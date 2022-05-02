@@ -1,6 +1,6 @@
 # Learn to code confidently in 100 consecutive days...
 
-# MY TARGETS
+## MY TARGETS
 I want to be able faster, competitive and confident in coding by which I mean,
     1. Improve my computational thinking & critical thinking skills
     2. Improve confidence in handling different IDE (PyCharm / VS code / Atom etc)
@@ -9,13 +9,13 @@ I want to be able faster, competitive and confident in coding by which I mean,
     5. Create a community in LinkedIn using the coding results updates.
 
 
-# MY RULES:
+## MY RULES:
 1. Spend min 1 hour per day for the next 100 days on coding.
 2. This 1 hour practice will not count the time I spend on coding as part of my job.
 3. Will post about the progress on LINKEDIn publicly every single day.
 4. Will commit to Github at the end of each practice session.
 
-# TOPICS TO MASTER
+## TOPICS TO MASTER
 1. Numpy
 2. Pandas
 3. Functions
@@ -30,7 +30,7 @@ I want to be able faster, competitive and confident in coding by which I mean,
 12. K-means clustering
 13. Principal Component Analysis
 
-# GOOD TO HAVE SKILLS:
+## GOOD TO HAVE SKILLS:
 14. OOP (Object Oriented Programming)
 15. Keras Image Classification
 16. Neural Network

@@ -8,9 +8,9 @@ import pandas as pd
 
 dict = {
         'Gender': ['Male', nan, 'Female', nan, 'Female'],
-        'Science': [85, 72, nan, 47, 53],
+        'Science': [85, nan, 72, 47, 53],
         'Maths': [56, nan, nan, 92, 68],
-        'English': [nan, 93, 49, 82, 75]
+        'English': [nan, nan, 49, 82, 75]
         }
 
 df1 = pd.DataFrame(dict)
@@ -59,6 +59,20 @@ df1 = pd.DataFrame(dict)
 # print(df1.dropna())
 
 
+# Drop the rows with all NULL values
+# print(df1.dropna(how='all'))
+
+
+# Drop the columns with at least 1 NULL value
+dict2 = {
+        'Gender': ['Male', nan, 'Female', nan, 'Female'],
+        'Science': [85, 86, 72, 47, 53],
+        'Maths': [56, nan, nan, 92, 68],
+        'English': [nan, nan, 49, 82, 75]
+        }
+df2 = pd.DataFrame(dict2)
+# print(df2)
+# print(df2.dropna(axis =1))
 
 
 
@@ -76,6 +90,14 @@ df1 = pd.DataFrame(dict)
 
 
 
-# Renaming and Replacing in Pandas
+
+
+
+
+
+
+
+
+
 # Concatenating, Merging, and Joining in a data frame
 # Summary Analysis, Cross Tabulation, and Pivot

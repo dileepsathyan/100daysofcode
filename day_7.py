@@ -26,7 +26,7 @@ df3_melted = df1.melt().rename(columns={'variable': 'Subject', 'value': 'Marks'}
 
 
 # Pivot the rows as columns
-# print(df3_melted.pivot(columns='Subject', values='Marks'))
+print(df3_melted.pivot(columns='Subject', values='Marks'))
 
 
 # Concatenate 2 dataframes on their columns (Append the rows of 2 dataframes)

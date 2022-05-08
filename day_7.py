@@ -42,7 +42,7 @@ df4 = pd.DataFrame(
 # print(df4)
 
 # Concatenate 2 Dataframes horizontally (Append columns of 2 Dataframes)
-# print(pd.concat([df2, df4], axis=1))
+print(pd.concat([df2, df4], axis=1))
 
 
 # Sort the Dataframe based on the values in a column.

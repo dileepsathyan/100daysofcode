@@ -30,7 +30,7 @@ df3_melted = df1.melt().rename(columns={'variable': 'Subject', 'value': 'Marks'}
 
 
 # Concatenate 2 dataframes on their columns (Append the rows of 2 dataframes)
-# print(pd.concat([df1, df2]))
+print(pd.concat([df1, df2]))
 
 
 df4 = pd.DataFrame(

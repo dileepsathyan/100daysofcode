@@ -56,7 +56,7 @@ df4 = pd.DataFrame(
 # Find the MIN and MAX of a column
 science_min = df1['Science'].min()
 science_max = df1['Science'].max()
-# print(f'Science Min mark: {science_min} \nScience Max mark: {science_max}')
+print(f'Science Min mark: {science_min} \nScience Max mark: {science_max}')
 
 
 # Find the MEAN and MEDIAN of a column

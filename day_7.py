@@ -46,7 +46,7 @@ df4 = pd.DataFrame(
 
 
 # Sort the Dataframe based on the values in a column.
-# print(df3_melted.sort_values(by='Marks'))
+print(df3_melted.sort_values(by='Marks'))
 
 
 # Sort values in descending order

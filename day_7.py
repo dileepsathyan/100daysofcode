@@ -62,7 +62,7 @@ science_max = df1['Science'].max()
 # Find the MEAN and MEDIAN of a column
 science_mean = df1['Science'].mean()
 science_median = df1['Science'].median()
-# print(f'Science Mean mark: {science_mean} \nScience Max mark: {science_median}')
+print(f'Science Mean mark: {science_mean} \nScience Max mark: {science_median}')
 
 
 # Merge 2 DataFrames

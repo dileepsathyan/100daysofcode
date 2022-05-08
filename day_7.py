@@ -8,7 +8,7 @@ df1 = pd.DataFrame(
                 'Maths': [56, 73, 66, 92, 68],
                 'English': [54, 88, 49, 82, 75]
                 })
-# print(df1)
+print(df1)
 
 
 df2 = pd.DataFrame(
@@ -17,7 +17,7 @@ df2 = pd.DataFrame(
                 'Maths': [75, 82],
                 'English': [64, 95]
                 })
-# print(df2)
+print(df2)
 
 
 # Gather all columns into rows and rename the columns as appropriate

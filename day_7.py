@@ -22,7 +22,7 @@ df2 = pd.DataFrame(
 
 # Gather all columns into rows and rename the columns as appropriate
 df3_melted = df1.melt().rename(columns={'variable': 'Subject', 'value': 'Marks'})
-# print(df3_melted)
+print(df3_melted)
 
 
 # Pivot the rows as columns

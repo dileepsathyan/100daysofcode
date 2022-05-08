@@ -50,7 +50,7 @@ df4 = pd.DataFrame(
 
 
 # Sort values in descending order
-# print(df3_melted.sort_values(by='Marks', ascending=False))
+print(df3_melted.sort_values(by='Marks', ascending=False))
 
 
 # Find the MIN and MAX of a column

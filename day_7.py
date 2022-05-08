@@ -39,7 +39,7 @@ df4 = pd.DataFrame(
                 'Biology': [67, 76],
                 'Chemistry': [86, 76]
                 })
-# print(df4)
+print(df4)
 
 # Concatenate 2 Dataframes horizontally (Append columns of 2 Dataframes)
 print(pd.concat([df2, df4], axis=1))

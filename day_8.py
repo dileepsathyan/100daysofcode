@@ -23,3 +23,8 @@ y = np.array([24, 85, 47, 38, 62])
 # plt.show()
 
 
+# Plot a Simple Vertical Bar Chart with explicit size and column widths
+# plt.bar(x, y, color='orange', width=.2)
+# plt.show()
+
+

@@ -55,4 +55,3 @@ plt.pie(y, labels=x, explode=[0.2, 0, 0, 0, 0], shadow=True)
 plt.legend()
 plt.title('Pie Chart')
 plt.show()
-

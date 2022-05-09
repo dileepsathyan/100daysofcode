@@ -50,3 +50,9 @@ y = np.array([24, 85, 47, 38, 62])
 # plt.show()
 
 
+# Create a Pie Chart with exploded view & with shadow and legend
+plt.pie(y, labels=x, explode=[0.2, 0, 0, 0, 0], shadow=True)
+plt.legend()
+plt.title('Pie Chart')
+plt.show()
+

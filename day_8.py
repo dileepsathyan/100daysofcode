@@ -21,9 +21,9 @@ plt.show()
 
 
 # Plot a Horizontal Bar Chart in a specified color
-# plt.barh(x, y, color= 'y')
-# plt.title('Horizontal Bar Chart')
-# plt.show()
+plt.barh(x, y, color= 'y')
+plt.title('Horizontal Bar Chart')
+plt.show()
 
 
 # Plot a Simple Vertical Bar Chart with explicit column widths

@@ -45,9 +45,9 @@ plt.show()
 
 
 # Create a Pie Chart with exploded view
-# plt.pie(y, labels=x, explode=[0.2, 0, 0, 0, 0])
-# plt.title('Pie Chart')
-# plt.show()
+plt.pie(y, labels=x, explode=[0.2, 0, 0, 0, 0])
+plt.title('Pie Chart')
+plt.show()
 
 
 # Create a Pie Chart with exploded view & with shadow and legend

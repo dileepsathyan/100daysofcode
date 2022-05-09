@@ -33,9 +33,9 @@ plt.show()
 
 
 # Plot a Horizontal Bar Chart in a specified color & explicit bar heights
-# plt.barh(x, y, color= 'y', height=.2)
-# plt.title('Horizontal Bar Chart')
-# plt.show()
+plt.barh(x, y, color= 'y', height=.2)
+plt.title('Horizontal Bar Chart')
+plt.show()
 
 
 # Create a Pie Chart

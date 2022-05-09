@@ -9,9 +9,9 @@ y = np.array([24, 85, 47, 38, 62])
 
 
 # Plot a Simple Vertical Bar Chart
-# plt.bar(x, y)
-# plt.title('Bar Chart')
-# plt.show()
+plt.bar(x, y)
+plt.title('Bar Chart')
+plt.show()
 
 
 # Plot a Horizontal Bar Chart

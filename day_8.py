@@ -10,24 +10,35 @@ y = np.array([24, 85, 47, 38, 62])
 
 # Plot a Simple Vertical Bar Chart
 # plt.bar(x, y)
+# plt.title('Bar Chart')
 # plt.show()
 
 
 # Plot a Horizontal Bar Chart
 # plt.barh(x, y)
+# plt.title('Horizontal Bar Chart')
 # plt.show()
 
 
 # Plot a Horizontal Bar Chart in a specified color
 # plt.barh(x, y, color= 'y')
+# plt.title('Horizontal Bar Chart')
 # plt.show()
 
 
 # Plot a Simple Vertical Bar Chart with explicit column widths
 # plt.bar(x, y, color='orange', width=.2)
+# plt.title('Bar Chart')
 # plt.show()
 
 
 # Plot a Horizontal Bar Chart in a specified color & explicit bar heights
 # plt.barh(x, y, color= 'y', height=.2)
+# plt.title('Horizontal Bar Chart')
+# plt.show()
+
+
+# Create a Pie Chart
+# plt.pie(y, labels=x)
+# plt.title('Pie Chart')
 # plt.show()

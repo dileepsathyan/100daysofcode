@@ -15,9 +15,9 @@ plt.show()
 
 
 # Plot a Horizontal Bar Chart
-# plt.barh(x, y)
-# plt.title('Horizontal Bar Chart')
-# plt.show()
+plt.barh(x, y)
+plt.title('Horizontal Bar Chart')
+plt.show()
 
 
 # Plot a Horizontal Bar Chart in a specified color

@@ -1,15 +1,19 @@
 from turtle import title
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-filepath = '/Users/dileepsathyan/Downloads/Personal Stuff/100daysofcode/Churn_Modelling.xls'
-df1 = pd.read_csv(filepath)
-# print(df1.head())
+
+x = np.array(["a", "b", "c", "d", "e"])
+y = np.array([24, 85, 47, 38, 62])
+
+# Plot a Simple Vertical Bar Chart
+# plt.bar(x, y)
+# plt.show()
 
 
-fig1 = df1['Balance'].plot(kind='hist', figsize=(5,3), title='Balance Summary')
-# print(plt.show())
+# Plot a Horizontal Bar Chart
+# plt.barh(x, y)
+# plt.show()
 
-fig2 = plt.barh(df1['EstimatedSalary'], df1['Geography'])
-plt.xlim(0,10000)
-print(plt.show())
+

@@ -38,3 +38,15 @@ fig = plt.figure()
 # plt.show()
 
 
+
+x2 = np.linspace(0, 2, 100)
+plt.plot(x2, x2, label='linear')
+plt.plot(x2, x2 **2, label='quadratic')
+plt.plot(x2, x2 **3, label='cubic')
+
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.title("Simple Plot")
+plt.legend()
+
+plt.show()

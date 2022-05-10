@@ -41,16 +41,16 @@ fig = plt.figure()
 # Pyplot provides the state-machine interface to the underlying object-oriented plotting library. 
 # The state-machine implicitly and automatically creates figures and axes to achieve the desired plot. 
 x2 = np.linspace(0, 2, 100)
-# plt.plot(x2, x2, label='linear')
-# plt.plot(x2, x2 **2, label='quadratic')
-# plt.plot(x2, x2 **3, label='cubic')
+plt.plot(x2, x2, label='linear')
+plt.plot(x2, x2 **2, label='quadratic')
+plt.plot(x2, x2 **3, label='cubic')
 
-# plt.xlabel('x label')
-# plt.ylabel('y label')
-# plt.title("Simple Plot")
-# plt.legend()
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.title("Simple Plot")
+plt.legend()
 
-# plt.show()
+plt.show()
 
 
 

@@ -33,3 +33,8 @@ fig = plt.figure()
 # plt.show()
 
 
+# Plot is a very versatile command 
+# plt.plot([1, 2, 3, 4], [1, 4, 8, 16])
+# plt.show()
+
+

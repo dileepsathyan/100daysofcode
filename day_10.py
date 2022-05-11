@@ -18,9 +18,9 @@ data2 = [5. , 25. , 50. , 20.]
 
 
 # Horizontal Bar Chart
-# plt.barh(range(len(data2)), data2)
-# plt.title('Horizontal Bar Chart')
-# plt.show() 
+plt.barh(range(len(data2)), data2)
+plt.title('Horizontal Bar Chart')
+plt.show() 
 
 
 # Stacked Bar Chart

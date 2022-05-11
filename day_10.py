@@ -44,9 +44,9 @@ labels = ['Computer', 'Electronics', 'Mechanical', 'Chemical']
 
 # Box Plot
 data3 = np.random.randn(100)
-# plt.boxplot(data3)
-# plt.title('Box Chart')
-# plt.show()
+plt.boxplot(data3)
+plt.title('Box Chart')
+plt.show()
 
 
 # Area Chart

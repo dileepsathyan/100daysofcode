@@ -36,10 +36,10 @@ z1 = range(4)
 # Pie Chart
 x1 = [35, 25, 20, 20]
 labels = ['Computer', 'Electronics', 'Mechanical', 'Chemical']
-# plt.figure(figsize=(5,5))
-# plt.pie(x1, labels=labels)
-# plt.title('Pie Chart')
-# plt.show()
+plt.figure(figsize=(5,5))
+plt.pie(x1, labels=labels)
+plt.title('Pie Chart')
+plt.show()
 
 
 # Box Plot

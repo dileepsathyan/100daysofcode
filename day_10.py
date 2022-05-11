@@ -52,9 +52,9 @@ data3 = np.random.randn(100)
 # Area Chart
 x2 = range(1, 6)
 y2 = [1, 4, 6, 8, 4]
-# plt.fill_between(x2, y2)
-# plt.title('Area Chart')
-# plt.show()
+plt.fill_between(x2, y2)
+plt.title('Area Chart')
+plt.show()
 
 
 # Contour Plot

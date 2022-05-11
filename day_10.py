@@ -27,10 +27,10 @@ data2 = [5. , 25. , 50. , 20.]
 a = [15., 30., 45., 22.]
 b = [15., 25., 50., 20.]
 z1 = range(4)
-# plt.bar(z1, a, color = 'b')
-# plt.bar(z1, b, color = 'r', bottom = a)
-# plt.title('Stacked Bar Chart')
-# plt.show()
+plt.bar(z1, a, color = 'b')
+plt.bar(z1, b, color = 'r', bottom = a)
+plt.title('Stacked Bar Chart')
+plt.show()
 
 
 # Pie Chart

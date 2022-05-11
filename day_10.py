@@ -59,6 +59,6 @@ y2 = [1, 4, 6, 8, 4]
 
 # Contour Plot
 matrix1 = np.random.rand(10, 20)
-# cp = plt.contour(matrix1)
-# plt.title('Contour Plot')
-# plt.show()
+cp = plt.contour(matrix1)
+plt.title('Contour Plot')
+plt.show()

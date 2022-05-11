@@ -48,3 +48,10 @@ data3 = np.random.randn(100)
 # plt.title('Box Chart')
 # plt.show()
 
+
+# Area Chart
+x2 = range(1, 6)
+y2 = [1, 4, 6, 8, 4]
+plt.fill_between(x2, y2)
+plt.title('Area Chart')
+plt.show()

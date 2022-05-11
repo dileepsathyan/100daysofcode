@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 # Histogram
 data1 = np.random.randn(100)
-# plt.hist(data1)
-# plt.title('Histogram')
-# plt.show()
+plt.hist(data1)
+plt.title('Histogram')
+plt.show()
 
 
 # Bar Chart

@@ -12,9 +12,9 @@ data1 = np.random.randn(100)
 
 # Bar Chart
 data2 = [5. , 25. , 50. , 20.]
-# plt.bar(range(len(data2)), data2)
-# plt.title('Bar Chart')
-# plt.show()
+plt.bar(range(len(data2)), data2)
+plt.title('Bar Chart')
+plt.show()
 
 
 # Horizontal Bar Chart

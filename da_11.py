@@ -39,7 +39,7 @@ def arb_function(*args):
 def arb_function1(*args):
     print(args[3])
 
-# arb_function1('Dog', 'Cat', 'Monkey', 'Bird')
+arb_function1('Dog', 'Cat', 'Monkey', 'Bird')
 
 
 

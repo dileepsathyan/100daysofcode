@@ -32,7 +32,7 @@ def default_arg_function(item = 'an empty box'):
 def arb_function(*args):
     print(args)
 
-# arb_function(1, 2, 3, 4)
+arb_function(1, 2, 3, 4)
 
 
 # We can explicitly return a value in the arguments as below.

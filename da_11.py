@@ -68,9 +68,9 @@ def sum_of_2_nums(a, b):
 
 qty = [10, 21, 25]
 pdt = ['cars', 'bikes', 'aeroplanes']
-# for i in qty:
-#     for j in pdt:
-#         print(i, j)
+for i in qty:
+    for j in pdt:
+        print(i, j)
 
 
 # Recursive Function

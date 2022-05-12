@@ -21,9 +21,9 @@ def new_function():
 def default_arg_function(item = 'an empty box'):
     print('This is ' + item)
 
-# default_arg_function('apple')
-# default_arg_function()
-# default_arg_function('banana')
+default_arg_function('apple')
+default_arg_function()
+default_arg_function('banana')
 
 
 # 2. Arbitrary arguments

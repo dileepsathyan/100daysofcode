@@ -59,7 +59,7 @@ def keyword_arg_function(name, age):
 def sum_of_2_nums(a, b):
     return a + b
 
-# print(sum_of_2_nums(120, 30))
+print(sum_of_2_nums(120, 30))
 
 
 # Nested functions

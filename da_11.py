@@ -10,7 +10,7 @@ import pandas as pd
 def new_function():
     print('This is the basic function syntax')
 
-# new_function()
+new_function()
 
 
 ## Types of arguments in Python functions

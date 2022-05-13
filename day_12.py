@@ -105,3 +105,14 @@ class HelloPerson:
     
 # p4 = HelloPerson('Dileep', 30, 'Male')
 # print(p4.say_hello())
+
+
+
+# Modify Object Properties
+p3.age = 34
+
+# Delete Object Properties
+del p3.name
+
+# Delete Objects
+del p4

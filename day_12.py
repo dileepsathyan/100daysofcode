@@ -11,13 +11,11 @@ lambda argument : expression
 
 
 # Create a lambda function to add 10 to one argument
-
 func1 = lambda a : a+10
 # print(func1(5))
 
 
 # Create a lambda function with 2 arguments
-
 func2 = lambda a, b : a*b
 # print(func2(2, 4))
 

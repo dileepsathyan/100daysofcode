@@ -37,3 +37,18 @@ func6_tripler = func4(3)
 
 # CLASSES AND OBJECTS
 
+# A Class is like an object constructor, or a "blueprint" for creating objects.
+
+# Create a Class with 1 property called x
+# Then assign the class to p1 to call the property from p1
+
+class my_first_class:
+    x = 10
+    y = 63
+    z = 246
+
+p1 = my_first_class()
+
+print(p1.x)
+print(p1.y)
+print(p1.z)

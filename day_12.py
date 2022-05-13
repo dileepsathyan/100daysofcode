@@ -86,5 +86,22 @@ class HelloPerson:
     def say_hello(self):
         print('Hello Mr. ' + self.name + ', You are a ' + self.gender + ' of age ' + self.age + ' years')
     
-p3 = HelloPerson('Dileep', 30, 'Male')
-print(p3.say_hello())
+# p3 = HelloPerson('Dileep', 30, 'Male')
+# print(p3.say_hello())
+
+
+# The self Parameter
+# The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.
+# It does not have to be named self , you can call it whatever you like, but it has to be the first parameter of any function in the class.
+
+class HelloPerson:
+    def __init__(can_be_anything, name, age, gender):
+        can_be_anything.name = name
+        can_be_anything.age = str(age)
+        can_be_anything.gender = gender
+    
+    def say_hello(this_too_can_be_different):
+        print('Hello Mr. ' + this_too_can_be_different.name)
+    
+# p4 = HelloPerson('Dileep', 30, 'Male')
+# print(p4.say_hello())

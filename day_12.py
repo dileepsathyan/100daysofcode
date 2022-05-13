@@ -70,6 +70,21 @@ class Person:
         self.gender = gender
 
 p2 = Person('Dileep', 30, 'Male')
-print(p2.name)
-print(p2.age)
-print(p2.gender)
+# print(p2.name)
+# print(p2.age)
+# print(p2.gender)
+
+
+# Object Methods: Objects can also contain methods. Methods in objects are functions that belong to the object.
+
+class HelloPerson:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = str(age)
+        self.gender = gender
+    
+    def say_hello(self):
+        print('Hello Mr. ' + self.name + ', You are a ' + self.gender + ' of age ' + self.age + ' years')
+    
+p3 = HelloPerson('Dileep', 30, 'Male')
+print(p3.say_hello())

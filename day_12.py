@@ -12,7 +12,7 @@ lambda argument : expression
 
 # Create a lambda function to add 10 to one argument
 func1 = lambda a : a+10
-# print(func1(5))
+print(func1(5))
 
 
 # Create a lambda function with 2 arguments
@@ -109,10 +109,10 @@ class HelloPerson:
 
 
 # Modify Object Properties
-p3.age = 34
+# p3.age = 34
 
 # Delete Object Properties
-del p3.name
+# del p3.name
 
 # Delete Objects
-del p4
+# del p4

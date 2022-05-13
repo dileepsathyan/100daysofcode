@@ -61,3 +61,15 @@ p1 = my_first_class()
 # All classes have a function called __init__(), which is always executed when the class is being initiated.
 # Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
 
+# Create a class and assign values using __init__ function.
+
+class Person:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+
+p2 = Person('Dileep', 30, 'Male')
+print(p2.name)
+print(p2.age)
+print(p2.gender)

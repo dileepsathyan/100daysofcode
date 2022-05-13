@@ -48,7 +48,16 @@ class my_first_class:
     z = 246
 
 p1 = my_first_class()
+# print(p1.x)
+# print(p1.y)
+# print(p1.z)
 
-print(p1.x)
-print(p1.y)
-print(p1.z)
+
+
+# The __init__() function
+
+# The examples above are classes and objects in their simplest form, and are not really useful in real life applications.
+# To understand the meaning of classes we have to understand the built-in __init__() function.
+# All classes have a function called __init__(), which is always executed when the class is being initiated.
+# Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
+

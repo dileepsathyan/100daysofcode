@@ -30,5 +30,6 @@ def func4(n):
 
 func5_doubler = func4(2)
 func6_tripler = func4(3)
-print(func5_doubler(4))
-print(func6_tripler(7))
+# print(func5_doubler(4))
+# print(func6_tripler(7))
+

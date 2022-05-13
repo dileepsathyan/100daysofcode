@@ -17,12 +17,12 @@ print(func1(5))
 
 # Create a lambda function with 2 arguments
 func2 = lambda a, b : a*b
-# print(func2(2, 4))
+print(func2(2, 4))
 
 
 # Create a lambda function with 3 arguments
 func3 = lambda a, b, c: (a + b)**c
-# print(func3(3, 4, 2))
+print(func3(3, 4, 2))
 
 # Create a default lambda function and reuse it to create more functions.
 def func4(n):
@@ -30,8 +30,8 @@ def func4(n):
 
 func5_doubler = func4(2)
 func6_tripler = func4(3)
-# print(func5_doubler(4))
-# print(func6_tripler(7))
+print(func5_doubler(4))
+print(func6_tripler(7))
 
 #####################################################################################################################
 
@@ -48,9 +48,9 @@ class my_first_class:
     z = 246
 
 p1 = my_first_class()
-# print(p1.x)
-# print(p1.y)
-# print(p1.z)
+print(p1.x)
+print(p1.y)
+print(p1.z)
 
 
 
@@ -70,9 +70,9 @@ class Person:
         self.gender = gender
 
 p2 = Person('Dileep', 30, 'Male')
-# print(p2.name)
-# print(p2.age)
-# print(p2.gender)
+print(p2.name)
+print(p2.age)
+print(p2.gender)
 
 
 # Object Methods: Objects can also contain methods. Methods in objects are functions that belong to the object.
@@ -86,8 +86,8 @@ class HelloPerson:
     def say_hello(self):
         print('Hello Mr. ' + self.name + ', You are a ' + self.gender + ' of age ' + self.age + ' years')
     
-# p3 = HelloPerson('Dileep', 30, 'Male')
-# print(p3.say_hello())
+p3 = HelloPerson('Dileep', 30, 'Male')
+print(p3.say_hello())
 
 
 # The self Parameter
@@ -103,16 +103,16 @@ class HelloPerson:
     def say_hello(this_too_can_be_different):
         print('Hello Mr. ' + this_too_can_be_different.name)
     
-# p4 = HelloPerson('Dileep', 30, 'Male')
-# print(p4.say_hello())
+p4 = HelloPerson('Dileep', 30, 'Male')
+print(p4.say_hello())
 
 
 
 # Modify Object Properties
-# p3.age = 34
+p3.age = 34
 
 # Delete Object Properties
-# del p3.name
+del p3.name
 
 # Delete Objects
-# del p4
+del p4

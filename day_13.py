@@ -1,7 +1,5 @@
 import pandas as pd
 
-from day_12 import Person
-
 
 # INHERITANCE
 
@@ -72,25 +70,26 @@ class Student3(Parent):
 # In the example below, the year 2019 should be a variable, and passed into the Student class when creating student objects. 
 # To do so, add another parameter in the __init__() function.
 
-class Student4(Person):
+class Student4(Parent):
     def __init__(self, first_name, last_name, year):
-        super().__init__(first_name, last_name, year)
+        super().__init__(first_name, last_name)
         self.graduation_year = year
 
 s5 = Student4('Dileep', 'Trinay', 2008)
 print(s5.graduation_year)
+print(s5.fname)
 
 
 
 # Add Methods to Child class
 
-class Student5(Person):
+class Student5(Parent):
     def __init__(self, first_name, last_name, year):
         super().__init__(first_name, last_name)
         self.graduation_year = year
 
     def welcome(self):
-        print('Welcome, '+ self.first_name, self.lname)
+        print('Welcome, '+ self.fname, self.lname)
 
 s6 = Student5('Dileep', 'Trinay', 2008)
 s6.welcome()

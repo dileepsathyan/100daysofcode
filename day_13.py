@@ -17,5 +17,31 @@ class Parent:
     def print_name(self):
         print('Hi, '+ self.fname, self.lname + '!..')
 
-p1 = Parent('Dileep', 'Sathyan')
-p1.print_name()    
+# p1 = Parent('Dileep', 'Sathyan')
+# p1.print_name()    
+
+
+
+# Create a child class
+# To create a class that inherits the functionality from another class, send the parent class as a parameter when creating the child class.
+
+class Student(Parent):
+    pass
+
+# p2 = Student('Trinay', 'Dileep')
+# p2.print_name() 
+
+
+
+# Adding __init__() function overrides the inheritance of the parent's __init__() function.
+# This means, when you add the __init__() function, the child class will no longer inherit the parent's __init__() function.
+
+class Student1(Parent):
+    def __init__(self, first_name, last_name):
+        # add new properties here
+
+# To keep the inheritance of the parent's __init__() function, add a call to the parent's __init__() function as below.
+
+class Student2(Parent):
+    def __init__(self, first_name, last_name):
+        Parent.__init__(self, first_name, last_name)

@@ -40,8 +40,13 @@ class Student1(Parent):
     def __init__(self, first_name, last_name):
         # add new properties here
 
+
+
 # To keep the inheritance of the parent's __init__() function, add a call to the parent's __init__() function as below.
 
 class Student2(Parent):
     def __init__(self, first_name, last_name):
         Parent.__init__(self, first_name, last_name)
+
+p3 = Student2('Dileep', 'Trinay')
+p3.print_name()

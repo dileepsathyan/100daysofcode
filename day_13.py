@@ -39,6 +39,7 @@ class Student(Parent):
 class Student1(Parent):
     def __init__(self, first_name, last_name):
         # add new properties here
+        pass
 
 
 

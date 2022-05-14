@@ -19,8 +19,8 @@ class Parent:
     def print_name(self):
         print('Hi, '+ self.fname, self.lname + '!..')
 
-# p1 = Parent('Dileep', 'Sathyan')
-# p1.print_name()    
+# s1 = Parent('Dileep', 'Sathyan')
+# s1.print_name()    
 
 
 
@@ -30,8 +30,8 @@ class Parent:
 class Student(Parent):
     pass
 
-# p2 = Student('Trinay', 'Dileep')
-# p2.print_name() 
+# s2 = Student('Trinay', 'Dileep')
+# s2.print_name() 
 
 
 
@@ -51,8 +51,8 @@ class Student2(Parent):
     def __init__(self, first_name, last_name):
         Parent.__init__(self, first_name, last_name)
 
-# p3 = Student2('Dileep', 'Trinay')
-# p3.print_name()
+# s3 = Student2('Dileep', 'Trinay')
+# s3.print_name()
 
 
 
@@ -64,8 +64,8 @@ class Student3(Parent):
         super().__init__(first_name, last_name)
         self.graduation_year = 2008
 
-# p4 = Student3('Dileep', 'Trinay')
-# print(p4.graduation_year)
+# s4 = Student3('Dileep', 'Trinay')
+# print(s4.graduation_year)
 
 
 
@@ -77,5 +77,20 @@ class Student4(Person):
         super().__init__(first_name, last_name, year)
         self.graduation_year = year
 
-p5 = Student4('Dileep', 'Trinay', 2008)
-print(p5.graduation_year)
+s5 = Student4('Dileep', 'Trinay', 2008)
+print(s5.graduation_year)
+
+
+
+# Add Methods to Child class
+
+class Student5(Person):
+    def __init__(self, first_name, last_name, year):
+        super().__init__(first_name, last_name)
+        self.graduation_year = year
+
+    def welcome(self):
+        print('Welcome, '+ self.first_name, self.lname)
+
+s6 = Student5('Dileep', 'Trinay', 2008)
+s6.welcome()

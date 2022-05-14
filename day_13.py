@@ -49,5 +49,18 @@ class Student2(Parent):
     def __init__(self, first_name, last_name):
         Parent.__init__(self, first_name, last_name)
 
-p3 = Student2('Dileep', 'Trinay')
-p3.print_name()
+# p3 = Student2('Dileep', 'Trinay')
+# p3.print_name()
+
+
+
+# Use the super() Function
+# Python also has a super() function that will make the child class inherit all the methods and properties from its parent:
+
+class Student3(Parent):
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        self.graduation_year = 2008
+
+p4 = Student3('Dileep', 'Trinay')
+print(p4.graduation_year)

@@ -17,8 +17,8 @@ class Parent:
     def print_name(self):
         print('Hi, '+ self.fname, self.lname + '!..')
 
-# s1 = Parent('Dileep', 'Sathyan')
-# s1.print_name()    
+s1 = Parent('Dileep', 'Sathyan')
+s1.print_name()    
 
 
 
@@ -28,8 +28,8 @@ class Parent:
 class Student(Parent):
     pass
 
-# s2 = Student('Trinay', 'Dileep')
-# s2.print_name() 
+s2 = Student('Trinay', 'Dileep')
+s2.print_name() 
 
 
 
@@ -49,8 +49,8 @@ class Student2(Parent):
     def __init__(self, first_name, last_name):
         Parent.__init__(self, first_name, last_name)
 
-# s3 = Student2('Dileep', 'Trinay')
-# s3.print_name()
+s3 = Student2('Dileep', 'Trinay')
+s3.print_name()
 
 
 
@@ -62,8 +62,8 @@ class Student3(Parent):
         super().__init__(first_name, last_name)
         self.graduation_year = 2008
 
-# s4 = Student3('Dileep', 'Trinay')
-# print(s4.graduation_year)
+s4 = Student3('Dileep', 'Trinay')
+print(s4.graduation_year)
 
 
 

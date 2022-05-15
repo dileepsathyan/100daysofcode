@@ -4,7 +4,7 @@ import datetime
 # Import the datetime module and display the current date
 
 x = datetime.datetime.now()
-# print(x)
+print(x)
 
 
 # When we execute the code from the example above the result will be: 2022-05-15 17:38:34.858080
@@ -13,31 +13,31 @@ x = datetime.datetime.now()
 
 
 # Return the year from the datetime object:
-# print(x.year)
+print(x.year)
 
 
 # Return the month from the datetime object
-# print(x.month)
+print(x.month)
 
 
 # Return the day from the datetime object
-# print(x.day)
+print(x.day)
 
 
 # Return the hour from the datetime object
-# print(x.hour)
+print(x.hour)
 
 
 # Return the minute from the datetime object
-# print(x.minute)
+print(x.minute)
 
 
 # Return the second from the datetime object
-# print(x.second)
+print(x.second)
 
 
 # Return the name of weekday:
-# print(x.strftime('%A'))
+print(x.strftime('%A'))
 
 # Directive	Description	                Example
 # %a	    Weekday,    short version	Wed	

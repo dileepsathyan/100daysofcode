@@ -40,7 +40,7 @@ print(x.strftime('%A'))
 # %C	    Century	                    20	
 # %x	    Local version of date	    12/31/18	
 # %X	    Local version of time	    17:41:00	
-# %%	    A % character	            %	
+# % %	    A % character	            %	
 # %G	    ISO 8601 year	            2018	
 # %u	    ISO 8601 weekday            (1-7)	1	
 # %V	    ISO 8601 weeknumber            (01-53)	01	
@@ -53,5 +53,3 @@ y = datetime.date(2022, 5, 15)
 print(y)
 
 
-
-# 

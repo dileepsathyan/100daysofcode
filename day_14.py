@@ -73,4 +73,4 @@ x = datetime.datetime.now()
 
 # Construct a date using datetime 
 y = datetime.date(2022, 5, 15)
-# print(y)
+print(y)

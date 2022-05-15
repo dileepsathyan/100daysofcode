@@ -36,8 +36,7 @@ print(x.minute)
 print(x.second)
 
 
-# Return the year and name of weekday:
-print(x.year)
+# Return the name of weekday:
 print(x.strftime('%A'))
 
 # Directive	Description	                Example
@@ -73,8 +72,5 @@ print(x.strftime('%A'))
 
 
 # Construct a date using datetime 
-
 y = datetime.date(2022, 5, 15)
 print(y)
-
-

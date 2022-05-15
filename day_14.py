@@ -11,6 +11,31 @@ print(x)
 # The date contains year, month, day, hour, minute, second, and microsecond.
 # The datetime module has many methods to return information about the date object.
 
+
+# Return the year from the datetime object:
+print(x.year)
+
+
+# Return the month from the datetime object
+print(x.month)
+
+
+# Return the day from the datetime object
+print(x.day)
+
+
+# Return the hour from the datetime object
+print(x.hour)
+
+
+# Return the minute from the datetime object
+print(x.minute)
+
+
+# Return the second from the datetime object
+print(x.second)
+
+
 # Return the year and name of weekday:
 print(x.year)
 print(x.strftime('%A'))

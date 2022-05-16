@@ -23,7 +23,25 @@ sq = pow(5,2)
 
 
 import math
+from traceback import print_tb
 
 
 # MATH MODULE
+
+# Find the Square Root of a number
+sq_rt = math.sqrt(64)
+# print(sq_rt)
+
+
+# Find the CEILING AND FLOOR values
+c = math.ceil(1.4)
+f = math.floor(5.6)
+# print(c)
+# print(f)
+
+
+# Pi constant value
+pi_val = math.pi
+# print(pi_val)
+
 

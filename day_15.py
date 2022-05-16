@@ -42,7 +42,7 @@ f = math.floor(5.6)
 
 # Pi constant value
 pi_val = math.pi
-# print(pi_val)
+print(pi_val)
 
 
 # Method	        Description

@@ -12,3 +12,10 @@ print(x_file["name"])
 print(x_file["age"])
 print(x_file["department"])
 
+
+# Convert a Python Object to a JSON string by using the json.dumps() method.
+
+y = json.dumps(x_file)
+print(y)
+print(x)
+

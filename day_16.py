@@ -24,6 +24,7 @@ y = json.dumps(x_file)
 
 
 
+# Convert a Python object with all data types to JSON
 j = {
     "name": "John",
     "age": 30,
@@ -37,4 +38,4 @@ j = {
             ]
     }
 
-print(json.dumps(j))
+# print(json.dumps(j))

@@ -11,16 +11,16 @@ x = '{"name": "Dileep", "age": 30, "department": "Science"}'
 
 x_file = json.loads(x)
 print(x_file["name"])
-# print(x_file["age"])
-# print(x_file["department"])
+print(x_file["age"])
+print(x_file["department"])
 
 
 
 # Convert a Python Object to a JSON string by using the json.dumps() method.
 
 y = json.dumps(x_file)
-# print(y)
-# print(x)
+print(y)
+print(x)
 
 
 
@@ -38,19 +38,19 @@ j = {
             ]
     }
 
-# print(json.dumps(j))
+print(json.dumps(j))
 
 
 
 # Format the same above result to visually readable manner.
-# print(json.dumps(j, indent=4))
+print(json.dumps(j, indent=4))
 
 
 
 # Using the separators parameter to change the default separator:
-# print(json.dumps(j, indent=4, separators=(". ", " = ")))
+print(json.dumps(j, indent=4, separators=(". ", " = ")))
 
 
 
 # sort the result alphabetically by keys:
-# print(json.dumps(j, indent=4, sort_keys=True))
+print(json.dumps(j, indent=4, sort_keys=True))

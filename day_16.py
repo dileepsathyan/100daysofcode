@@ -4,3 +4,8 @@ import json
 # Python has a built-in package called json, which can be used to work with JSON data.
 
 # Convert JSON string in Python using the json.loads() method.
+
+x = '{"name": "Dileep", "age": 30, "department": "Science"}'
+
+x_file = json.loads(x)
+print(x_file["name"])

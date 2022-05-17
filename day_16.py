@@ -39,3 +39,8 @@ j = {
     }
 
 # print(json.dumps(j))
+
+
+
+# Format the same above result to visually readable manner.
+print(json.dumps(j, indent=4))

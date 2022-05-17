@@ -43,4 +43,12 @@ j = {
 
 
 # Format the same above result to visually readable manner.
-print(json.dumps(j, indent=4))
+# print(json.dumps(j, indent=4))
+
+
+
+# Using the separators parameter to change the default separator:
+# print(json.dumps(j, indent=4, separators=(". ", " = ")))
+
+
+

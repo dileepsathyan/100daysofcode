@@ -18,43 +18,43 @@ import re
 txt1 = 'He passed in IELTS Exam'
 
 x = re.search('^He.*Exam$', txt1)
-# if x:
-#     print('We have a match!')
-# else:
-#     print('No match...')
+if x:
+    print('We have a match!')
+else:
+    print('No match...')
 
 
 
 # Try using the findall method in re.
 txt2 = 'Cups and Dips'
 y = re.findall('ps', txt2)
-# print(y)
+print(y)
 
 # findall function returns and empty list if there is no match.
-# print(re.findall('us', txt2))
+print(re.findall('us', txt2))
 
 
 
 # The split() function returns a list where the string has been split at each match
 s = re.split(' ', txt2)
-# print(s)
+print(s)
 
 # In the above method, if we have to split the string at the first white-space character:
 t = re.split(' ', txt2, maxsplit=1)
-# print(t)
+print(t)
 
 
 
 # The sub() function substitutes the matches with the text of your choice:
 u = re.sub('s', 'z', txt2)
-# print(u)
+print(u)
 
 
 
 # A Match Object is an object containing information about the search and the result.
 # The below returns a match object
 m = re.search('am', txt1)
-# print(m)
+print(m)
 
 
 # The Match object has properties and methods used to retrieve information about the search, and the result:

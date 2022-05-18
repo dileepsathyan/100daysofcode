@@ -24,6 +24,7 @@ x = re.search('^He.*Exam$', txt1)
 #     print('No match...')
 
 
+
 # Try using the findall method in re.
 txt2 = 'Cups and Dips'
 y = re.findall('ps', txt2)
@@ -31,6 +32,12 @@ y = re.findall('ps', txt2)
 
 # findall function returns and empty list if there is no match.
 # print(re.findall('us', txt2))
+
+
+
+# The split() function returns a list where the string has been split at each match
+z = re.split(' ', txt2)
+print(z)
 
 
 

@@ -5,9 +5,9 @@ import re
 # Python has a built-in package called re, which can be used to work with Regular Expressions.
 
 
-txt = 'The rain in Spain'
+txt = 'He passed in IELTS Exam'
 
-x = re.search('^The.*Spain$', txt)
+x = re.search('^He.*Exam$', txt)
 if x:
     print('We have a match!')
 else:

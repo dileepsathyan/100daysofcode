@@ -47,9 +47,13 @@ t = re.split(' ', txt2, maxsplit=1)
 
 # The sub() function substitutes the matches with the text of your choice:
 u = re.sub('s', 'z', txt2)
-print(u)
+# print(u)
 
 
+
+# 
+m = re.search('am', txt1)
+print(m)
 
 
 # Character	Description	                    Example	

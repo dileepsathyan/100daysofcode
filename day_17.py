@@ -14,15 +14,23 @@ import re
 # sub	        Replaces one or many matches with a string
 
 
+# Try using the search method in re.
+txt1 = 'He passed in IELTS Exam'
 
-
-txt = 'He passed in IELTS Exam'
-
-x = re.search('^He.*Exam$', txt)
+x = re.search('^He.*Exam$', txt1)
 if x:
     print('We have a match!')
 else:
     print('No match...')
+
+
+# Try using the findall method in re.
+txt2 = 'Cups and Dips'
+y = re.findall('ps', txt2)
+print(y)
+
+
+
 
 
 

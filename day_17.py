@@ -37,16 +37,17 @@ y = re.findall('ps', txt2)
 
 # The split() function returns a list where the string has been split at each match
 s = re.split(' ', txt2)
-print(s)
+# print(s)
 
 # In the above method, if we have to split the string at the first white-space character:
 t = re.split(' ', txt2, maxsplit=1)
-print(t)
+# print(t)
 
 
 
-
-
+# The sub() function substitutes the matches with the text of your choice:
+u = re.sub('s', 'z', txt2)
+print(u)
 
 
 

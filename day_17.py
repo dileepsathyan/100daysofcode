@@ -54,8 +54,17 @@ u = re.sub('s', 'z', txt2)
 # A Match Object is an object containing information about the search and the result.
 # The below returns a match object
 m = re.search('am', txt1)
-print(m)
+# print(m)
 
+
+# The Match object has properties and methods used to retrieve information about the search, and the result:
+# .span() returns a tuple containing the start-, and end positions of the match.
+# .string returns the string passed into the function
+# .group() returns the part of the string where there was a match
+
+print(m.span)
+print(m.string)
+print(m.group())
 
 
 

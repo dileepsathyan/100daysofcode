@@ -51,9 +51,13 @@ u = re.sub('s', 'z', txt2)
 
 
 
-# 
+# A Match Object is an object containing information about the search and the result.
+# The below returns a match object
 m = re.search('am', txt1)
 print(m)
+
+
+
 
 
 # Character	Description	                    Example	

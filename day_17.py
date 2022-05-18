@@ -18,17 +18,19 @@ import re
 txt1 = 'He passed in IELTS Exam'
 
 x = re.search('^He.*Exam$', txt1)
-if x:
-    print('We have a match!')
-else:
-    print('No match...')
+# if x:
+#     print('We have a match!')
+# else:
+#     print('No match...')
 
 
 # Try using the findall method in re.
 txt2 = 'Cups and Dips'
 y = re.findall('ps', txt2)
-print(y)
+# print(y)
 
+# findall function returns and empty list if there is no match.
+# print(re.findall('us', txt2))
 
 
 

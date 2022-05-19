@@ -39,3 +39,15 @@ except:
     print('This is the except block because x was not defined..')
 finally:
     print('This is finally block which will be exceuted no matter what')
+
+
+
+# Raise an exception: As a Python developer you can choose to throw an exception if a condition occurs.
+# To throw (or raise) an exception, use the raise keyword..
+
+n = -1
+
+if n < 0:
+    raise Exception('No numbers below zero')
+
+

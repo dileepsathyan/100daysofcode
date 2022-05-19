@@ -20,3 +20,12 @@ except NameError:
     print('y is not defined..')
 except:
     print('some other error occured..')
+
+
+# Else: You can use the else keyword to define a block of code to be executed if no errors were raised.
+try:
+    print('Hi')
+except:
+    print('This is the except block..')
+else:
+    print('This is else block which means there are no errors found...')

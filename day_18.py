@@ -8,6 +8,8 @@
 # The try block will generate an exception, because x is not defined
 from re import X
 
+from numpy import dtype
+
 
 try:
     print(x)
@@ -17,47 +19,41 @@ except:
 
 # Many Exceptions: You can define as many exception blocks as you want.
 # e.g. if you want to execute a special block of code for a special kind of error:
-try:
-    print(y)
-except NameError:
-    print('y is not defined..')
-except:
-    print('some other error occured..')
+
+# try:
+#     print(y)
+# except NameError:
+#     print('y is not defined..')
+# except:
+#     print('some other error occured..')
 
 
 # Else: You can use the else keyword to define a block of code to be executed if no errors were raised.
-try:
-    print('Hi')
-except:
-    print('This is the except block..')
-else:
-    print('This is else block which means there are no errors found...')
+
+# try:
+#     print('Hi')
+# except:
+#     print('This is the except block..')
+# else:
+#     print('This is else block which means there are no errors found...')
 
 
 
 # Finally: The finally block, if specified, will be executed regardless if the try block raises an error or not
-try:
-    print(x)
-except:
-    print('This is the except block because x was not defined..')
-finally:
-    print('This is finally block which will be exceuted no matter what')
+
+# try:
+#     print(x)
+# except:
+#     print('This is the except block because x was not defined..')
+# finally:
+#     print('This is finally block which will be exceuted no matter what')
 
 
 
 # Raise an exception: As a Python developer you can choose to throw an exception if a condition occurs.
 # To throw (or raise) an exception, use the raise keyword..
 
-n = -1
+# n = -1
 
-if n < 0:
-    raise Exception('No numbers below zero')
-
-
-# The raise keyword is used to raise an exception.
-# You can define what kind of error to raise, and the text to print to the user
-# Raise a TypeError if x is not an integer:
-m = "hello"
-
-if not type(m) is int:
-  raise TypeError("Only integers are allowed")
+# if n < 0:
+#     raise Exception('No numbers below zero')

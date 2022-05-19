@@ -9,12 +9,10 @@ from numpy import dtype
 
 # The try block will generate an exception, because x is not defined
 
-
-
-try:
-    print(x)
-except:
-    print('Variable x was not defined but the exception has been handled...')
+# try:
+#     print(x)
+# except:
+#     print('Variable x was not defined but the exception has been handled...')
 
 
 # Many Exceptions: You can define as many exception blocks as you want.
@@ -53,7 +51,7 @@ except:
 # Raise an exception: As a Python developer you can choose to throw an exception if a condition occurs.
 # To throw (or raise) an exception, use the raise keyword..
 
-# n = -1
+n = -1
 
-# if n < 0:
-#     raise Exception('No numbers below zero')
+if n < 0:
+    raise Exception('No numbers below zero')

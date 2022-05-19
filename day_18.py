@@ -1,3 +1,5 @@
+from numpy import dtype
+
 # Exception Handling in Python
 
 # The try block lets you test a block of code for errors.
@@ -6,9 +8,7 @@
 # The finally block lets you execute code, regardless of the result of the try- and except blocks.
 
 # The try block will generate an exception, because x is not defined
-from re import X
 
-from numpy import dtype
 
 
 try:

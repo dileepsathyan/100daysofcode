@@ -29,3 +29,13 @@ except:
     print('This is the except block..')
 else:
     print('This is else block which means there are no errors found...')
+
+
+
+# Finally: The finally block, if specified, will be executed regardless if the try block raises an error or not
+try:
+    print(x)
+except:
+    print('This is the except block because x was not defined..')
+finally:
+    print('This is finally block which will be exceuted no matter what')

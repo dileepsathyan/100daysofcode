@@ -6,6 +6,9 @@
 # The finally block lets you execute code, regardless of the result of the try- and except blocks.
 
 # The try block will generate an exception, because x is not defined
+from re import X
+
+
 try:
     print(x)
 except:
@@ -51,3 +54,10 @@ if n < 0:
     raise Exception('No numbers below zero')
 
 
+# The raise keyword is used to raise an exception.
+# You can define what kind of error to raise, and the text to print to the user
+# Raise a TypeError if x is not an integer:
+m = "hello"
+
+if not type(m) is int:
+  raise TypeError("Only integers are allowed")

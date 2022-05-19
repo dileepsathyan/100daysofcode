@@ -12,4 +12,11 @@ except:
     print('Variable x was not defined but the exception has been handled...')
 
 
-    
+# Many Exceptions: You can define as many exception blocks as you want.
+# e.g. if you want to execute a special block of code for a special kind of error:
+try:
+    print(y)
+except NameError:
+    print('y is not defined..')
+except:
+    print('some other error occured..')

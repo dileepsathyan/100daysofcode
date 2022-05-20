@@ -49,4 +49,4 @@ txt6 = 'This is Mr. {0} from {country_name}. {0} has won many awards in the last
 
 txt7 = 'It costs {:.2f} dollars'
 val = 12.3
-# print(txt7.format(val))
+print(txt7.format(val))

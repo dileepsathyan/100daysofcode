@@ -39,8 +39,12 @@ txt5 = 'I want to buy a {item} from {shop_name} for my {relation}'
 
 
 
+# Indexing also helps in referring the same variable more than once in a string.
+txt6 = ''
+
+
 # Format the numbers in a string
 
-txt6 = 'It costs {:.2f} dollars'
+txt7 = 'It costs {:.2f} dollars'
 val = 12.3
-# print(txt6.format(val))
+# print(txt7.format(val))

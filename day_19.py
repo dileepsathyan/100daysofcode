@@ -26,6 +26,7 @@ bought = '5 Lakhs'
 sold = '4.5 Lakhs'
 # print(txt3.format(quantity, bought, sold))
 
+
 # The order of the variables you parse into the format method can be customised as per the indexes in the text string.
 txt4 = 'I bought {2} cars at {0} rupees each but I had to sell them for {1} rupees after few years...'
 # print(txt4.format(bought, sold, quantity))
@@ -34,7 +35,7 @@ txt4 = 'I bought {2} cars at {0} rupees each but I had to sell them for {1} rupe
 
 # Explicit names in the variables to assign values
 txt5 = 'I want to buy a {item} from {shop_name} for my {relation}'
-print()
+# print(txt5.format(item='TOY CAR', shop_name= 'WALMART', relation='SON'))
 
 
 
@@ -42,4 +43,4 @@ print()
 
 txt6 = 'It costs {:.2f} dollars'
 val = 12.3
-print(txt6.format(val))
+# print(txt6.format(val))

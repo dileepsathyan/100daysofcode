@@ -40,7 +40,9 @@ txt5 = 'I want to buy a {item} from {shop_name} for my {relation}'
 
 
 # Indexing also helps in referring the same variable more than once in a string.
-txt6 = ''
+txt6 = 'This is Mr. {0} from {country_name}. {0} has won many awards!'
+print(txt6.format('Rahman', country_name='India'))
+
 
 
 # Format the numbers in a string

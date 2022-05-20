@@ -34,3 +34,6 @@ txt4 = 'I bought {2} cars at {0} rupees each but I had to sell them for {1} rupe
 
 # Format the numbers in a string
 
+txt5 = 'It costs {:.2f} dollars'
+val = 12.3
+print(txt5.format(val))

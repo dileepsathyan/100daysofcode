@@ -32,3 +32,5 @@ txt4 = 'I bought {2} cars at {0} rupees each but I had to sell them for {1} rupe
 
 
 
+# Format the numbers in a string
+

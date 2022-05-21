@@ -35,3 +35,9 @@ while l < 5:
     l += 1
 else:
     print('l is no longer less than 5')
+
+
+
+# For loops
+# A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+

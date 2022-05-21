@@ -2,10 +2,10 @@
 
 # A while loop executes a set of statements as long as a condition is true.
 # The while loop requires relevant variables to be ready, in the below example we need to define an indexing variable, i, which we set to 1 intially.
-# i = 1
-# while i <= 5:
-#     print(i)
-#     i += 1
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
 
 
 
@@ -104,8 +104,13 @@
 
 # A nested loop is a loop inside a loop.
 # The "inner loop" will be executed one time for each iteration of the "outer loop"
-qty = [3, 5]
-item = ['car', 'fruits', 'house', 'persons']
-for q in qty:
-    for i in item:
-        print(q, i)
+# qty = [3, 5]
+# item = ['car', 'fruits', 'house', 'persons']
+# for q in qty:
+#     for i in item:
+#         print(q, i)
+
+
+# for loops cannot be empty, but if you for some reason have a for loop with no content, put in the pass statement to avoid getting an error.
+# for i in range(6):
+#     pass

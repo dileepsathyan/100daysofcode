@@ -64,3 +64,9 @@
 
 
 
+# Continue statement stops the current iteration and continues the next one
+# fruits = ['apple', 'banana', 'guava']
+# for i in fruits:
+#     if i == 'banana':
+#         continue
+#     print(i)

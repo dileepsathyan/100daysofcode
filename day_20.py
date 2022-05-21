@@ -102,3 +102,10 @@
 #     print(i)
 
 
+# A nested loop is a loop inside a loop.
+# The "inner loop" will be executed one time for each iteration of the "outer loop"
+qty = [3, 5]
+item = ['car', 'fruits', 'house', 'persons']
+for q in qty:
+    for i in item:
+        print(q, i)

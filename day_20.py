@@ -26,3 +26,12 @@ while k < 5:
     if k == 4:
         continue
     print(k)
+
+
+# Else statement can help run a block of code when a condition is no longer true.
+l = 1
+while l < 5:
+    print(l)
+    l += 1
+else:
+    print('l is no longer less than 5')

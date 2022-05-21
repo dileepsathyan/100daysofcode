@@ -19,3 +19,10 @@ while j < 15:
 
 
 
+# Continue statement helps stop the current iteration and continue with the next one.
+k = 0
+while k < 5:
+    k += 1
+    if k == 4:
+        continue
+    print(k)

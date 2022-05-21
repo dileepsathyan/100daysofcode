@@ -47,9 +47,20 @@
 #     print(i)
 
 
+
 # Looping through a string
-word = 'apples'
-for i in word:
-    print(i)
+# word = 'apples'
+# for i in word:
+#     print(i)
+
+
+
+# Break statement in for loops
+# fruits = ['apple', 'banana', 'guava']
+# for i in fruits:
+#     print(i)
+#     if i == 'banana':
+#         break
+
 
 

@@ -70,3 +70,19 @@
 #     if i == 'banana':
 #         continue
 #     print(i)
+
+
+
+# range() functions is used to loop through a set of code a specified number of times.
+# for i in range(6):
+#     print(i)
+
+
+# Use the start parameter in range() function:
+# for i in range(2,6):
+#     print(i)
+
+
+# Use the increment sequence constomiser in the range() function.
+for i in range(1, 9, 2):
+    print(i)

@@ -41,6 +41,15 @@
 # For loops
 # A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
 
-fruits = ['apple', 'banana', 'guava']
-for i in fruits:
+# Looping through a list
+# fruits = ['apple', 'banana', 'guava']
+# for i in fruits:
+#     print(i)
+
+
+# Looping through a string
+word = 'apples'
+for i in word:
     print(i)
+
+

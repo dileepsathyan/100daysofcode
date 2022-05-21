@@ -84,5 +84,21 @@
 
 
 # Use the increment sequence constomiser in the range() function.
-for i in range(1, 9, 2):
-    print(i)
+# for i in range(1, 9, 2):
+#     print(i)
+
+
+# Else statement in a for loop is used to execute a block of code when the iteration is over.
+# for i in range(1, 6):
+#     print(i)
+# else:
+#     print('Printed from 1 to 5...')
+
+
+
+# Break function is used to stop the loop based on a condition.
+# for i in range(6):
+#     if i == 4: break
+#     print(i)
+
+

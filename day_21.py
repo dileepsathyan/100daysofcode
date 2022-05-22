@@ -28,3 +28,27 @@ str1 = 'I am from India'
 #     print('Word doesnt exist in the string...')
 
 
+# STRING SLICING
+
+# Slice the first 4 charactors
+# print(str1[:5])
+
+
+# Slice any part of the string
+# print(str1[5:-6])
+
+
+# Slice the last 5 charactors
+# print(str1[-5:])
+
+
+
+# STRING MODIFICATION
+
+# Convert to upper case
+# print(str1.upper())
+
+
+# Convert to lower case
+# print(str1.lower())
+

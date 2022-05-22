@@ -59,3 +59,10 @@ str2 = ' -Hello- '
 # Replace any character with another
 # print(str2.replace('-', '/'))
 
+
+# Split the string on a given delimiter
+# print(str1.split(' '))
+
+
+# String Concatenation
+print('How ' + 'are ' + 'you?')

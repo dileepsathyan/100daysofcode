@@ -13,3 +13,8 @@ str1 = 'I am from India'
 # Length of a string
 # print(len(str1))
 
+
+# Check the presence of a word in a string
+# print('am' in str1)
+
+

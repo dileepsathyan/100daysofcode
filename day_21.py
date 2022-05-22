@@ -52,3 +52,6 @@ str1 = 'I am from India'
 # Convert to lower case
 # print(str1.lower())
 
+# Remove whitespace
+str2 = ' -Hello- '
+print(str2.strip())

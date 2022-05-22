@@ -54,4 +54,8 @@ str1 = 'I am from India'
 
 # Remove whitespace
 str2 = ' -Hello- '
-print(str2.strip())
+# print(str2.strip())
+
+# Replace any character with another
+# print(str2.replace('-', '/'))
+

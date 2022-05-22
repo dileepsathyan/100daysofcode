@@ -2,7 +2,7 @@
 
 # Charactors in Strings can be called using their indexes.
 str1 = 'I am from India'
-# print(str1[2])
+print(str1[2])
 
 
 # Looping through strings

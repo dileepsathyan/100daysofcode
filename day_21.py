@@ -18,3 +18,8 @@ str1 = 'I am from India'
 # print('am' in str1)
 
 
+# Using IF condition in a string
+# if 'India' in str1:
+#     print('Match exists')
+
+

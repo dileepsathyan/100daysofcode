@@ -23,3 +23,8 @@ str1 = 'I am from India'
 #     print('Match exists')
 
 
+# Using NOT in string
+# if 'USA' not in str1:
+#     print('Word doesnt exist in the string...')
+
+

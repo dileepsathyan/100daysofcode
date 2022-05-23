@@ -2,22 +2,23 @@
 
 import mysql.connector
 
-mydb = mysql.connector.connect(
-                                host="localhost",
-                                user="root",
-                                password="password"
-                              )
+# mydb = mysql.connector.connect(
+#                                 host="localhost",
+#                                 user="root",
+#                                 password="password"
+#                               )
                               
 
 # Creating a new database
-mycursor = mydb.cursor()
+# mycursor = mydb.cursor()
 # mycursor.execute("CREATE DATABASE sample_db")
 
 
 # View Available Databases
-mycursor.execute("SHOW DATABASES")
-for x in mycursor:
-    print(x)
+# mycursor.execute("SHOW DATABASES")
+
+# for x in mycursor:
+#     print(x)
 
 
 # Connecting to the database while making the MySQL connection
@@ -30,3 +31,20 @@ for x in mycursor:
 
 
 
+# Creating a new table
+mydb = mysql.connector.connect(
+                                host="localhost",
+                                user="root",
+                                password="password",
+                                database='sample_db'
+                              )
+mycursor = mydb.cursor()
+
+mycursor.execute("CREATE TABLE customers (name VARCHAR(255), age TINYINT(255))")
+
+
+# View tables in a database
+mycursor.execute("SHOW TABLES")
+
+for x in mycursor:
+  print(x)

@@ -43,8 +43,11 @@ mycursor = mydb.cursor()
 mycursor.execute("CREATE TABLE customers (name VARCHAR(255), age TINYINT(255))")
 
 
+
 # View tables in a database
 mycursor.execute("SHOW TABLES")
 
 for x in mycursor:
-  print(x)
+    print(x)
+
+

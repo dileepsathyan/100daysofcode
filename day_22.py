@@ -20,3 +20,13 @@ for x in mycursor:
     print(x)
 
 
+# Connecting to the database while making the MySQL connection
+# mydb = mysql.connector.connect(
+#                                 host="localhost",
+#                                 user="root",
+#                                 password="password",
+#                                 database='sample_db'
+#                               )
+
+
+

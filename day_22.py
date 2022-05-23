@@ -40,14 +40,23 @@ mydb = mysql.connector.connect(
                               )
 mycursor = mydb.cursor()
 
-mycursor.execute("CREATE TABLE customers (name VARCHAR(255), age TINYINT(255))")
+# mycursor.execute("CREATE TABLE customers (name VARCHAR(255), age TINYINT(255))")
 
 
 
-# View tables in a database
-mycursor.execute("SHOW TABLES")
+# # View tables in a database
+# mycursor.execute("SHOW TABLES")
 
-for x in mycursor:
-    print(x)
+# for x in mycursor:
+#     print(x)
 
 
+# Inserting a record to the table
+
+sql = "INSERT INTO customers (name, age) VALUES (%s, %s)"
+val = ("Dileep", 31)
+mycursor.execute(sql, val)
+
+mydb.commit()
+
+print(mycursor.rowcount, "record inserted.")

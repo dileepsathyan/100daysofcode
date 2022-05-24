@@ -28,10 +28,26 @@ for x in myresult:
 
 # Executing a long sql query using Python
 
-qry = "SELECT name, age FROM customers WHERE name in ('Dileep', 'Sajana', 'Trinay') ORDER BY 2"
+qry1 = "SELECT name, age FROM customers WHERE name in ('Dileep', 'Sajana', 'Trinay') ORDER BY 2"
 
-mycursor.execute(qry)
-myresult = mycursor.fetchall()
+mycursor.execute(qry1)
+# mydb.commit()
 
-for x in myresult:
+myresult1 = mycursor.fetchall()
+
+for x in myresult1:
+    print(x)
+
+
+
+# DELETE statement
+
+qry2 = "DELETE FROM customers WHERE age = 30"
+
+mycursor.execute(qry2)
+# mydb.commit()
+
+myresult2 = mycursor.fetchall()
+
+for x in myresult2:
     print(x)

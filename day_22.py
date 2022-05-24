@@ -75,4 +75,4 @@ mycursor.executemany(sql, val)
 
 mydb.commit()
 
-print(mycursor.rowcount, "records were inserted.")
+print(mycursor.rowcount, "records were inserted..")

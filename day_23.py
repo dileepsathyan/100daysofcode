@@ -8,10 +8,16 @@ mydb = mysql.connector.connect(
                             )
 
 mycursor = mydb.cursor()
-mycursor.execute("SELECT * FROM CUSTOMERS")
 
-for x in mycursor:
+
+# SELECT statment
+mycursor.execute("SELECT * FROM CUSTOMERS")
+myresult = mycursor.fetchall()
+
+for x in myresult:
     print(x)
+
+
 
 
 

@@ -48,3 +48,11 @@ mydb.commit()
 print(mycursor.rowcount, 'record(s) deleted')
 
 
+
+# DROP a table: can be done by executing the below query
+qry3 = "DROP TABLE customers"
+
+
+# DROP a table only if it exists
+qry4 = "DROP TABLE IF EXISTS customers"
+

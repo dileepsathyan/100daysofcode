@@ -18,6 +18,12 @@ for x in myresult:
     print(x)
 
 
+# Customised SELECT statment
+mycursor.execute("SELECT age FROM CUSTOMERS WHERE name = 'Trinay'")
+myresult = mycursor.fetchall()
+
+for x in myresult:
+    print(x)
 
 
 

@@ -55,7 +55,7 @@ for x in mycursor:
 # Inserting a record to the table
 
 sql = "INSERT INTO customers (name, age) VALUES (%s, %s)"
-val = ("Dileep", 31)
+val = ("Dileep", 30)
 
 mycursor.execute(sql, val)
 

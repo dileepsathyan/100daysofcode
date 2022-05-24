@@ -11,11 +11,11 @@ mycursor = mydb.cursor()
 
 
 # SELECT statment
-mycursor.execute("SELECT * FROM CUSTOMERS")
-myresult1 = mycursor.fetchall()
+# mycursor.execute("SELECT * FROM CUSTOMERS")
+# myresult1 = mycursor.fetchall()
 
-for x in myresult1:
-    print(x)
+# for x in myresult1:
+#     print(x)
 
 
 # Customised SELECT statment
@@ -78,11 +78,11 @@ mycursor = mydb.cursor()
 
 
 # Lets join both tables using a simple join query.
-# qry6 = "SELECT c.name, r.relationship \
-#         FROM customers c\
-#         JOIN relation r ON c.age = r.age"
-# mycursor.execute(qry6)
+qry6 = "SELECT c.name, r.relationship \
+        FROM customers c\
+        JOIN relation r ON c.age = r.age"
+mycursor.execute(qry6)
 
-# myresult6 = mycursor.fetchall()
-# for x in myresult6:
-#     print(x)
+myresult6 = mycursor.fetchall()
+for x in myresult6:
+    print(x)

@@ -40,11 +40,11 @@ for x in myresult3:
 
 
 # DELETE statement
+# commit() function commits the changes in the actual db. If commit() is not called, the changes wont reflect in the db.
 
-qry2 = "DELETE FROM customers WHERE age = 30"
-
+qry2 = "DELETE FROM sample_db.customers WHERE age = 30"
 mycursor.execute(qry2)
-myresult4 = mycursor.fetchall()
+mydb.commit()
+print(mycursor.rowcount, 'record(s) deleted')
 
-for i in myresult4:
-    print(i)
+

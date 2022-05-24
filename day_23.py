@@ -12,3 +12,6 @@ mycursor.execute("SELECT * FROM CUSTOMERS")
 
 for x in mycursor:
     print(x)
+
+
+

@@ -26,4 +26,12 @@ for x in myresult:
     print(x)
 
 
+# Executing a long sql query using Python
 
+qry = "SELECT name, age FROM customers WHERE name in ('Dileep', 'Sajana', 'Trinay') ORDER BY 2"
+
+mycursor.execute(qry)
+myresult = mycursor.fetchall()
+
+for x in myresult:
+    print(x)

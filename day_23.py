@@ -12,17 +12,17 @@ mycursor = mydb.cursor()
 
 # SELECT statment
 mycursor.execute("SELECT * FROM CUSTOMERS")
-myresult = mycursor.fetchall()
+myresult1 = mycursor.fetchall()
 
-for x in myresult:
+for x in myresult1:
     print(x)
 
 
 # Customised SELECT statment
 mycursor.execute("SELECT age FROM CUSTOMERS WHERE name = 'Trinay'")
-myresult = mycursor.fetchall()
+myresult2 = mycursor.fetchall()
 
-for x in myresult:
+for x in myresult2:
     print(x)
 
 
@@ -31,11 +31,10 @@ for x in myresult:
 qry1 = "SELECT name, age FROM customers WHERE name in ('Dileep', 'Sajana', 'Trinay') ORDER BY 2"
 
 mycursor.execute(qry1)
-# mydb.commit()
 
-myresult1 = mycursor.fetchall()
+myresult3 = mycursor.fetchall()
 
-for x in myresult1:
+for x in myresult3:
     print(x)
 
 
@@ -45,9 +44,7 @@ for x in myresult1:
 qry2 = "DELETE FROM customers WHERE age = 30"
 
 mycursor.execute(qry2)
-# mydb.commit()
+myresult4 = mycursor.fetchall()
 
-myresult2 = mycursor.fetchall()
-
-for x in myresult2:
-    print(x)
+for i in myresult4:
+    print(i)

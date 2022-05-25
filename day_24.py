@@ -7,10 +7,10 @@ mydb1 = mysql.connector.connect(
                             )
 
 qry1 = "SHOW DATABASES"
-with mydb1.cursor() as cursor:
-    cursor.execute(qry1)
-    for db in cursor:
-        print(db)
+# with mydb1.cursor() as cursor:
+#     cursor.execute(qry1)
+#     for db in cursor:
+#         print(db)``
 
 
 # Connecting to an existing database
@@ -85,10 +85,10 @@ vals = [(65, 'Grand Father'),
         (21, 'Cousin Brother'),
         (19, 'Cousing Sister')]
 
-# with mydb2.cursor() as cursor:
-#     cursor.executemany(qry6, vals)
+with mydb2.cursor() as cursor:
+    cursor.executemany(qry6, vals)
 
-#     cursor.execute("SELECT * FROM relation")
-#     result6 = cursor.fetchall()
-#     for x in result6:
-#         print(x)
+    cursor.execute("SELECT * FROM relation")
+    result6 = cursor.fetchall()
+    for x in result6:
+        print(x)

@@ -42,10 +42,23 @@ qry4 = """
         JOIN relation r
         ON c.age = r.age
         """
-with mydb2.cursor() as cursor:
-    cursor.execute(qry4)
-    for x in cursor:
-        print(x)
+# with mydb2.cursor() as cursor:
+#     cursor.execute(qry4)
+#     for x in cursor:
+#         print(x)
 
 
 # Difference between execute() and executemany()
+
+# .execute(): is used when we the values are small and can be written in the same SQL query.
+qry5 = """
+        INSERT INTO relation
+        VALUES  (65, 'Grand Father'),
+                (58, 'Grand Mother'),
+                (45, 'Uncle')
+        """
+with mydb2.cursor() as cursor:
+    cursor.execute(qry5)
+    result5 = cursor.fetchall()
+    for x in result5:
+        print(x)

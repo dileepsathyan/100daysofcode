@@ -29,11 +29,11 @@ qry2 = "SHOW TABLES"
 
 # Describing a table
 qry3 = "DESCRIBE relation"
-# with mydb2.cursor() as cursor:
-#     cursor.execute(qry3)
-#     result2 = cursor.fetchall()
-#     for field in result2:
-#         print(field)
+with mydb2.cursor() as cursor:
+    cursor.execute(qry3)
+    result2 = cursor.fetchall()
+    for field in result2:
+        print(field)
 
 
 qry4 = """

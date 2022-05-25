@@ -21,10 +21,10 @@ mydb2 = mysql.connector.connect(
                             database='sample_db'
                         )
 qry2 = "SHOW TABLES"
-# with mydb2.cursor() as cursor:
-#     cursor.execute(qry2)
-#     for tbl_name in cursor:
-#         print(tbl_name)
+with mydb2.cursor() as cursor:
+    cursor.execute(qry2)
+    for tbl_name in cursor:
+        print(tbl_name)
 
 
 # Describing a table

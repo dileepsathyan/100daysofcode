@@ -46,3 +46,6 @@ with mydb2.cursor() as cursor:
     cursor.execute(qry4)
     for x in cursor:
         print(x)
+
+
+# Difference between execute() and executemany()

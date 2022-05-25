@@ -7,10 +7,10 @@ mydb1 = mysql.connector.connect(
                             )
 
 qry1 = "SHOW DATABASES"
-# with mydb1.cursor() as cursor:
-#     cursor.execute(qry1)
-#     for db in cursor:
-#         print(db)``
+with mydb1.cursor() as cursor:
+    cursor.execute(qry1)
+    for db in cursor:
+        print(db)
 
 
 # Connecting to an existing database

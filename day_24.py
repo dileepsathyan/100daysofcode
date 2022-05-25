@@ -59,6 +59,8 @@ qry5 = """
         """
 with mydb2.cursor() as cursor:
     cursor.execute(qry5)
+    
+    cursor.execute("SELECT * FROM relation")
     result5 = cursor.fetchall()
     for x in result5:
         print(x)

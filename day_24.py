@@ -51,6 +51,7 @@ qry4 = """
 # Difference between execute() and executemany()
 
 # .execute(): is used when we the values are small and can be written in the same SQL query.
+# Note: I am not using .commit() so that these changes are temporary and wont be reflected in the db.
 qry5 = """
         INSERT INTO relation
         VALUES  (65, 'Grand Father'),

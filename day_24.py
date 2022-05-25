@@ -92,3 +92,4 @@ with mydb2.cursor() as cursor:
     result6 = cursor.fetchall()
     for x in result6:
         print(x)
+        

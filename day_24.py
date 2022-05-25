@@ -42,10 +42,10 @@ qry4 = """
         JOIN relation r
         ON c.age = r.age
         """
-# with mydb2.cursor() as cursor:
-#     cursor.execute(qry4)
-#     for x in cursor:
-#         print(x)
+with mydb2.cursor() as cursor:
+    cursor.execute(qry4)
+    for x in cursor:
+        print(x)
 
 
 # Difference between execute() and executemany()
@@ -58,13 +58,13 @@ qry5 = """
                 (58, 'Grand Mother'),
                 (45, 'Uncle')
         """
-# with mydb2.cursor() as cursor:
-#     cursor.execute(qry5)
+with mydb2.cursor() as cursor:
+    cursor.execute(qry5)
 
-#     cursor.execute("SELECT * FROM relation")
-#     result5 = cursor.fetchall()
-#     for x in result5:
-#         print(x)
+    cursor.execute("SELECT * FROM relation")
+    result5 = cursor.fetchall()
+    for x in result5:
+        print(x)
 
 
 

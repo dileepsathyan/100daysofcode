@@ -36,3 +36,13 @@ qry3 = "DESCRIBE relation"
 #         print(field)
 
 
+qry4 = """
+        SELECT CONCAT(c.name, ' ', c.age, ' ', r.relationship)
+        FROM customers c
+        JOIN relation r
+        ON c.age = r.age
+        """
+with mydb2.cursor() as cursor:
+    cursor.execute(qry4)
+    for x in cursor:
+        print(x)

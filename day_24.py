@@ -57,10 +57,37 @@ qry5 = """
                 (58, 'Grand Mother'),
                 (45, 'Uncle')
         """
+# with mydb2.cursor() as cursor:
+#     cursor.execute(qry5)
+
+#     cursor.execute("SELECT * FROM relation")
+#     result5 = cursor.fetchall()
+#     for x in result5:
+#         print(x)
+
+
+
+# .executemany(): is used when the list is huge and cant be put together in 1 query.
+
+qry6 = """
+        INSERT INTO relation 
+        (age, relationship)
+        VALUES  (%s, %s)
+        """
+
+vals = [(65, 'Grand Father'),
+        (58, 'Grand Mother'),
+        (45, 'Uncle'),
+        (40, 'Aunt'),
+        (15, 'Brother'),
+        (18, 'Sister'),
+        (21, 'Cousin Brother'),
+        (19, 'Cousing Sister')]
+
 with mydb2.cursor() as cursor:
-    cursor.execute(qry5)
-    
+    cursor.executemany(qry6, vals)
+
     cursor.execute("SELECT * FROM relation")
-    result5 = cursor.fetchall()
-    for x in result5:
+    result6 = cursor.fetchall()
+    for x in result6:
         print(x)

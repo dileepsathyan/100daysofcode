@@ -6,8 +6,7 @@ mydb1 = mysql.connector.connect(
                             password='password'
                             )
 
-# qry1 = "SHOW DATABASES"
-
+qry1 = "SHOW DATABASES"
 # with mydb1.cursor() as cursor:
 #     cursor.execute(qry1)
 #     for db in cursor:
@@ -22,7 +21,6 @@ mydb2 = mysql.connector.connect(
                             database='sample_db'
                         )
 qry2 = "SHOW TABLES"
-
 # with mydb2.cursor() as cursor:
 #     cursor.execute(qry2)
 #     for tbl_name in cursor:
@@ -31,9 +29,10 @@ qry2 = "SHOW TABLES"
 
 # Describing a table
 qry3 = "DESCRIBE relation"
+# with mydb2.cursor() as cursor:
+#     cursor.execute(qry3)
+#     result2 = cursor.fetchall()
+#     for field in result2:
+#         print(field)
 
-with mydb2.cursor() as cursor:
-    cursor.execute(qry3)
-    result2 = cursor.fetchall()
-    for field in result2:
-        print(field)
+

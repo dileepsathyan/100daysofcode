@@ -84,10 +84,10 @@ vals = [(65, 'Grand Father'),
         (21, 'Cousin Brother'),
         (19, 'Cousing Sister')]
 
-with mydb2.cursor() as cursor:
-    cursor.executemany(qry6, vals)
+# with mydb2.cursor() as cursor:
+#     cursor.executemany(qry6, vals)
 
-    cursor.execute("SELECT * FROM relation")
-    result6 = cursor.fetchall()
-    for x in result6:
-        print(x)
+#     cursor.execute("SELECT * FROM relation")
+#     result6 = cursor.fetchall()
+#     for x in result6:
+#         print(x)

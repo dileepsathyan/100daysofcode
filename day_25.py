@@ -14,24 +14,24 @@ y = np.array([4, 7, 10, 8, 12, 11, 13])
 
 
 # Create a linear regression model and fit it using the existing data.
-model = LinearRegression()
-model.fit(x, y)
+model1 = LinearRegression()
+model1.fit(x, y)
 
 
 # Once the model is fit, we can get the results such as R-Squared value, Intercept & Co-efficients
 
 # Find the R-Squared value
-r_sq = model.score(x, y)
-print(f"R-Squared Value : {r_sq}")
+r_sq1 = model1.score(x, y)
+print(f"R-Squared Value : {r_sq1}")
 
 
 # Find the Intercept
-interc_val = model.intercept_
+interc_val = model1.intercept_
 print(f"Intercept Value : {interc_val}")
 
 
 # Find the Slope or Co-efficient value
-slope = model.coef_
+slope = model1.coef_
 print(f"Slope or Co-eff Value : {slope}")
 
 
@@ -48,3 +48,10 @@ q = np.array([4, 7, 10, 8, 12, 11, 13])
 print(p)
 print(q)
 
+model2 = LinearRegression()
+model2.fit(p, q)
+
+r_sq2 = model2.score(p, q)
+print(f"R-Squared Value : {r_sq2}")
+print(f"Intercept Value : {model2.intercept_}")
+print(f"Slope or Co-eff Value : {model2.coef_}")

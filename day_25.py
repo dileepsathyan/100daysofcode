@@ -46,7 +46,7 @@ print('###################')
 
 # In case the response variable is 2-D, we will get the Intercept also as an array. Lets verify that in the below example by making both input and response as 2-D.
 p = np.array([21, 24, 27, 30, 33, 36, 39]).reshape((-1, 1))
-q = np.array([4, 7, 10, 8, 12, 11, 13])
+q = np.array([4, 7, 10, 8, 12, 11, 13]).reshape((-1, 1))
 print(p)
 print(q)
 
@@ -57,6 +57,8 @@ r_sq2 = model2.score(p, q)
 print(f"R-Squared Value : {r_sq2}")
 print(f"Intercept Value : {model2.intercept_}")
 print(f"Slope or Co-eff Value : {model2.coef_}")
+
+# In both cases, we got the similar values as result but this time we notice the Intercept also as an array..
 
 
 

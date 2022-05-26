@@ -9,8 +9,8 @@ from sklearn.linear_model import LinearRegression
 
 x = np.array([21, 24, 27, 30, 33, 36, 39]).reshape((-1, 1))
 y = np.array([4, 7, 10, 8, 12, 11, 13])
-# print(x)
-# print(y)
+print(x)
+print(y)
 
 
 # Create a linear regression model and fit it using the existing data.
@@ -34,6 +34,8 @@ print(f"Intercept Value : {interc_val}")
 slope = model1.coef_
 print(f"Slope or Co-eff Value : {slope}")
 
+
+print('###################')
 
 # Understanding the results:
 

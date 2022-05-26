@@ -34,4 +34,9 @@ print(f"Intercept Value : {interc_val}")
 slope = model.coef_
 print(f"Slope or Co-eff Value : {slope}")
 
+
 # Understanding the results:
+
+# Intercept of -3.928 is the y value when the x is zero.
+# Slope / co-eff value represents the y value increases by 0.44 units for 1 unit increase in x value.
+

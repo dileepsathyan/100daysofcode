@@ -14,20 +14,20 @@ print(y)
 
 
 # Create a linear regression model and fit it using the existing data.
-model1 = LinearRegression()
-model1.fit(x, y)
+# model1 = LinearRegression()
+# model1.fit(x, y)
 
 
 # Once the model is fit, we can get the results such as R-Squared value, Intercept & Co-efficients
 
 # Find the R-Squared value
-r_sq1 = model1.score(x, y)
-print(f"R-Squared Value : {r_sq1}")
+# r_sq1 = model1.score(x, y)
+# print(f"R-Squared Value : {r_sq1}")
 
 
 # Find the Intercept
-interc_val = model1.intercept_
-print(f"Intercept Value : {interc_val}")
+# interc_val = model1.intercept_
+# print(f"Intercept Value : {interc_val}")
 
 
 # Find the Slope or Co-efficient value

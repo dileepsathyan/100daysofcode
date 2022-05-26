@@ -66,5 +66,14 @@ print(f"Slope or Co-eff Value : {model2.coef_}")
 
 # Once we have a satisfactory model, we can use it for predicting the response for a new set of regressors using .predict() method.
 
-predicted_y = model1.precict(x)
-print(f"Predcited y values for 1-D x-variables: {predicted_y}")
+predicted_y = model1.predict(x)
+print(f"Predcited 1-D y response are: {predicted_y}")
+
+
+predicted_q = model2.predict(p)
+print(f"Predcited 2-D q response are: {predicted_q}")
+
+
+# Verifying the intercepts & slopes from the model.
+pred_q = model2.intercept_ + (model2.coef_ * p)
+print(f"Verifying the above reults here: {pred_q}")

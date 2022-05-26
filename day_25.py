@@ -9,33 +9,33 @@ from sklearn.linear_model import LinearRegression
 
 x = np.array([21, 24, 27, 30, 33, 36, 39]).reshape((-1, 1))
 y = np.array([4, 7, 10, 8, 12, 11, 13])
-print(x)
-print(y)
+# print(x)
+# print(y)
 
 
 # Create a linear regression model and fit it using the existing data.
-# model1 = LinearRegression()
-# model1.fit(x, y)
+model1 = LinearRegression()
+model1.fit(x, y)
 
 
 # Once the model is fit, we can get the results such as R-Squared value, Intercept & Co-efficients
 
 # Find the R-Squared value
-# r_sq1 = model1.score(x, y)
-# print(f"R-Squared Value : {r_sq1}")
+r_sq1 = model1.score(x, y)
+print(f"R-Squared Value : {r_sq1}")
 
 
 # Find the Intercept
-# interc_val = model1.intercept_
-# print(f"Intercept Value : {interc_val}")
+interc_val = model1.intercept_
+print(f"Intercept Value : {interc_val}")
 
 
 # Find the Slope or Co-efficient value
-# slope = model1.coef_
-# print(f"Slope or Co-eff Value : {slope}")
+slope = model1.coef_
+print(f"Slope or Co-eff Value : {slope}")
 
 
-# print('###################')
+print('###################')
 
 # Understanding the results:
 
@@ -47,16 +47,16 @@ print(y)
 # In case the response variable is 2-D, we will get the Intercept also as an array. Lets verify that in the below example by making both input and response as 2-D.
 p = np.array([21, 24, 27, 30, 33, 36, 39]).reshape((-1, 1))
 q = np.array([4, 7, 10, 8, 12, 11, 13]).reshape((-1, 1))
-# print(p)
-# print(q)
+print(p)
+print(q)
 
-# model2 = LinearRegression()
-# model2.fit(p, q)
+model2 = LinearRegression()
+model2.fit(p, q)
 
-# r_sq2 = model2.score(p, q)
-# print(f"R-Squared Value : {r_sq2}")
-# print(f"Intercept Value : {model2.intercept_}")
-# print(f"Slope or Co-eff Value : {model2.coef_}")
+r_sq2 = model2.score(p, q)
+print(f"R-Squared Value : {r_sq2}")
+print(f"Intercept Value : {model2.intercept_}")
+print(f"Slope or Co-eff Value : {model2.coef_}")
 
 # In both cases, we got the similar values as result but this time we notice the Intercept also as an array..
 
@@ -66,14 +66,14 @@ q = np.array([4, 7, 10, 8, 12, 11, 13]).reshape((-1, 1))
 
 # Once we have a satisfactory model, we can use it for predicting the response for a new set of regressors using .predict() method.
 
-# predicted_y = model1.predict(x)
-# print(f"Predcited 1-D y response are: {predicted_y}")
+predicted_y = model1.predict(x)
+print(f"Predcited 1-D y response are: {predicted_y}")
 
 
-# predicted_q = model2.predict(p)
-# print(f"Predcited 2-D q response are: {predicted_q}")
+predicted_q = model2.predict(p)
+print(f"Predcited 2-D q response are: {predicted_q}")
 
 
 # Verifying the intercepts & slopes from the model.
-# pred_q = model2.intercept_ + (model2.coef_ * p)
-# print(f"Verifying the above reults here: {pred_q}")
+pred_q = model2.intercept_ + (model2.coef_ * p)
+print(f"Verifying the above reults here: {pred_q}")

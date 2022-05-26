@@ -66,3 +66,5 @@ print(f"Slope or Co-eff Value : {model2.coef_}")
 
 # Once we have a satisfactory model, we can use it for predicting the response for a new set of regressors using .predict() method.
 
+predicted_y = model1.precict(x)
+print(f"Predcited y values for 1-D x-variables: {predicted_y}")

@@ -62,7 +62,7 @@ print(f"Slope or Co-eff Value : {model2.coef_}")
 
 
 
-# Predicting the response.
+# PREDICTING THE RESPONSE.
 
 # Once we have a satisfactory model, we can use it for predicting the response for a new set of regressors using .predict() method.
 

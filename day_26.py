@@ -42,5 +42,5 @@ print(predicted_y)
 
 
 # Verifying the intercepts & slopes from the model.
-pred_y = model1.intercept_ + (model1.coef_ * x)
+pred_y = model1.intercept_ + np.sum(model1.coef_ * x, axis=1)
 print(f"Verifying the above reults here: {pred_y}")

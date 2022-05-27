@@ -54,3 +54,12 @@ print(f"Verifying the above reults here: {pred_y}")
 
 from sklearn.preprocessing import PolynomialFeatures
 
+
+# Create a transformer to convert the x vars to a 2nd degree polynomial
+transformer  = PolynomialFeatures(degree=2, include_bias=False)
+
+
+# Use the transformer and process the explanatory variables.
+poly_x = transformer.transform(x)
+
+print()

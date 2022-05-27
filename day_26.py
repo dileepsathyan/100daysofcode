@@ -49,6 +49,8 @@ print(f"Verifying the above reults here: {pred_y}")
 
 # POLYNOMIAL REGRESSION
 
-from sklearn.preprocessing import PolynomialFeatures
+# Polynomial regression is very similar to Linear Regression above except the preprocessing required on for the explanatory variable. 
+# In this case, we need to convert the x variable to a higher degree polynomial before fitting to a model. Scikit Learn library has the inbuilt feature to do this conversion.
 
+from sklearn.preprocessing import PolynomialFeatures
 

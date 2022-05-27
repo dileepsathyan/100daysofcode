@@ -1,4 +1,3 @@
-from pyexpat import model
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -13,16 +12,16 @@ from sklearn.linear_model import LinearRegression
 # Load the sample dataset
 file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/Fish.csv")
 
+
 # Prepare the dataset
 file = file[file['Species']=='Bream']
 print(file.head())
+
 
 # Define the variables
 x = file[['Length', 'Height', 'Width']]
 y = file['Weight']
 
-# print(x)
-# print(y)
 
 # Create a model and fit the model.
 model1 = LinearRegression()

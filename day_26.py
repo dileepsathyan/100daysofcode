@@ -15,5 +15,11 @@ file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/Fish.csv")
 # Prepare the dataset
 file = file[file['Species']=='Bream']
 print(file.head())
-print(file.info())
+
+# Define the variables
+x = file[['Length', 'Height', 'Width']]
+y = file['Weight']
+
+# print(x)
+# print(y)
 

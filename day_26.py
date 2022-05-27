@@ -79,9 +79,11 @@ print(f'Intercept value: {model2.intercept_}')
 
 
 # Predict the response values
-pred2_y = model2.predict(poly_x)
-print(pred2_y)
+predicted2_y = model2.predict(poly_x)
+print(predicted2_y)
 
 
 
 # Verifiying the predicted values.
+pred2_y = model2.intercept_ + np.sum(model2.coef_ * poly_x, axis=1)
+print(f"Verifying the above reults here: {pred2_y}")

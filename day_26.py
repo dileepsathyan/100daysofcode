@@ -68,5 +68,20 @@ print(poly_x)
 
 
 # Now, create a model and fit the values
-model2 = LinearRegression.fit(poly_x, y)
+model2 = LinearRegression().fit(poly_x, y)
 
+
+# Get the results: Slope, Intercept & Co-eff values
+r_sq2 = model2.score(poly_x, y)
+print(f'R-Squared value: {r_sq2}')
+print(f'Slope or Co-eff value: {model2.coef_}')
+print(f'Intercept value: {model2.intercept_}')
+
+
+# Predict the response values
+pred2_y = model2.predict(poly_x)
+print(pred2_y)
+
+
+
+# Verifiying the predicted values.

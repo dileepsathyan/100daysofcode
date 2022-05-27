@@ -20,30 +20,30 @@ print(file.head())
 
 
 # Define the variables
-x = file[['Length', 'Height', 'Width']]
-y = file['Weight']
+# x = file[['Length', 'Height', 'Width']]
+# y = file['Weight']
 
 
 # Create a model and fit the model.
-model1 = LinearRegression()
-model1.fit(x, y)
+# model1 = LinearRegression()
+# model1.fit(x, y)
 
 
 # Get the results: Slope, Intercept & Co-eff values
-r_sq1 = model1.score(x, y)
-print(f'R-Squared value: {r_sq1}')
-print(f'Slope or Co-eff value: {model1.coef_}')
-print(f'Intercept value: {model1.intercept_}')
+# r_sq1 = model1.score(x, y)
+# print(f'R-Squared value: {r_sq1}')
+# print(f'Slope or Co-eff value: {model1.coef_}')
+# print(f'Intercept value: {model1.intercept_}')
 
 
 # Predict the y_values
-predicted_y = model1.predict(x)
-print(predicted_y)
+# predicted_y = model1.predict(x)
+# print(predicted_y)
 
 
 # Verifying the intercepts & slopes from the model.
-pred_y = model1.intercept_ + np.sum(model1.coef_ * x, axis=1)
-print(f"Verifying the above reults here: {pred_y}")
+# pred_y = model1.intercept_ + np.sum(model1.coef_ * x, axis=1)
+# print(f"Verifying the above reults here: {pred_y}")
 
 
 
@@ -56,34 +56,34 @@ from sklearn.preprocessing import PolynomialFeatures
 
 
 # Create a transformer to convert the x vars to a 2nd degree polynomial
-transformer  = PolynomialFeatures(degree=2, include_bias=False)
+
+# transformer  = PolynomialFeatures(degree=2, include_bias=False)
 
 
 # Use the transformer and process the explanatory variables.
 # This method also takes the input array and effectively does the same thing as .fit() and .transform() called in that order. It also returns the modified array with the actual values and their squared values.
 
-poly_x = transformer.fit_transform(x)
-
-print(poly_x)
+# poly_x = transformer.fit_transform(x)
+# print(poly_x)
 
 
 # Now, create a model and fit the values
-model2 = LinearRegression().fit(poly_x, y)
+# model2 = LinearRegression().fit(poly_x, y)
 
 
 # Get the results: Slope, Intercept & Co-eff values
-r_sq2 = model2.score(poly_x, y)
-print(f'R-Squared value: {r_sq2}')
-print(f'Slope or Co-eff value: {model2.coef_}')
-print(f'Intercept value: {model2.intercept_}')
+# r_sq2 = model2.score(poly_x, y)
+# print(f'R-Squared value: {r_sq2}')
+# print(f'Slope or Co-eff value: {model2.coef_}')
+# print(f'Intercept value: {model2.intercept_}')
 
 
 # Predict the response values
-predicted2_y = model2.predict(poly_x)
-print(predicted2_y)
+# predicted2_y = model2.predict(poly_x)
+# print(predicted2_y)
 
 
 
 # Verifiying the predicted values.
-pred2_y = model2.intercept_ + np.sum(model2.coef_ * poly_x, axis=1)
-print(f"Verifying the above reults here: {pred2_y}")
+# pred2_y = model2.intercept_ + np.sum(model2.coef_ * poly_x, axis=1)
+# print(f"Verifying the above reults here: {pred2_y}")

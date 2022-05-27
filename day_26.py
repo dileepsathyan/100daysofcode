@@ -23,3 +23,7 @@ y = file['Weight']
 # print(x)
 # print(y)
 
+# Create a model and fit the model.
+model1 = LinearRegression()
+model1.fit(x, y)
+

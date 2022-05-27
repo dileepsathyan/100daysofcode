@@ -60,6 +60,13 @@ transformer  = PolynomialFeatures(degree=2, include_bias=False)
 
 
 # Use the transformer and process the explanatory variables.
-poly_x = transformer.transform(x)
+# This method also takes the input array and effectively does the same thing as .fit() and .transform() called in that order. It also returns the modified array with the actual values and their squared values.
 
-print()
+poly_x = transformer.fit_transform(x)
+
+print(poly_x)
+
+
+# Now, create a model and fit the values
+model2 = LinearRegression.fit(poly_x, y)
+

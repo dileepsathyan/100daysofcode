@@ -29,6 +29,7 @@ model1 = LinearRegression()
 model1.fit(x, y)
 
 
+# Print the Slope, Intercept & Co-eff values
 r_sq1 = model1.score(x, y)
 print(f'R-Squared value: {r_sq1}')
 print(f'Slope or Co-eff value: {model1.coef_}')

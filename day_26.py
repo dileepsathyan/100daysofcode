@@ -1,3 +1,4 @@
+from pyexpat import model
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -28,10 +29,18 @@ model1 = LinearRegression()
 model1.fit(x, y)
 
 
-# Print the Slope, Intercept & Co-eff values
+# Get the results: Slope, Intercept & Co-eff values
 r_sq1 = model1.score(x, y)
 print(f'R-Squared value: {r_sq1}')
 print(f'Slope or Co-eff value: {model1.coef_}')
 print(f'Intercept value: {model1.intercept_}')
 
 
+# Predict the y_values
+predicted_y = model1.predict(x)
+print(predicted_y)
+
+
+# Verifying the intercepts & slopes from the model.
+pred_y = model1.intercept_ + (model1.coef_ * x)
+print(f"Verifying the above reults here: {pred_y}")

@@ -1,3 +1,4 @@
+from pyexpat import model
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
@@ -26,4 +27,11 @@ y = file['Weight']
 # Create a model and fit the model.
 model1 = LinearRegression()
 model1.fit(x, y)
+
+
+r_sq1 = model1.score(x, y)
+print(f'R-Squared value: {r_sq1}')
+print(f'Slope or Co-eff value: {model1.coef_}')
+print(f'Intercept value: {model1.intercept_}')
+
 

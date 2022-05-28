@@ -24,7 +24,7 @@ results1 = model1.fit()
 # print(results1.summary())
 
 
-# print(f'R-squared value :{results1.rsquared}')
+print(f'R-squared value :{results1.rsquared}')
 print(f'Adjusted R-squared value :{results1.rsquared_adj}')
 print(f'Coefficients :{results1.params}')
 

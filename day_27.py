@@ -14,5 +14,3 @@ file = file[file['Species']=='Bream']
 x = file[['Length', 'Height', 'Width']]
 y = file['Weight']
 
-
-

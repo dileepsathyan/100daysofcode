@@ -30,7 +30,7 @@ results1 = model1.fit()
 
 
 # Predict the results: Method1: .fittedvalues
-# print(results1.fittedvalues)
+print(results1.fittedvalues)
 
 
 # Predict the results: Method2: .predict()

@@ -21,7 +21,7 @@ results1 = model1.fit()
 
 
 # Print the results
-# print(results1.summary())
+print(results1.summary())
 
 
 print(f'R-squared value :{results1.rsquared}')

@@ -16,8 +16,8 @@ y = file['Weight']
 
 
 # Now create a model and fit it to get the results
-model1 = sm.OLS(y, x)
-results1 = model1.fit()
+# model1 = sm.OLS(y, x)
+# results1 = model1.fit()
 
 
 # Print the results

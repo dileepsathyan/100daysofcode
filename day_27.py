@@ -34,4 +34,4 @@ print(results1.fittedvalues)
 
 
 # Predict the results: Method2: .predict()
-print(results1.predict(x))
+# print(results1.predict(x))

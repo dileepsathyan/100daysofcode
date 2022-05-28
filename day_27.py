@@ -14,3 +14,17 @@ file = file[file['Species']=='Bream']
 x = file[['Length', 'Height', 'Width']]
 y = file['Weight']
 
+
+# Now create a model and fit it to get the results
+model1 = sm.OLS(y, x)
+results1 = model1.fit()
+
+
+# Print the results
+# print(results1.summary())
+
+
+# print(f'R-squared value :{results1.rsquared}')
+# print(f'Adjusted R-squared value :{results1.rsquared_adj}')
+# print(f'Coefficients :{results1.params}')
+

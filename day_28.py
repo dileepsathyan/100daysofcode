@@ -17,3 +17,10 @@ from sklearn.linear_model import LogisticRegression
 file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/logistic_regression_dataset.csv")
 print(file.head(10))
 
+# The nature of the dependent variables differentiates regression and classification problems. Regression problems have continuous and usually unbounded outputs. An example is when you’re estimating the salary as a function of experience and education level. On the other hand, classification problems have discrete and finite outputs called classes or categories. For example, predicting if an employee is going to be promoted or not (true or false) is a classification problem.
+
+# There are two main types of classification problems:
+
+# 1. Binary or Binomial classification: exactly two classes to choose between (usually 0 and 1, true and false, or positive and negative)
+# 2. Multiclass or multinomial classification: three or more classes of the outputs to choose from.
+

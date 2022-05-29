@@ -1,3 +1,4 @@
+from pyexpat import model
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
@@ -46,16 +47,60 @@ file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/logistic_regr
 print(file.head(10))
 
 
-x = file[['Gender', 'Age', 'EstimatedSalary']]
+x = file[['Age']]
 y = file['Purchased']
 
 
 # Create a model and fit it.
 model1 = LogisticRegression(solver='liblinear', random_state=0)
-
+model1.fit(x, y)
 # random_state is an integer, an instance of numpy.RandomState, or None (default) that defines what pseudo-random number generator to use.
 # solver is a string ('liblinear' by default) that decides what solver to use for fitting the model. Other options are 'newton-cg', 'lbfgs', 'sag', and 'saga'.
     # 'liblinear' solver doesn’t work without regularization.
     # 'newton-cg', 'sag', 'saga', and 'lbfgs' don’t support L1 regularization.
     # 'saga' is the only solver that supports elastic-net regularization.
 
+# Get the attributes of the model
+
+# The attribute .classes_ represents the array of distinct values that y takes:
+# print(model1.classes_)
+
+# Print the intercept and slope
+# print(f'Intercept: {model1.intercept_}')
+# print(f'Slope: {model1.coef_}')
+
+
+# Predicting the reponses.
+# Once a model is defined, .predict_proba(), returns the matrix of probabilities that shows the predicted output is equal to zero or one:
+result1 = model1.predict_proba(x)
+# print(result1)
+
+# Interpreting the predicted values.
+# each row in the predicted matrix, corresponds to a single observation. The first column is the probability of the predicted output being zero, that is 1 - 𝑝(𝑥). The second column is the probability that the output is one, or 𝑝(𝑥).
+
+# We can get the actual predictions, based on the probability matrix and the values of 𝑝(𝑥), with .predict():
+pred1 = model1.predict(x)
+# print(pred1)
+
+
+# Print the accuracy of the model using .score()
+# print(model1.score(x, y))
+
+
+# Confusion matrix is usually better in comparing the results of the model.
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+
+
+cm = confusion_matrix(y, model1.predict(x))
+
+fig, ax = plt.subplots(figsize=(5, 5))
+ax.imshow(cm)
+ax.grid(False)
+ax.xaxis.set(ticks=(0, 1), ticklabels=('Predicted 0s', 'Predicted 1s'))
+ax.yaxis.set(ticks=(0, 1), ticklabels=('Actual 0s', 'Actual 1s'))
+ax.set_ylim(1.5, -0.5)
+for i in range(2):
+    for j in range(2):
+        ax.text(j, i, cm[i, j], ha='center', va='center', color='red')
+plt.show()

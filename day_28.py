@@ -13,10 +13,6 @@ from sklearn.linear_model import LogisticRegression
 # 2. Dependent variables, also called outputs or responses, depend on the independent variables.
 
 
-# Import the dataset which has flag for social_network_ads purchases across different users with their Gender, Age & Income distribution.
-file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/logistic_regression_dataset.csv")
-print(file.head(10))
-
 # The nature of the dependent variables differentiates regression and classification problems. Regression problems have continuous and usually unbounded outputs. An example is when you’re estimating the salary as a function of experience and education level. On the other hand, classification problems have discrete and finite outputs called classes or categories. For example, predicting if an employee is going to be promoted or not (true or false) is a classification problem.
 
 # There are two main types of classification problems:
@@ -39,3 +35,27 @@ print(file.head(10))
 # The 'negative predictive value' is the ratio of the number of true negatives to the sum of the numbers of true and false negatives.
 # The 'sensitivity' (aka recall or true positive rate) is the ratio of the number of true positives to the number of actual positives
 # The 'specificity' (or true negative rate) is the ratio of the number of true negatives to the number of actual negatives.
+
+
+# Single-variate logistic regression is the most straightforward case of logistic regression with only one independent variable (or feature).
+# Multi-variate logistic regression has more than one input variable.
+
+
+# Import the dataset which has flag for social_network_ads purchases across different users with their Gender, Age & Income distribution.
+file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/logistic_regression_dataset.csv")
+print(file.head(10))
+
+
+x = file[['Gender', 'Age', 'EstimatedSalary']]
+y = file['Purchased']
+
+
+# Create a model and fit it.
+model1 = LogisticRegression(solver='liblinear', random_state=0)
+
+# random_state is an integer, an instance of numpy.RandomState, or None (default) that defines what pseudo-random number generator to use.
+# solver is a string ('liblinear' by default) that decides what solver to use for fitting the model. Other options are 'newton-cg', 'lbfgs', 'sag', and 'saga'.
+    # 'liblinear' solver doesn’t work without regularization.
+    # 'newton-cg', 'sag', 'saga', and 'lbfgs' don’t support L1 regularization.
+    # 'saga' is the only solver that supports elastic-net regularization.
+

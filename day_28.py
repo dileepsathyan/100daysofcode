@@ -43,7 +43,7 @@ from sklearn.linear_model import LogisticRegression
 
 # Import the dataset which has flag for social_network_ads purchases across different users with their Gender, Age & Income distribution.
 file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/logistic_regression_dataset.csv")
-print(file.head(10))
+# print(file.head(10))
 
 
 x = file[['Age']]

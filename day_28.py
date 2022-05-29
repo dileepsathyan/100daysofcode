@@ -66,8 +66,8 @@ model1 = LogisticRegression(solver='liblinear', random_state=0)
 # print(model1.classes_)
 
 # Print the intercept and slope
-print(f'Intercept: {model1.intercept_}')
-print(f'Slope: {model1.coef_}')
+# print(f'Intercept: {model1.intercept_}')
+# print(f'Slope: {model1.coef_}')
 
 
 # Predicting the reponses.

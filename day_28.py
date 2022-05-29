@@ -79,12 +79,12 @@ print(result1)
 # each row in the predicted matrix, corresponds to a single observation. The first column is the probability of the predicted output being zero, that is 1 - 𝑝(𝑥). The second column is the probability that the output is one, or 𝑝(𝑥).
 
 # We can get the actual predictions, based on the probability matrix and the values of 𝑝(𝑥), with .predict():
-# pred1 = model1.predict(x)
-# print(pred1)
+pred1 = model1.predict(x)
+print(pred1)
 
 
 # Print the accuracy of the model using .score()
-# print(model1.score(x, y))
+print(model1.score(x, y))
 
 
 # Confusion matrix is usually better in comparing the results of the model.
@@ -92,15 +92,15 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 
 
-# cm = confusion_matrix(y, model1.predict(x))
+cm = confusion_matrix(y, model1.predict(x))
 
-# fig, ax = plt.subplots(figsize=(5, 5))
-# ax.imshow(cm)
-# ax.grid(False)
-# ax.xaxis.set(ticks=(0, 1), ticklabels=('Predicted 0s', 'Predicted 1s'))
-# ax.yaxis.set(ticks=(0, 1), ticklabels=('Actual 0s', 'Actual 1s'))
-# ax.set_ylim(1.5, -0.5)
-# for i in range(2):
-#     for j in range(2):
-#         ax.text(j, i, cm[i, j], ha='center', va='center', color='red')
-# plt.show()
+fig, ax = plt.subplots(figsize=(5, 5))
+ax.imshow(cm)
+ax.grid(False)
+ax.xaxis.set(ticks=(0, 1), ticklabels=('Predicted 0s', 'Predicted 1s'))
+ax.yaxis.set(ticks=(0, 1), ticklabels=('Actual 0s', 'Actual 1s'))
+ax.set_ylim(1.5, -0.5)
+for i in range(2):
+    for j in range(2):
+        ax.text(j, i, cm[i, j], ha='center', va='center', color='red')
+plt.show()

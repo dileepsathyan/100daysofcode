@@ -63,7 +63,7 @@ model1 = LogisticRegression(solver='liblinear', random_state=0)
 # Get the attributes of the model
 
 # The attribute .classes_ represents the array of distinct values that y takes:
-print(model1.classes_)
+# print(model1.classes_)
 
 # Print the intercept and slope
 print(f'Intercept: {model1.intercept_}')

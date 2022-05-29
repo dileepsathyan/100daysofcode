@@ -94,13 +94,13 @@ from sklearn.metrics import confusion_matrix
 
 cm = confusion_matrix(y, model1.predict(x))
 
-fig, ax = plt.subplots(figsize=(5, 5))
-ax.imshow(cm)
-ax.grid(False)
-ax.xaxis.set(ticks=(0, 1), ticklabels=('Predicted 0s', 'Predicted 1s'))
-ax.yaxis.set(ticks=(0, 1), ticklabels=('Actual 0s', 'Actual 1s'))
-ax.set_ylim(1.5, -0.5)
-for i in range(2):
-    for j in range(2):
-        ax.text(j, i, cm[i, j], ha='center', va='center', color='red')
-plt.show()
+# fig, ax = plt.subplots(figsize=(5, 5))
+# ax.imshow(cm)
+# ax.grid(False)
+# ax.xaxis.set(ticks=(0, 1), ticklabels=('Predicted 0s', 'Predicted 1s'))
+# ax.yaxis.set(ticks=(0, 1), ticklabels=('Actual 0s', 'Actual 1s'))
+# ax.set_ylim(1.5, -0.5)
+# for i in range(2):
+#     for j in range(2):
+#         ax.text(j, i, cm[i, j], ha='center', va='center', color='red')
+# plt.show()

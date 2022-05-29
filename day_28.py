@@ -66,14 +66,14 @@ model1.fit(x, y)
 print(model1.classes_)
 
 # Print the intercept and slope
-# print(f'Intercept: {model1.intercept_}')
-# print(f'Slope: {model1.coef_}')
+print(f'Intercept: {model1.intercept_}')
+print(f'Slope: {model1.coef_}')
 
 
 # Predicting the reponses.
 # Once a model is defined, .predict_proba(), returns the matrix of probabilities that shows the predicted output is equal to zero or one:
-# result1 = model1.predict_proba(x)
-# print(result1)
+result1 = model1.predict_proba(x)
+print(result1)
 
 # Interpreting the predicted values.
 # each row in the predicted matrix, corresponds to a single observation. The first column is the probability of the predicted output being zero, that is 1 - 𝑝(𝑥). The second column is the probability that the output is one, or 𝑝(𝑥).

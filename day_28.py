@@ -43,7 +43,7 @@ from sklearn.linear_model import LogisticRegression
 
 # Import the dataset which has flag for social_network_ads purchases across different users with their Gender, Age & Income distribution.
 file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/logistic_regression_dataset.csv")
-# print(file.head(10))
+print(file.head(10))
 
 
 x = file[['Age']]
@@ -52,7 +52,7 @@ y = file['Purchased']
 
 # Create a model and fit it.
 model1 = LogisticRegression(solver='liblinear', random_state=0)
-# model1.fit(x, y)
+model1.fit(x, y)
 
 # random_state is an integer, an instance of numpy.RandomState, or None (default) that defines what pseudo-random number generator to use.
 # solver is a string ('liblinear' by default) that decides what solver to use for fitting the model. Other options are 'newton-cg', 'lbfgs', 'sag', and 'saga'.
@@ -63,7 +63,7 @@ model1 = LogisticRegression(solver='liblinear', random_state=0)
 # Get the attributes of the model
 
 # The attribute .classes_ represents the array of distinct values that y takes:
-# print(model1.classes_)
+print(model1.classes_)
 
 # Print the intercept and slope
 # print(f'Intercept: {model1.intercept_}')

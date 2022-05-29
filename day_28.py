@@ -92,7 +92,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 
 
-cm = confusion_matrix(y, model1.predict(x))
+# cm = confusion_matrix(y, model1.predict(x))
 
 # fig, ax = plt.subplots(figsize=(5, 5))
 # ax.imshow(cm)

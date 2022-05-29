@@ -84,7 +84,7 @@ pred1 = model1.predict(x)
 
 
 # Print the accuracy of the model using .score()
-print(model1.score(x, y))
+# print(model1.score(x, y))
 
 
 # Confusion matrix is usually better in comparing the results of the model.

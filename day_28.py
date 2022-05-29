@@ -79,7 +79,7 @@ print(result1)
 # each row in the predicted matrix, corresponds to a single observation. The first column is the probability of the predicted output being zero, that is 1 - 𝑝(𝑥). The second column is the probability that the output is one, or 𝑝(𝑥).
 
 # We can get the actual predictions, based on the probability matrix and the values of 𝑝(𝑥), with .predict():
-pred1 = model1.predict(x)
+# pred1 = model1.predict(x)
 # print(pred1)
 
 

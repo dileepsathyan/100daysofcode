@@ -52,7 +52,7 @@ y = file['Purchased']
 
 # Create a model and fit it.
 model1 = LogisticRegression(solver='liblinear', random_state=0)
-model1.fit(x, y)
+# model1.fit(x, y)
 
 # random_state is an integer, an instance of numpy.RandomState, or None (default) that defines what pseudo-random number generator to use.
 # solver is a string ('liblinear' by default) that decides what solver to use for fitting the model. Other options are 'newton-cg', 'lbfgs', 'sag', and 'saga'.

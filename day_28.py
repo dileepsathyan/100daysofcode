@@ -14,8 +14,8 @@ from sklearn.linear_model import LogisticRegression
 
 
 # Import the dataset which has flag for social_network_ads purchases across different users with their Gender, Age & Income distribution.
-file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/logistic_regression_dataset.csv")
-print(file.head(10))
+# file = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/logistic_regression_dataset.csv")
+# print(file.head(10))
 
 # The nature of the dependent variables differentiates regression and classification problems. Regression problems have continuous and usually unbounded outputs. An example is when you’re estimating the salary as a function of experience and education level. On the other hand, classification problems have discrete and finite outputs called classes or categories. For example, predicting if an employee is going to be promoted or not (true or false) is a classification problem.
 

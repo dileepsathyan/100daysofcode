@@ -38,5 +38,8 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/car_price_predi
 CompanyName = df['CarName'].apply(lambda x: x.split(' ')[0])
 df.insert(3, 'CompanyName', CompanyName)
 df['CarName'] = df['CarName'].apply(lambda x: x.split(' ', maxsplit=1)[1:])
+df['CompanyName'] = df['CompanyName'].str.lower()
+print(df['CompanyName'].unique())
 
-print(df['CompanyName'])
+
+# The company names need some spelling corrections.

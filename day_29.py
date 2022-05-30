@@ -12,8 +12,8 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/kc_house_data.c
 
 
 # Have a look at the columns in the dataset.
-# print(df.columns)
+print(df.columns)
 
 
 # Make sure there are no NULL values.
-print(df.isnull)
+# print(df.isnull)

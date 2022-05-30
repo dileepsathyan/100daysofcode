@@ -43,3 +43,17 @@ print(df['CompanyName'].unique())
 
 
 # The company names need some spelling corrections.
+# Define a function that replaces the names with correct spelling.
+
+def correct_names(wrong_name, correct_name):
+    df['CompanyName'].replace(wrong_name, 
+                              correct_name, 
+                              inplace=True)
+
+correct_names('maxda', 'mazda')
+correct_names('porcshce', 'porsche')
+correct_names('toyouta', 'toyota')
+correct_names('vokswagen', 'volkswagen')
+correct_names('vw', 'volkswagen')
+
+print(df['CompanyName'].unique())

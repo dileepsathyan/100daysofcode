@@ -11,10 +11,17 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/car_price_predi
 # print(df.head())
 
 
-# Get the gist of the dataset
+
+# Do some EDA on the dataset before working on the models.
+# First, get the gist of the dataset
 # print(df.info())
 
 
 # View all the columns in the dataset
 # print(df.columns)
+
+
+# View the size of the dataset
+# print(df.shape)
+
 

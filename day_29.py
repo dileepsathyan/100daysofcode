@@ -35,3 +35,8 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/car_price_predi
 # print(df['CarName'].unique())
 
 
+CompanyName = df['CarName'].apply(lambda x: x.split(' ')[0])
+df.insert(3, 'CompanyName', CompanyName)
+df['CarName'] = df['CarName'].apply(lambda x: x.split(' ', maxsplit=1)[1:])
+
+print(df['CompanyName'])

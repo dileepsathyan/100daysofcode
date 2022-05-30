@@ -25,3 +25,13 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/car_price_predi
 # print(df.shape)
 
 
+# Get the complete stats of the dataset using .describe() method.
+# print(df.describe())
+
+
+
+# DATA CLEANING
+# CarName field in the dataset contains both the Company Name followed by the model name. Lets split them into 2 columns.
+# print(df['CarName'].unique())
+
+

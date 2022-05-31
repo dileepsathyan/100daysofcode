@@ -156,3 +156,34 @@ import seaborn as sns
 # plt.show()
 
 # hatchback and wagon type cars are cheaper in price than that of hardtop and convetible cars.
+
+
+#
+
+plt.figure(figsize=(12,6))
+
+plt.subplot(1,2,1)
+plt.title('Door Number Histogram')
+sns.countplot(df['doornumber'], palette=("plasma"))
+
+plt.subplot(1,2,2)
+plt.title('Door Number vs Price')
+sns.boxplot(x=df['doornumber'], y=df['price'], palette=("plasma"))
+
+plt.show()
+
+
+
+
+
+# plt.figure(figsize=(12,6))
+
+# plt.subplot(1,2,1)
+# plt.title('Aspiration Histogram')
+# sns.countplot(df['aspiration'], palette=("plasma"))
+
+# plt.subplot(1,2,2)
+# plt.title('Aspiration vs Price')
+# sns.boxplot(x=df['aspiration'], y=df['price'], palette=("plasma"))
+
+# plt.show()

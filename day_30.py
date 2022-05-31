@@ -95,13 +95,14 @@ correct_names('vw', 'volkswagen')
 # plt.show()
 
 
-print(df.columns)
 # Fuel Types
 # df['fueltype'].value_counts().plot(kind='barh')
 # plt.title('Fuel Types')
 # plt.show()
 
-#Car Types
-df['carbody'].value_counts().plot(kind='barh')
-plt.title('car Types')
-plt.show()
+
+# Car Types
+# df['carbody'].value_counts().plot(kind='barh')
+# plt.title('car Types')
+# plt.show()
+

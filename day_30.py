@@ -104,10 +104,25 @@ correct_names('vw', 'volkswagen')
 # Gas fuelled cars are considerably higher than that of Diesel fuelled cars.
 
 # Car Types
-df['carbody'].value_counts().plot(kind='barh')
-plt.title('Car Types')
-plt.show()
+# df['carbody'].value_counts().plot(kind='barh')
+# plt.title('Car Types')
+# plt.show()
 
 # Sedan, followed by hatchback, seems to lead the among all the car types.
 
 
+import seaborn as sns
+
+
+# Engine Type
+plt.figure(figsize=(12,6))
+
+plt.subplot(1,2,1)
+plt.title('Engine Type Histogram')
+sns.countplot(df['enginetype'], palette=("Blues_d"))
+
+plt.subplot(1,2,2)
+plt.title('Engine Type vs Price')
+sns.boxplot(x=df['enginetype'], y=df['price'], palette=("PuBuGn"))
+
+plt.show()

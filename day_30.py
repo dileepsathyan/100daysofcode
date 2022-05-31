@@ -158,32 +158,37 @@ import seaborn as sns
 # hatchback and wagon type cars are cheaper in price than that of hardtop and convetible cars.
 
 
-#
-
-plt.figure(figsize=(12,6))
-
-plt.subplot(1,2,1)
-plt.title('Door Number Histogram')
-sns.countplot(df['doornumber'], palette=("plasma"))
-
-plt.subplot(1,2,2)
-plt.title('Door Number vs Price')
-sns.boxplot(x=df['doornumber'], y=df['price'], palette=("plasma"))
-
-plt.show()
-
-
-
-
+# Check the number of doors and the price distribution.
 
 # plt.figure(figsize=(12,6))
 
 # plt.subplot(1,2,1)
-# plt.title('Aspiration Histogram')
-# sns.countplot(df['aspiration'], palette=("plasma"))
+# plt.title('Door Number')
+# sns.countplot(df['doornumber'], palette=("plasma"))
 
 # plt.subplot(1,2,2)
-# plt.title('Aspiration vs Price')
-# sns.boxplot(x=df['aspiration'], y=df['price'], palette=("plasma"))
+# plt.title('Door Number vs Price')
+# sns.boxplot(x=df['doornumber'], y=df['price'], palette=("plasma"))
 
 # plt.show()
+
+# Number of doors dont seem to have much impact on the price.
+
+
+
+
+# Check the aspiration and the price distribution.
+
+plt.figure(figsize=(12,6))
+
+plt.subplot(1,2,1)
+plt.title('Aspiration')
+sns.countplot(df['aspiration'], palette=("plasma"))
+
+plt.subplot(1,2,2)
+plt.title('Aspiration vs Price')
+sns.boxplot(x=df['aspiration'], y=df['price'], palette=("plasma"))
+
+plt.show()
+
+# Looks like aspiration with turbo has higher price range than std.

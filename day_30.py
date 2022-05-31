@@ -140,10 +140,19 @@ import seaborn as sns
 # Jaguar has the highest average price while the chevrolet is the cheapest among all car brands.
 
 
-# Check the average car price among all brands.
+# Check the average car price among fuel types.
 
 # fueltype_price = df.groupby(['fueltype'])['price'].mean().sort_values(ascending=False)
 # fueltype_price.plot(kind='barh')
 # plt.show()
 
 # Diesel fuelled cars are expensive than Gas fuelled cars, which resonates with the higher sales of Gas fuelled cars.
+
+
+# Check the average car price among car types.
+
+carbody_price = df.groupby(['carbody'])['price'].mean().sort_values(ascending=False)
+carbody_price.plot(kind='barh')
+plt.show()
+
+# hatchback and wagon type cars are cheaper in price than that of hardtop and convetible cars.

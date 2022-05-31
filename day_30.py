@@ -94,15 +94,20 @@ correct_names('vw', 'volkswagen')
 # plt.title('Company Names')
 # plt.show()
 
+# Toyota seems to be the favorite car for the customer base.
 
 # Fuel Types
 # df['fueltype'].value_counts().plot(kind='barh')
 # plt.title('Fuel Types')
 # plt.show()
 
+# Gas fuelled cars are considerably higher than that of Diesel fuelled cars.
 
 # Car Types
-# df['carbody'].value_counts().plot(kind='barh')
-# plt.title('car Types')
-# plt.show()
+df['carbody'].value_counts().plot(kind='barh')
+plt.title('Car Types')
+plt.show()
+
+# Sedan, followed by hatchback, seems to lead the among all the car types.
+
 

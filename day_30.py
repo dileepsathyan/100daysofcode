@@ -85,3 +85,23 @@ correct_names('vw', 'volkswagen')
 
 # There is huge difference between the mean and median of the distribution.
 # 90% of the values are below 22563 which shows high variance in the car prices when compared to the max price of 45400.
+
+
+# Visualizing the categorical values in the dataframe
+
+# CompanyName
+# df['CompanyName'].value_counts().plot(kind='barh')
+# plt.title('Company Names')
+# plt.show()
+
+
+print(df.columns)
+# Fuel Types
+# df['fueltype'].value_counts().plot(kind='barh')
+# plt.title('Fuel Types')
+# plt.show()
+
+#Car Types
+df['carbody'].value_counts().plot(kind='barh')
+plt.title('car Types')
+plt.show()

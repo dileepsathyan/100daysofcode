@@ -66,13 +66,18 @@ correct_names('vw', 'volkswagen')
 
 # Data Visualisation using matplotlib library
 
-plt.figure(figsize=(8,4))
+# plt.figure(figsize=(8,4))
 
-plt.subplot(1, 2, 1)
-plt.hist(df['price'], 10)
-plt.title('Car Price Distribution')
+# plt.subplot(1, 2, 1)
+# plt.hist(df['price'], 10)
+# plt.title('Car Price Distribution')
 
-plt.subplot(1, 2, 2)
-plt.boxplot(df['price'])
-plt.title('Car Price Spread')
-plt.show()
+# plt.subplot(1, 2, 2)
+# plt.boxplot(df['price'])
+# plt.title('Car Price Spread')
+# plt.show()
+
+
+# Check the values of car prices by percentiles
+# print(df['price'].describe(percentiles= [0.25, 0.5, 0.75, 0.9, 1]))
+

@@ -179,16 +179,16 @@ import seaborn as sns
 
 # Check the aspiration and the price distribution.
 
-plt.figure(figsize=(12,6))
+# plt.figure(figsize=(12,6))
 
-plt.subplot(1,2,1)
-plt.title('Aspiration')
-sns.countplot(df['aspiration'], palette=("plasma"))
+# plt.subplot(1,2,1)
+# plt.title('Aspiration')
+# sns.countplot(df['aspiration'], palette=("plasma"))
 
-plt.subplot(1,2,2)
-plt.title('Aspiration vs Price')
-sns.boxplot(x=df['aspiration'], y=df['price'], palette=("plasma"))
+# plt.subplot(1,2,2)
+# plt.title('Aspiration vs Price')
+# sns.boxplot(x=df['aspiration'], y=df['price'], palette=("plasma"))
 
-plt.show()
+# plt.show()
 
 # Looks like aspiration with turbo has higher price range than std.

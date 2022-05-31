@@ -77,7 +77,11 @@ correct_names('vw', 'volkswagen')
 # plt.title('Car Price Spread')
 # plt.show()
 
+# From the plot, its clear that most of the car prices are below 15,000 and the plot itself is right skewed.
+
 
 # Check the values of car prices by percentiles
 # print(df['price'].describe(percentiles= [0.25, 0.5, 0.75, 0.9, 1]))
 
+# There is huge difference between the mean and median of the distribution.
+# 90% of the values are below 22563 which shows high variance in the car prices when compared to the max price of 45400.

@@ -101,7 +101,7 @@ correct_names('vw', 'volkswagen')
 # plt.title('Fuel Types')
 # plt.show()
 
-# Gas fuelled cars are considerably higher than that of Diesel fuelled cars.
+# Gas fuelled cars are considerably higher in number than that of Diesel fuelled cars.
 
 # Car Types
 # df['carbody'].value_counts().plot(kind='barh')
@@ -142,6 +142,8 @@ import seaborn as sns
 
 # Check the average car price among all brands.
 
-fueltype_price = df.groupby(['fueltype'])['price'].mean().sort_values(ascending=False)
-fueltype_price.plot(kind='barh')
-plt.show()
+# fueltype_price = df.groupby(['fueltype'])['price'].mean().sort_values(ascending=False)
+# fueltype_price.plot(kind='barh')
+# plt.show()
+
+# Diesel fuelled cars are expensive than Gas fuelled cars, which resonates with the higher sales of Gas fuelled cars.

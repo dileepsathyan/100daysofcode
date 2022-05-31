@@ -151,8 +151,8 @@ import seaborn as sns
 
 # Check the average car price among car types.
 
-carbody_price = df.groupby(['carbody'])['price'].mean().sort_values(ascending=False)
-carbody_price.plot(kind='barh')
-plt.show()
+# carbody_price = df.groupby(['carbody'])['price'].mean().sort_values(ascending=False)
+# carbody_price.plot(kind='barh')
+# plt.show()
 
 # hatchback and wagon type cars are cheaper in price than that of hardtop and convetible cars.

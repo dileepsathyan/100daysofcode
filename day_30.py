@@ -115,17 +115,26 @@ import seaborn as sns
 
 
 # Engine Type
-plt.figure(figsize=(12,6))
+# plt.figure(figsize=(12,6))
 
-plt.subplot(1,2,1)
-plt.title('Engine Type')
-sns.countplot(df['enginetype'], palette=("Blues_d"))
+# plt.subplot(1,2,1)
+# plt.title('Engine Type')
+# sns.countplot(df['enginetype'], palette=("Blues_d"))
 
-plt.subplot(1,2,2)
-plt.title('Engine Type vs Price')
-sns.boxplot(x=df['enginetype'], y=df['price'], palette=("PuBuGn"))
+# plt.subplot(1,2,2)
+# plt.title('Engine Type vs Price')
+# sns.boxplot(x=df['enginetype'], y=df['price'], palette=("PuBuGn"))
 
-plt.show()
+# plt.show()
 
 # ohc engine type is the most liked type.
 # ohc and ohcf have the lowest price range.
+
+
+# Check the average car price among all brands.
+
+# brand_price = df.groupby(['CompanyName'])['price'].mean().sort_values(ascending=False)
+# brand_price.plot(kind='barh')
+# plt.show()
+
+# Jaguar has the highest average price while the chevrolet is the cheapest among all car brands.

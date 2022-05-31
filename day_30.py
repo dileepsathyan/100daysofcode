@@ -138,3 +138,10 @@ import seaborn as sns
 # plt.show()
 
 # Jaguar has the highest average price while the chevrolet is the cheapest among all car brands.
+
+
+# Check the average car price among all brands.
+
+fueltype_price = df.groupby(['fueltype'])['price'].mean().sort_values(ascending=False)
+fueltype_price.plot(kind='barh')
+plt.show()

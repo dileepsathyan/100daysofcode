@@ -66,16 +66,16 @@ correct_names('vw', 'volkswagen')
 
 # Data Visualisation using matplotlib library
 
-# plt.figure(figsize=(8,4))
+plt.figure(figsize=(8,4))
 
-# plt.subplot(1, 2, 1)
-# plt.hist(df['price'], 10)
-# plt.title('Car Price Distribution')
+plt.subplot(1, 2, 1)
+plt.hist(df['price'], 10)
+plt.title('Car Price Distribution')
 
-# plt.subplot(1, 2, 2)
-# plt.boxplot(df['price'])
-# plt.title('Car Price Spread')
-# plt.show()
+plt.subplot(1, 2, 2)
+plt.boxplot(df['price'])
+plt.title('Car Price Spread')
+plt.show()
 
 # From the plot, its clear that most of the car prices are below 15,000 and the plot itself is right skewed.
 
@@ -90,23 +90,23 @@ correct_names('vw', 'volkswagen')
 # Visualizing the categorical values in the dataframe
 
 # CompanyName
-# df['CompanyName'].value_counts().plot(kind='barh')
-# plt.title('Company Names')
-# plt.show()
+df['CompanyName'].value_counts().plot(kind='barh')
+plt.title('Company Names')
+plt.show()
 
 # Toyota seems to be the favorite car for the customer base.
 
 # Fuel Types
-# df['fueltype'].value_counts().plot(kind='barh')
-# plt.title('Fuel Types')
-# plt.show()
+df['fueltype'].value_counts().plot(kind='barh')
+plt.title('Fuel Types')
+plt.show()
 
 # Gas fuelled cars are considerably higher in number than that of Diesel fuelled cars.
 
 # Car Types
-# df['carbody'].value_counts().plot(kind='barh')
-# plt.title('Car Types')
-# plt.show()
+df['carbody'].value_counts().plot(kind='barh')
+plt.title('Car Types')
+plt.show()
 
 # Sedan, followed by hatchback, seems to lead the among all the car types.
 
@@ -115,17 +115,17 @@ import seaborn as sns
 
 
 # Engine Type
-# plt.figure(figsize=(12,6))
+plt.figure(figsize=(12,6))
 
-# plt.subplot(1,2,1)
-# plt.title('Engine Type')
-# sns.countplot(df['enginetype'], palette=("Blues_d"))
+plt.subplot(1,2,1)
+plt.title('Engine Type')
+sns.countplot(df['enginetype'], palette=("Blues_d"))
 
-# plt.subplot(1,2,2)
-# plt.title('Engine Type vs Price')
-# sns.boxplot(x=df['enginetype'], y=df['price'], palette=("PuBuGn"))
+plt.subplot(1,2,2)
+plt.title('Engine Type vs Price')
+sns.boxplot(x=df['enginetype'], y=df['price'], palette=("PuBuGn"))
 
-# plt.show()
+plt.show()
 
 # ohc engine type is the most liked type.
 # ohc and ohcf have the lowest price range.
@@ -133,27 +133,27 @@ import seaborn as sns
 
 # Check the average car price among all brands.
 
-# brand_price = df.groupby(['CompanyName'])['price'].mean().sort_values(ascending=False)
-# brand_price.plot(kind='barh')
-# plt.show()
+brand_price = df.groupby(['CompanyName'])['price'].mean().sort_values(ascending=False)
+brand_price.plot(kind='barh')
+plt.show()
 
 # Jaguar has the highest average price while the chevrolet is the cheapest among all car brands.
 
 
 # Check the average car price among fuel types.
 
-# fueltype_price = df.groupby(['fueltype'])['price'].mean().sort_values(ascending=False)
-# fueltype_price.plot(kind='barh')
-# plt.show()
+fueltype_price = df.groupby(['fueltype'])['price'].mean().sort_values(ascending=False)
+fueltype_price.plot(kind='barh')
+plt.show()
 
 # Diesel fuelled cars are expensive than Gas fuelled cars, which resonates with the higher sales of Gas fuelled cars.
 
 
 # Check the average car price among car types.
 
-# carbody_price = df.groupby(['carbody'])['price'].mean().sort_values(ascending=False)
-# carbody_price.plot(kind='barh')
-# plt.show()
+carbody_price = df.groupby(['carbody'])['price'].mean().sort_values(ascending=False)
+carbody_price.plot(kind='barh')
+plt.show()
 
 # hatchback and wagon type cars are cheaper in price than that of hardtop and convetible cars.
 

@@ -281,7 +281,16 @@ df_train, df_test = train_test_split(df, train_size = 0.7, test_size = 0.3, rand
 
 scaler = MinMaxScaler()
 num_vars = ['wheelbase', 'curbweight', 'enginesize', 'boreratio', 
-            'horsepower','fueleconomy','carlength','carwidth','price']
+            'horsepower','FuelEfficiency','carlength','carwidth','price']
 df_train[num_vars] = scaler.fit_transform(df_train[num_vars])
+
+
+# Convert the train dataframe into X and Y variables.
+
+x_train = df_train.pop('price')
+y_train = df_train
+
+print(f'Train dataframe size: {df_train.shape}')
+print(f'Test dataframe size: {df_test.shape}')
 
 

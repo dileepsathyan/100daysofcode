@@ -233,5 +233,5 @@ correct_names('vw', 'volkswagen')
 # Feature Engineering.
 # Create a new feature called FuelEfficiency by calcualting 55% of the city mileage and 45% of highway mileage
 
-df['fuelefficiency'] = (df['citympg'] * 0.55) + (df['highwaympg'] * 0.45)
-print(df[['CompanyName', 'fuelefficiency']])
+df['FuelEfficiency'] = (df['citympg'] * 0.55) + (df['highwaympg'] * 0.45)
+print(df[['CompanyName', 'FuelEfficiency']])

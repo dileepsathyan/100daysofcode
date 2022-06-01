@@ -303,3 +303,27 @@ import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 
+lm = LinearRegression()
+lm.fit(x_train, y_train)
+rfe = RFE(lm, 10)
+rfe = rfe.fit(x_train, y_train)
+
+x_train_rfe = x_train[x_train.columns[rfe.support_]]
+x_train_rfe.head()
+
+
+def build_model(X,y):
+    X = sm.add_constant(X) #Adding the constant
+    lm = sm.OLS(y,X).fit() # fitting the model
+    print(lm.summary()) # model summary
+    return X
+    
+def checkVIF(X):
+    vif = pd.DataFrame()
+    vif['Features'] = X.columns
+    vif['VIF'] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+    vif['VIF'] = round(vif['VIF'], 2)
+    vif = vif.sort_values(by = "VIF", ascending = False)
+    return(vif)
+
+

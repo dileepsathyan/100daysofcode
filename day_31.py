@@ -195,3 +195,35 @@ correct_names('vw', 'volkswagen')
 
 ######################################################################################################
 
+# Visualising the numerical variables.
+
+
+plt.figure(figsize=(12,10))
+
+plt.subplot(2,2,1)
+plt.scatter(df['carlength'], df['price'])
+plt.title('Car Length vs Price')
+plt.ylabel('Price')
+plt.xlabel('Car Length')
+
+plt.subplot(2,2,2)
+plt.scatter(df['carwidth'], df['price'])
+plt.title('Car Width vs Price')
+plt.ylabel('Price')
+plt.xlabel('Car Width')
+
+plt.subplot(2,2,3)
+plt.scatter(df['carheight'], df['price'])
+plt.title('Car Height vs Price')
+plt.ylabel('Price')
+plt.xlabel('Car Height')
+
+plt.subplot(2,2,4)
+plt.scatter(df['curbweight'], df['price'])
+plt.title('Curb Weight vs Price')
+plt.ylabel('Price')
+plt.xlabel('Curb Weight')
+
+plt.show()
+
+

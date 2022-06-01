@@ -201,33 +201,33 @@ import seaborn as sns
 # Visualising the numerical variables.
 
 
-# plt.figure(figsize=(12,10))
+plt.figure(figsize=(12,10))
 
-# plt.subplot(2,2,1)
-# plt.scatter(df['carlength'], df['price'])
-# plt.title('Car Length vs Price')
-# plt.ylabel('Price')
-# plt.xlabel('Car Length')
+plt.subplot(2,2,1)
+plt.scatter(df['carlength'], df['price'])
+plt.title('Car Length vs Price')
+plt.ylabel('Price')
+plt.xlabel('Car Length')
 
-# plt.subplot(2,2,2)
-# plt.scatter(df['carwidth'], df['price'])
-# plt.title('Car Width vs Price')
-# plt.ylabel('Price')
-# plt.xlabel('Car Width')
+plt.subplot(2,2,2)
+plt.scatter(df['carwidth'], df['price'])
+plt.title('Car Width vs Price')
+plt.ylabel('Price')
+plt.xlabel('Car Width')
 
-# plt.subplot(2,2,3)
-# plt.scatter(df['carheight'], df['price'])
-# plt.title('Car Height vs Price')
-# plt.ylabel('Price')
-# plt.xlabel('Car Height')
+plt.subplot(2,2,3)
+plt.scatter(df['carheight'], df['price'])
+plt.title('Car Height vs Price')
+plt.ylabel('Price')
+plt.xlabel('Car Height')
 
-# plt.subplot(2,2,4)
-# plt.scatter(df['curbweight'], df['price'])
-# plt.title('Curb Weight vs Price')
-# plt.ylabel('Price')
-# plt.xlabel('Curb Weight')
+plt.subplot(2,2,4)
+plt.scatter(df['curbweight'], df['price'])
+plt.title('Curb Weight vs Price')
+plt.ylabel('Price')
+plt.xlabel('Curb Weight')
 
-# plt.show()
+plt.show()
 
 # carlength, carwidth & curbweight are positively correlated to the price
 # However, carheight doesnt have any relation to its price.
@@ -237,19 +237,19 @@ import seaborn as sns
 # Create a new feature called fueleconomy by calcualting 55% of the city mileage and 45% of highway mileage
 
 df['fueleconomy'] = (df['citympg'] * 0.55) + (df['highwaympg'] * 0.45)
-# print(df[['CompanyName', 'fueleconomy']])
+print(df[['CompanyName', 'fueleconomy']])
 
 # Plot the new feature
 
-# plt.figure(figsize=(6,5))
+plt.figure(figsize=(6,5))
 
-# plt.title('Fuel economy vs Price')
-# sns.scatterplot(x=df['fueleconomy'], y=df['price'], hue=df['drivewheel'])
-# plt.xlabel('Fuel Efficiency')
-# plt.ylabel('Price')
+plt.title('Fuel economy vs Price')
+sns.scatterplot(x=df['fueleconomy'], y=df['price'], hue=df['drivewheel'])
+plt.xlabel('Fuel Efficiency')
+plt.ylabel('Price')
 
-# plt.show()
-# plt.tight_layout()
+plt.show()
+plt.tight_layout()
 
 # As suspected, fuel efficiency has a clear negative correlation with the price.
 
@@ -274,7 +274,7 @@ df_final = dummies('drivewheel',df_final)
 df_final = dummies('enginetype',df_final)
 df_final = dummies('cylindernumber',df_final)
 
-# print(df.head())
+print(df.head())
 
 
 
@@ -301,8 +301,8 @@ df_train[num_vars] = scaler.fit_transform(df_train[num_vars])
 y_train = df_train.pop('price')
 X_train = df_train
 
-# print(f'Train dataframe size: {df_train.shape}')
-# print(f'Test dataframe size: {df_test.shape}')
+print(f'Train dataframe size: {df_train.shape}')
+print(f'Test dataframe size: {df_test.shape}')
 
 
 

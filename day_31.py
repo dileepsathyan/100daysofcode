@@ -280,6 +280,8 @@ np.random.seed(0)
 df_train, df_test = train_test_split(df, train_size = 0.7, test_size = 0.3, random_state = 100)
 
 scaler = MinMaxScaler()
-num_vars = ['wheelbase', 'curbweight', 'enginesize', 'boreratio', 'horsepower','fueleconomy','carlength','carwidth','price']
+num_vars = ['wheelbase', 'curbweight', 'enginesize', 'boreratio', 
+            'horsepower','fueleconomy','carlength','carwidth','price']
 df_train[num_vars] = scaler.fit_transform(df_train[num_vars])
+
 

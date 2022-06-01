@@ -1,3 +1,6 @@
+# Credits: https://www.kaggle.com/code/goyalshalini93/car-price-prediction-linear-regression-rfe/notebook
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -292,22 +295,21 @@ num_vars = ['wheelbase', 'curbweight', 'enginesize', 'boreratio',
 df_train[num_vars] = scaler.fit_transform(df_train[num_vars])
 
 
-# Convert the train dataframe into X and Y variables.
+# # Convert the train dataframe into X and Y variables.
 
-X_train = df_train.pop('price')
-y_train = df_train
 
-print(f'Train dataframe size: {df_train.shape}')
-print(f'Test dataframe size: {df_test.shape}')
+y_train = df_train.pop('price')
+X_train = df_train
 
-# print(X_train)
+# print(f'Train dataframe size: {df_train.shape}')
+# print(f'Test dataframe size: {df_test.shape}')
+
+
 
 # Build the model and fit it
 
 from sklearn.feature_selection import RFE
 from sklearn.linear_model import LinearRegression
-import statsmodels.api as sm 
-from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 
 lm = LinearRegression()
@@ -315,22 +317,6 @@ lm.fit(X_train, y_train)
 rfe = RFE(lm, 10)
 rfe = rfe.fit(X_train, y_train)
 
-x_train_rfe = X_train[X_train.columns[rfe.support_]]
+print(list(zip(X_train.columns,rfe.support_,rfe.ranking_)))
 
-
-def build_model(X,y):
-    X = sm.add_constant(X) #Adding the constant
-    lm = sm.OLS(y,X).fit() # fitting the model
-    print(lm.summary()) # model summary
-    return X
-    
-def checkVIF(X):
-    vif = pd.DataFrame()
-    vif['Features'] = X.columns
-    vif['VIF'] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
-    vif['VIF'] = round(vif['VIF'], 2)
-    vif = vif.sort_values(by = "VIF", ascending = False)
-    return(vif)
-
-
-x_train_new = build_model(x_train_rfe, y_train)
+print(X_train.columns[rfe.support_])

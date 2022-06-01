@@ -248,4 +248,5 @@ plt.ylabel('Price')
 plt.show()
 plt.tight_layout()
 
+# As suspected, fuel efficiency has a clear negative correlation with the price.
 

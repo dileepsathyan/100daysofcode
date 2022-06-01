@@ -198,34 +198,40 @@ correct_names('vw', 'volkswagen')
 # Visualising the numerical variables.
 
 
-plt.figure(figsize=(12,10))
+# plt.figure(figsize=(12,10))
 
-plt.subplot(2,2,1)
-plt.scatter(df['carlength'], df['price'])
-plt.title('Car Length vs Price')
-plt.ylabel('Price')
-plt.xlabel('Car Length')
+# plt.subplot(2,2,1)
+# plt.scatter(df['carlength'], df['price'])
+# plt.title('Car Length vs Price')
+# plt.ylabel('Price')
+# plt.xlabel('Car Length')
 
-plt.subplot(2,2,2)
-plt.scatter(df['carwidth'], df['price'])
-plt.title('Car Width vs Price')
-plt.ylabel('Price')
-plt.xlabel('Car Width')
+# plt.subplot(2,2,2)
+# plt.scatter(df['carwidth'], df['price'])
+# plt.title('Car Width vs Price')
+# plt.ylabel('Price')
+# plt.xlabel('Car Width')
 
-plt.subplot(2,2,3)
-plt.scatter(df['carheight'], df['price'])
-plt.title('Car Height vs Price')
-plt.ylabel('Price')
-plt.xlabel('Car Height')
+# plt.subplot(2,2,3)
+# plt.scatter(df['carheight'], df['price'])
+# plt.title('Car Height vs Price')
+# plt.ylabel('Price')
+# plt.xlabel('Car Height')
 
-plt.subplot(2,2,4)
-plt.scatter(df['curbweight'], df['price'])
-plt.title('Curb Weight vs Price')
-plt.ylabel('Price')
-plt.xlabel('Curb Weight')
+# plt.subplot(2,2,4)
+# plt.scatter(df['curbweight'], df['price'])
+# plt.title('Curb Weight vs Price')
+# plt.ylabel('Price')
+# plt.xlabel('Curb Weight')
 
-plt.show()
+# plt.show()
 
 # carlength, carwidth & curbweight are positively correlated to the price
 # However, carheight doesnt have any relation to its price.
 
+
+# Feature Engineering.
+# Create a new feature called FuelEfficiency by calcualting 55% of the city mileage and 45% of highway mileage
+
+df['fuelefficiency'] = (df['citympg'] * 0.55) + (df['highwaympg'] * 0.45)
+print(df[['CompanyName', 'fuelefficiency']])

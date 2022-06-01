@@ -226,4 +226,6 @@ plt.xlabel('Curb Weight')
 
 plt.show()
 
+# carlength, carwidth & curbweight are positively correlated to the price
+# However, carheight doesnt have any relation to its price.
 

@@ -111,7 +111,7 @@ correct_names('vw', 'volkswagen')
 # # Sedan, followed by hatchback, seems to lead the among all the car types.
 
 
-# import seaborn as sns
+import seaborn as sns
 
 
 # # Engine Type
@@ -235,3 +235,17 @@ correct_names('vw', 'volkswagen')
 
 df['FuelEfficiency'] = (df['citympg'] * 0.55) + (df['highwaympg'] * 0.45)
 print(df[['CompanyName', 'FuelEfficiency']])
+
+# Plot the new feature
+
+plt.figure(figsize=(6,5))
+
+plt.title('Fuel economy vs Price')
+sns.scatterplot(x=df['FuelEfficiency'], y=df['price'], hue=df['drivewheel'])
+plt.xlabel('Fuel Efficiency')
+plt.ylabel('Price')
+
+plt.show()
+plt.tight_layout()
+
+

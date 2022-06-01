@@ -294,3 +294,12 @@ print(f'Train dataframe size: {df_train.shape}')
 print(f'Test dataframe size: {df_test.shape}')
 
 
+
+# Build the model and fit it
+
+from sklearn.feature_selection import RFE
+from sklearn.linear_model import LinearRegression
+import statsmodels.api as sm 
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+
+

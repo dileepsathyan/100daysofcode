@@ -234,19 +234,37 @@ import seaborn as sns
 # Create a new feature called FuelEfficiency by calcualting 55% of the city mileage and 45% of highway mileage
 
 df['FuelEfficiency'] = (df['citympg'] * 0.55) + (df['highwaympg'] * 0.45)
-print(df[['CompanyName', 'FuelEfficiency']])
+# print(df[['CompanyName', 'FuelEfficiency']])
 
 # Plot the new feature
 
-plt.figure(figsize=(6,5))
+# plt.figure(figsize=(6,5))
 
-plt.title('Fuel economy vs Price')
-sns.scatterplot(x=df['FuelEfficiency'], y=df['price'], hue=df['drivewheel'])
-plt.xlabel('Fuel Efficiency')
-plt.ylabel('Price')
+# plt.title('Fuel economy vs Price')
+# sns.scatterplot(x=df['FuelEfficiency'], y=df['price'], hue=df['drivewheel'])
+# plt.xlabel('Fuel Efficiency')
+# plt.ylabel('Price')
 
-plt.show()
-plt.tight_layout()
+# plt.show()
+# plt.tight_layout()
 
 # As suspected, fuel efficiency has a clear negative correlation with the price.
+
+# Convert the categorical variables into dummies before passing on to model.
+def dummies(x, dfx):
+    temp = pd.get_dummies(dfx[x], drop_first = True)
+    dfx = pd.concat([dfx, temp], axis = 1)
+    dfx.drop([x], axis = 1, inplace = True)
+    return dfx
+
+# Applying the function to the cars_lr
+
+df = dummies('fueltype',df)
+df = dummies('aspiration',df)
+df = dummies('carbody',df)
+df = dummies('drivewheel',df)
+df = dummies('enginetype',df)
+df = dummies('cylindernumber',df)
+
+# print(df.head())
 

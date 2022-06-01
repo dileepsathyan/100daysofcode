@@ -231,17 +231,17 @@ import seaborn as sns
 
 
 # Feature Engineering.
-# Create a new feature called FuelEfficiency by calcualting 55% of the city mileage and 45% of highway mileage
+# Create a new feature called fueleconomy by calcualting 55% of the city mileage and 45% of highway mileage
 
-df['FuelEfficiency'] = (df['citympg'] * 0.55) + (df['highwaympg'] * 0.45)
-# print(df[['CompanyName', 'FuelEfficiency']])
+df['fueleconomy'] = (df['citympg'] * 0.55) + (df['highwaympg'] * 0.45)
+# print(df[['CompanyName', 'fueleconomy']])
 
 # Plot the new feature
 
 # plt.figure(figsize=(6,5))
 
 # plt.title('Fuel economy vs Price')
-# sns.scatterplot(x=df['FuelEfficiency'], y=df['price'], hue=df['drivewheel'])
+# sns.scatterplot(x=df['fueleconomy'], y=df['price'], hue=df['drivewheel'])
 # plt.xlabel('Fuel Efficiency')
 # plt.ylabel('Price')
 
@@ -249,6 +249,11 @@ df['FuelEfficiency'] = (df['citympg'] * 0.55) + (df['highwaympg'] * 0.45)
 # plt.tight_layout()
 
 # As suspected, fuel efficiency has a clear negative correlation with the price.
+
+
+df_final = df[['price', 'fueltype', 'aspiration','carbody', 'drivewheel','wheelbase',
+        'curbweight', 'enginetype', 'cylindernumber', 'enginesize', 'boreratio','horsepower', 
+        'fueleconomy', 'carlength','carwidth']]
 
 # Convert the categorical variables into dummies before passing on to model.
 def dummies(x, dfx):
@@ -259,12 +264,12 @@ def dummies(x, dfx):
 
 # Applying the function to the cars_lr
 
-df = dummies('fueltype',df)
-df = dummies('aspiration',df)
-df = dummies('carbody',df)
-df = dummies('drivewheel',df)
-df = dummies('enginetype',df)
-df = dummies('cylindernumber',df)
+df_final = dummies('fueltype',df_final)
+df_final = dummies('aspiration',df_final)
+df_final = dummies('carbody',df_final)
+df_final = dummies('drivewheel',df_final)
+df_final = dummies('enginetype',df_final)
+df_final = dummies('cylindernumber',df_final)
 
 # print(df.head())
 
@@ -277,53 +282,56 @@ from sklearn.preprocessing import MinMaxScaler
 # Split the dataframe as 70% for training and 30% for testing.
 
 np.random.seed(0)
-df_train, df_test = train_test_split(df, train_size = 0.7, test_size = 0.3, random_state = 100)
+df_train, df_test = train_test_split(df_final, train_size = 0.7, test_size = 0.3, random_state = 100)
+
 
 scaler = MinMaxScaler()
 num_vars = ['wheelbase', 'curbweight', 'enginesize', 'boreratio', 
-            'horsepower','FuelEfficiency','carlength','carwidth','price']
+            'horsepower', 'fueleconomy','carlength','carwidth','price']
+
 df_train[num_vars] = scaler.fit_transform(df_train[num_vars])
 
 
 # Convert the train dataframe into X and Y variables.
 
-x_train = df_train.pop('price')
+X_train = df_train.pop('price')
 y_train = df_train
 
 print(f'Train dataframe size: {df_train.shape}')
 print(f'Test dataframe size: {df_test.shape}')
 
-
+# print(X_train)
 
 # Build the model and fit it
 
-from sklearn.feature_selection import RFE
-from sklearn.linear_model import LinearRegression
-import statsmodels.api as sm 
-from statsmodels.stats.outliers_influence import variance_inflation_factor
+# from sklearn.feature_selection import RFE
+# from sklearn.linear_model import LinearRegression
+# import statsmodels.api as sm 
+# from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 
-lm = LinearRegression()
-lm.fit(x_train, y_train)
-rfe = RFE(lm, 10)
-rfe = rfe.fit(x_train, y_train)
+# lm = LinearRegression()
+# lm.fit(X_train, y_train)
+# rfe = RFE(lm, 10)
+# rfe = rfe.fit(X_train, y_train)
 
-x_train_rfe = x_train[x_train.columns[rfe.support_]]
-x_train_rfe.head()
+# x_train_rfe = X_train[X_train.columns[rfe.support_]]
+# x_train_rfe.head()
 
 
-def build_model(X,y):
-    X = sm.add_constant(X) #Adding the constant
-    lm = sm.OLS(y,X).fit() # fitting the model
-    print(lm.summary()) # model summary
-    return X
+# def build_model(X,y):
+#     X = sm.add_constant(X) #Adding the constant
+#     lm = sm.OLS(y,X).fit() # fitting the model
+#     print(lm.summary()) # model summary
+#     return X
     
-def checkVIF(X):
-    vif = pd.DataFrame()
-    vif['Features'] = X.columns
-    vif['VIF'] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
-    vif['VIF'] = round(vif['VIF'], 2)
-    vif = vif.sort_values(by = "VIF", ascending = False)
-    return(vif)
+# def checkVIF(X):
+#     vif = pd.DataFrame()
+#     vif['Features'] = X.columns
+#     vif['VIF'] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+#     vif['VIF'] = round(vif['VIF'], 2)
+#     vif = vif.sort_values(by = "VIF", ascending = False)
+#     return(vif)
 
 
+# x_train_new = build_model(x_train_rfe, y_train)

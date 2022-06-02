@@ -103,30 +103,22 @@
 
 ### 7. ASSOCIATION RULE LEARNING ALGORITHMS
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
+# ---- This is used to extract the observed relationshipns among the data points. This can discover important and commercially useful associations in large multidimensional datasets
+# ---- The most popular algorithms are:
+# ------- a. Apriori
+# ------- b. ECLAT algorithm
 
 
-### 8. ARTIFICAL NEURAL NETWORKALGORITHMS
+### 8. ARTIFICAL NEURAL NETWORK ALGORITHMS
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
+# ---- These are models inspired by structure and/or function of biological neural networks.
+# ---- These are a class of pattern matching that are commonly used for regression and classification problems.
+# ------- a. Perceptron
+# ------- b. Multilayer Perceptrons (MLP)
+# ------- c. Back-Propagation
+# ------- d. Stochastic Gradient Descent
+# ------- e. Hopfield Network
+# ------- f. Radial Basis Function Network (RBFN)
 
 
 ### 9. DEEP LEARNING ALGORITHMS

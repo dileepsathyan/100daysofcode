@@ -165,15 +165,14 @@
 
 ### 12. OTHER MACHINE LEARNING ALGORITHMS
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
-
-
+# ---- The algorithms which are not covered in the above listing are:
+# ------- a. Feature selection algorithms
+# ------- b. Algorithm accuracy evaluation
+# ------- c. Performance measures
+# ------- d. Optimization algorithms
+# ------- e. Computational intelligence (evolutionary algorithms, etc.)
+# ------- f. Computer Vision (CV)
+# ------- g. Natural Language Processing (NLP)
+# ------- h. Recommender Systems
+# ------- i. Reinforcement Learning
+# ------- j. Graphical Models

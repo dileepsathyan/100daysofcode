@@ -43,7 +43,17 @@
 # ------- f. Locally Estimated Scatterplot Smoothing (LOESS)
 
 
-### 2. INSTANCE-BASED ALGORITHMS (MEMORY BASED LEARNING):
+### 2. REGULARIZATION ALGORITHMS
+
+# ---- This is an extention made to above Regression algoriths.
+# ---- These are modifications made to other algorithms. The examples are:
+# ------- a. Ridge Regression
+# ------- b. Least Absolute Shrinkage & Selection Operator (LASSO)
+# ------- c. Elastic Net
+# ------- d. Least Angle Regression (LARS)
+
+
+### 3. INSTANCE-BASED ALGORITHMS (MEMORY BASED LEARNING):
 
 # ---- Instance based learning model is a decision problem with instances or examples of training data that are deemed important or required to the model.
 # ---- Such methods usually build up a database of example data & compare new data to the database using similarity measures in order to find the best match and make the prediction. Hence this is also called Memory based learning.
@@ -55,17 +65,6 @@
 # ------- e. Support Vector Machines (SVM)
 
 
-### 3. REGULARIZATION ALGORITHMS
-
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
 
 
 ### 4. DECISION TREE ALGORITHMS

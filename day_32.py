@@ -32,27 +32,166 @@
 
 # Knowing which algorithm exists for a business problem is crucual in machine learning. ML algorithms can be grouped in different ways. However, I find it useful to group them by the learning styles.
 
-### 1. REGRESSION ALGORITHMS
+#### 1. REGRESSION ALGORITHMS:
 
-### 2. INSTANCE-BASED ALGORITHMS
+# ---- Regression is all about modelling the relationship among the variables that iteratively refined by a a measure of error in predictions made by the model. The most popular regression algorithms are:
+# ------- a. Ordinary Least Squares Regression (OLSR)
+# ------- b. Linear Regression
+# ------- c. Logistic Regression
+# ------- d. Stepwise Regression
+# ------- e. Multivariate Adaptive Regression Splines (MARS)
+# ------- f. Locally Estimated Scatterplot Smoothing (LOESS)
+
+
+### 2. INSTANCE-BASED ALGORITHMS:
+
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
 
 ### 3. REGULARIZATION ALGORITHMS
 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
+
 ### 4. DECISION TREE ALGORITHMS
+
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
 
 ### 5. BAYESIAN ALGORITHMS
 
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
 ### 6. CLUSTERING ALGORITHMS
+
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
 
 ### 7. ASSOCIATION RULE LEARNING ALGORITHMS
 
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
+
 ### 8. ARTIFICAL NEURAL NETWORKALGORITHMS
+
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
 
 ### 9. DEEP LEARNING ALGORITHMS
 
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
+
 ### 10. DIMENSIONALITY REDUCTION ALGORITHMS
+
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
 
 ### 11. ENSEMBLE ALGORITHMS
 
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
+
 ### 12. OTHER MACHINE LEARNING ALGORITHMS
+
+# ---- 
+# ---- 
+# ---- 
+# ------- a. 
+# ------- b. 
+# ------- c. 
+# ------- d. 
+# ------- e. 
+# ------- f. 
+# ------- g. 
+
 

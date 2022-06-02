@@ -22,10 +22,37 @@
 # ---- Example algorithms include: K-Means & Apriori algorithm.
 
 
-### SEMI-SUPERVISED LEARNING:
+### 3. SEMI-SUPERVISED LEARNING:
 
 # ---- In this case, the input data will be a mixture of labelled and unlabelled results.
 # ---- Here the model is expected to learn the structures in the data and make desired predictions.
 # ---- Examples: Classification & Regression models.
 
+
+
+# Knowing which algorithm exists for a business problem is crucual in machine learning. ML algorithms can be grouped in different ways. However, I find it useful to group them by the learning styles.
+
+### 1. REGRESSION ALGORITHMS
+
+### 2. INSTANCE-BASED ALGORITHMS
+
+### 3. REGULARIZATION ALGORITHMS
+
+### 4. DECISION TREE ALGORITHMS
+
+### 5. BAYESIAN ALGORITHMS
+
+### 6. CLUSTERING ALGORITHMS
+
+### 7. ASSOCIATION RULE LEARNING ALGORITHMS
+
+### 8. ARTIFICAL NEURAL NETWORKALGORITHMS
+
+### 9. DEEP LEARNING ALGORITHMS
+
+### 10. DIMENSIONALITY REDUCTION ALGORITHMS
+
+### 11. ENSEMBLE ALGORITHMS
+
+### 12. OTHER MACHINE LEARNING ALGORITHMS
 

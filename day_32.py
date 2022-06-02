@@ -17,9 +17,10 @@
 ### 2. UNSUPERVISED LEARNING:
 
 # ---- This doesnt invlove the data with labelled or known results.
-# ---- 
-# ---- 
-# ---- 
+# ---- The model is prepared by deducing structures present in the input data to extract general rules.
+# ---- Example: Clustering, Dimensionality Reduction, & Association Rule Mining 
+# ---- Example algorithms include: K-Means & Apriori algorithm.
+
 
 ### SEMI-SUPERVISED LEARNING:
 

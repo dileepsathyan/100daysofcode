@@ -65,8 +65,6 @@
 # ------- e. Support Vector Machines (SVM)
 
 
-
-
 ### 4. DECISION TREE ALGORITHMS
 
 # ---- Decision Tree methods constructs a model of decision made based on actual values of attributes in the data.

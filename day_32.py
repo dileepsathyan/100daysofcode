@@ -43,18 +43,16 @@
 # ------- f. Locally Estimated Scatterplot Smoothing (LOESS)
 
 
-### 2. INSTANCE-BASED ALGORITHMS:
+### 2. INSTANCE-BASED ALGORITHMS (MEMORY BASED LEARNING):
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
+# ---- Instance based learning model is a decision problem with instances or examples of training data that are deemed important or required to the model.
+# ---- Such methods usually build up a database of example data & compare new data to the database using similarity measures in order to find the best match and make the prediction. Hence this is also called Memory based learning.
+# ---- The most popular regression algorithms are:
+# ------- a. k-Nearest Neighbor (kNN)
+# ------- b. Learning Vector Quantization (LVQ)
+# ------- c. Self Organizing Map (SOM)
+# ------- d. Locally Weighted Learning (LWL)
+# ------- e. Support Vector Machines (SVM)
 
 
 ### 3. REGULARIZATION ALGORITHMS

@@ -151,16 +151,16 @@
 
 ### 11. ENSEMBLE ALGORITHMS
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
+# ---- Ensemble methods are models composed of multiple weaker models that are independently trained and whose predictions are combined in some way to make the overall prediction.
+# ---- Much effort is put into what types of weak learners to combine and the ways in which to combine them. This is a very powerful class of techniques and as such is very popular.
+# ------- a. Boosting
+# ------- b. Bootstrapped Aggregation (Bagging)
+# ------- c. AdaBoost
+# ------- d. Weighted Average (Blending)
+# ------- e. Stacked Generalization (Stacking)
+# ------- f. Gradient Boosting Machines (GBM)
+# ------- g. Gradient Boosted Regression Trees (GBRT)
+# ------- h. Random Forest
 
 
 ### 12. OTHER MACHINE LEARNING ALGORITHMS

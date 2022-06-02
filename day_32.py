@@ -92,16 +92,13 @@
 
 ### 6. CLUSTERING ALGORITHMS
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
+# ---- Clustering methods are typically organized by modelling approache such as centroid-based & hierarchal.
+# ---- All methods are concerned with using inherent structures in the data into groups of maximum commonality.
+# ---- The most popular algorithms are:
+# ------- a. k-MEANS
+# ------- b. k-MEDIANS
+# ------- c. Expectation-Maximization (EM)
+# ------- d. ierarchical Clustering
 
 
 ### 7. ASSOCIATION RULE LEARNING ALGORITHMS

@@ -69,30 +69,28 @@
 
 ### 4. DECISION TREE ALGORITHMS
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
+# ---- Decision Tree methods constructs a model of decision made based on actual values of attributes in the data.
+# ---- Decisions fork-in tree structures until a prediction decision is made for a given record. Decision tree methods are often fast and accurate. The most popular algorithms are:
+# ------- a. Classification & Regression Tree (CART)
+# ------- b. Iterative Dichotomiser 3 (ID3)
+# ------- c. C4.5 and C5.0 (different versions of a powerful approach)
+# ------- d. Chi-squared Automatic Interaction Detection (CHAID)
+# ------- e. Decision Stump
+# ------- f. M5
+# ------- g. Conditional Decision Trees
 
 
 ### 5. BAYESIAN ALGORITHMS
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
+# ---- These explicitly apply Baye's theorem on classification and regression problems.
+# ---- The most popular algorithms are: 
+# ------- a. Naive Bayes
+# ------- b. Gaussian Naive Bayes
+# ------- c. Multinomial Naive Bayes
+# ------- d. Averaged One-Dependence Estimators (AODE)
+# ------- e. Bayesian Belief Network (BBN)
+# ------- f. Bayesian Network (BN)
+
 
 ### 6. CLUSTERING ALGORITHMS
 

@@ -24,7 +24,8 @@
 
 ### SEMI-SUPERVISED LEARNING:
 
-# ---- 
-# ---- 
-# ---- 
-# ---- 
+# ---- In this case, the input data will be a mixture of labelled and unlabelled results.
+# ---- Here the model is expected to learn the structures in the data and make desired predictions.
+# ---- Examples: Classification & Regression models.
+
+

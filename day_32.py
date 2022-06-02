@@ -123,30 +123,30 @@
 
 ### 9. DEEP LEARNING ALGORITHMS
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
+# ---- These are a modern update to Artificial Neural Networks that exploit abundant cheap computation. They are concerned with building much larger and more complex neural networks and many methods are concerned with very large datasets of labelled analog data, such as image, text. audio, and video.
+# ------- a. Convolutional Neural Network (CNN)
+# ------- b. Recurrent Neural Networks (RNNs)
+# ------- c. Long Short-Term Memory Networks (LSTMs)
+# ------- d. Stacked Auto-Encoders
+# ------- e. Deep Boltzmann Machine (DBM)
+# ------- f. Deep Belief Networks (DBN)
 
 
 ### 10. DIMENSIONALITY REDUCTION ALGORITHMS
 
-# ---- 
-# ---- 
-# ---- 
-# ------- a. 
-# ------- b. 
-# ------- c. 
-# ------- d. 
-# ------- e. 
-# ------- f. 
-# ------- g. 
+# ---- Like clustering methods, dimensionality reduction is also concerned with the inherent structure in the data.
+# ---- But in this case, its in an unsupervised manner or order to summarize or describe data using less information.
+# ---- This can be useful to visualize dimensional data or to simplify data which can then be used in a supervised learning method. Many of these methods can be adapted for use in classification and regression. The most popular algorithms are:
+# ------- a. Principal Component Analysis (PCA)
+# ------- b. Principal Component Regression (PCR)
+# ------- c. Partial Least Squares Regression (PLSR)
+# ------- d. Sammon Mapping
+# ------- e. Multidimensional Scaling (MDS)
+# ------- f. Projection Pursuit
+# ------- g. Linear Discriminant Analysis (LDA)
+# ------- h. Mixture Discriminant Analysis (MDA)
+# ------- i. Quadratic Discriminant Analysis (QDA)
+# ------- j. Flexible Discriminant Analysis (FDA)
 
 
 ### 11. ENSEMBLE ALGORITHMS

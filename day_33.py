@@ -50,8 +50,63 @@ corr_fields = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'flo
 
 
 # Visualize the correlation values using seaborn
-plt.figure(figsize=(15,8))
-sns.heatmap(df[corr_fields].corr(), vmin=-1, vmax=1, annot=True,cmap='BrBG', fmt=".1g")
-print(plt.show())
+# plt.figure(figsize=(15,8))
+# sns.heatmap(df[corr_fields].corr(), vmin=-1, vmax=1, annot=True,cmap='BrBG', fmt=".1g")
+# print(plt.show())
 
 
+# Find the outliers in the fields.
+
+def create_boxplot(dfx, col):
+    plt.figure(figsize=(12,5))
+    sns.boxplot(dfx[col], dfx['price'])
+    plt.title(col)
+    plt.show()
+
+cols = ['bedrooms','bathrooms','floors','waterfront','view','condition','grade']
+
+for col in cols:
+    create_boxplot(df, col)
+
+
+
+# Remove the outliers.
+
+def remove_outliers(dfx,col):
+    iqr = df[col].quantile(0.75) - df[col].quantile(0.25)
+    min_limit = df[col].quantile(0.25)-(1.5*iqr)
+    max_limit = df[col].quantile(0.75)+(1.5*iqr)
+    outliers = []
+    for i in df[col]:
+        if i > max_limit or i < min_limit:
+            outliers.append(i)
+        else:
+            pass
+    outliers = pd.Series(outliers)
+    filtered_df = df[~df[col].isin(outliers)]
+    return filtered_df
+
+def remove_outliers( dfx, col):
+    q1 = dfx[col].quantile(0.25)
+    q3 = dfx[col].quantile(0.75)
+    iqr = q3 - q1
+    min_limit = q1 - iqr
+    max_limit = q3 + iqr
+
+    outliers_list = []
+    for i in dfx[col]:
+        if i < min_limit or i > max_limit:
+            outliers_list.append(i)
+        else:
+            pass
+    outliers = pd.Series(outliers_list)
+    df_cleaned = dfx[dfx[col].isin(outliers)]
+    return df_cleaned
+    
+
+for col in cols:
+    remove_outliers_iqr(df, col)
+
+
+for col in cols:
+    create_boxplot(df, col)

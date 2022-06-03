@@ -76,22 +76,8 @@ print(df.columns)
 df = df.drop(['id', 'date', 'year', 'yr_built', 'yr_renovated'], axis=1)
 
 
-def remove_outliers_iqr(df,column):
-    distance = 1.5
-    iqr = df[column].quantile(0.75) - df[column].quantile(0.25)
-    lower_threshold = df[column].quantile(0.25)-(iqr*distance)
-    upper_threshold = df[column].quantile(0.75)+(iqr*distance)
-    outliers = []
-    for i in df[column]:
-        if i>upper_threshold or i<lower_threshold:
-            outliers.append(i)
-        else:
-            pass
-    outliers = pd.Series(outliers)
-    filtered_df = df[~df[column].isin(outliers)]
-    return filtered_df
 
-
+# Remove the outliers in all the fields and plot them again.
 def remove_outliers(dfx, col):
     q1 = dfx[col].quantile(0.25)
     q3 = dfx[col].quantile(0.75)
@@ -110,9 +96,10 @@ def remove_outliers(dfx, col):
     return df_cleaned
 
 
-for col in df.columns:
-    remove_outliers_iqr(df, col)
+for col in cols:
+    df = remove_outliers(df, col)
 
 
+# Make boxplots again to make sure that outliers.
 for col in cols:
     create_boxplot(df, col)

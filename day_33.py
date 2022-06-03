@@ -57,27 +57,21 @@ corr_fields = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'flo
 
 # Find the outliers in the fields.
 
-def create_boxplot(dfx, col):
-    plt.figure(figsize=(12,5))
-    sns.boxplot(dfx[col], dfx['price'])
-    plt.title(col)
-    plt.show()
+# def create_boxplot(dfx, col):
+#     plt.figure(figsize=(12,5))
+#     sns.boxplot(dfx[col], dfx['price'])
+#     plt.title(col)
+#     plt.show()
 
 # cols = ['bedrooms','bathrooms','floors','waterfront','view','condition','grade']
-cols = ['bedrooms']
+
+# for col in cols:
+#     create_boxplot(df, col)
 
 
-for col in cols:
-    create_boxplot(df, col)
-
-
-print(df.columns)
 # Remove the outliers.
 df = df.drop(['id', 'date', 'year', 'yr_built', 'yr_renovated'], axis=1)
 
-
-
-# Remove the outliers in all the fields and plot them again.
 def remove_outliers(dfx, col):
     q1 = dfx[col].quantile(0.25)
     q3 = dfx[col].quantile(0.75)

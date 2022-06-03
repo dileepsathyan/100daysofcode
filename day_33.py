@@ -63,7 +63,9 @@ def create_boxplot(dfx, col):
     plt.title(col)
     plt.show()
 
-cols = ['bedrooms','bathrooms','floors','waterfront','view','condition','grade']
+# cols = ['bedrooms','bathrooms','floors','waterfront','view','condition','grade']
+cols = ['bedrooms']
+
 
 for col in cols:
     create_boxplot(df, col)
@@ -72,7 +74,7 @@ for col in cols:
 
 # Remove the outliers.
 
-def remove_outliers(dfx,col):
+def remove_outliers_iqr(dfx,col):
     iqr = df[col].quantile(0.75) - df[col].quantile(0.25)
     min_limit = df[col].quantile(0.25)-(1.5*iqr)
     max_limit = df[col].quantile(0.75)+(1.5*iqr)
@@ -85,8 +87,9 @@ def remove_outliers(dfx,col):
     outliers = pd.Series(outliers)
     filtered_df = df[~df[col].isin(outliers)]
     return filtered_df
+    
 
-def remove_outliers( dfx, col):
+def remove_outliers(dfx, col):
     q1 = dfx[col].quantile(0.25)
     q3 = dfx[col].quantile(0.75)
     iqr = q3 - q1
@@ -100,12 +103,12 @@ def remove_outliers( dfx, col):
         else:
             pass
     outliers = pd.Series(outliers_list)
-    df_cleaned = dfx[dfx[col].isin(outliers)]
+    df_cleaned = dfx[~dfx[col].isin(outliers)]
     return df_cleaned
-    
+
 
 for col in cols:
-    remove_outliers_iqr(df, col)
+    remove_outliers(df, col)
 
 
 for col in cols:

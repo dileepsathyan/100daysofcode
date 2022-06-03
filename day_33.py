@@ -34,7 +34,7 @@ df.insert(5, 'age', (df.year - df.yr_built))
 
 
 # Check whether the house has been renovated or not.
-# print(df.yr_renovated.head(10))
+print(df.yr_renovated.head(10))
 
 
 # Since the above field is filled with 0 for those houses which were NOT renovated, lets create a new flag column for renovation.
@@ -71,23 +71,26 @@ for col in cols:
     create_boxplot(df, col)
 
 
-
+print(df.columns)
 # Remove the outliers.
+df = df.drop(['id', 'date', 'year', 'yr_built', 'yr_renovated'], axis=1)
 
-def remove_outliers_iqr(dfx,col):
-    iqr = df[col].quantile(0.75) - df[col].quantile(0.25)
-    min_limit = df[col].quantile(0.25)-(1.5*iqr)
-    max_limit = df[col].quantile(0.75)+(1.5*iqr)
+
+def remove_outliers_iqr(df,column):
+    distance = 1.5
+    iqr = df[column].quantile(0.75) - df[column].quantile(0.25)
+    lower_threshold = df[column].quantile(0.25)-(iqr*distance)
+    upper_threshold = df[column].quantile(0.75)+(iqr*distance)
     outliers = []
-    for i in df[col]:
-        if i > max_limit or i < min_limit:
+    for i in df[column]:
+        if i>upper_threshold or i<lower_threshold:
             outliers.append(i)
         else:
             pass
     outliers = pd.Series(outliers)
-    filtered_df = df[~df[col].isin(outliers)]
+    filtered_df = df[~df[column].isin(outliers)]
     return filtered_df
-    
+
 
 def remove_outliers(dfx, col):
     q1 = dfx[col].quantile(0.25)
@@ -107,8 +110,8 @@ def remove_outliers(dfx, col):
     return df_cleaned
 
 
-for col in cols:
-    remove_outliers(df, col)
+for col in df.columns:
+    remove_outliers_iqr(df, col)
 
 
 for col in cols:

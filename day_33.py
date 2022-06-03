@@ -43,8 +43,9 @@ df['renovated_flag'] = np.where(df.yr_renovated ==0, 0, 1)
 
 
 # Check the correlation among the variables.
-req_fields = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront', 'view', 
+corr_fields = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront', 'view', 
             'condition', 'grade', 'sqft_above', 'sqft_basement', 'yr_built', 'yr_renovated', 'zipcode', 
             'lat', 'long', 'sqft_living15', 'sqft_lot15']
-print(df[req_fields].corr)
+print(df[corr_fields].corr())
+
 

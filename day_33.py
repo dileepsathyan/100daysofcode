@@ -70,30 +70,30 @@ corr_fields = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'flo
 
 
 # Remove the outliers.
-df = df.drop(['id', 'date', 'year', 'yr_built', 'yr_renovated'], axis=1)
+# df = df.drop(['id', 'date', 'year', 'yr_built', 'yr_renovated'], axis=1)
 
-def remove_outliers(dfx, col):
-    q1 = dfx[col].quantile(0.25)
-    q3 = dfx[col].quantile(0.75)
-    iqr = q3 - q1
-    min_limit = q1 - iqr
-    max_limit = q3 + iqr
+# def remove_outliers(dfx, col):
+#     q1 = dfx[col].quantile(0.25)
+#     q3 = dfx[col].quantile(0.75)
+#     iqr = q3 - q1
+#     min_limit = q1 - iqr
+#     max_limit = q3 + iqr
 
-    outliers_list = []
-    for i in dfx[col]:
-        if i < min_limit or i > max_limit:
-            outliers_list.append(i)
-        else:
-            pass
-    outliers = pd.Series(outliers_list)
-    df_cleaned = dfx[~dfx[col].isin(outliers)]
-    return df_cleaned
+#     outliers_list = []
+#     for i in dfx[col]:
+#         if i < min_limit or i > max_limit:
+#             outliers_list.append(i)
+#         else:
+#             pass
+#     outliers = pd.Series(outliers_list)
+#     df_cleaned = dfx[~dfx[col].isin(outliers)]
+#     return df_cleaned
 
 
-for col in cols:
-    df = remove_outliers(df, col)
+# for col in cols:
+#     df = remove_outliers(df, col)
 
 
 # Make boxplots again to make sure that outliers.
-for col in cols:
-    create_boxplot(df, col)
+# for col in cols:
+#     create_boxplot(df, col)

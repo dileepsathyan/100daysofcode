@@ -8,3 +8,9 @@ from sklearn.metrics import explained_variance_score, mean_squared_error, mean_a
 
 
 # KING COUNTY HOUSE PRICE PREDICTION
+
+df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/kc_house_data.csv")
+print(df.head())
+print(df.describe())
+print(df.info())
+

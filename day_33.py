@@ -12,7 +12,11 @@ from sklearn.metrics import explained_variance_score, mean_squared_error, mean_a
 # KING COUNTY HOUSE PRICE PREDICTION
 
 df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/kc_house_data.csv")
-print(df.head())
-print(df.describe())
-print(df.info())
+# print(df.head())
+# print(df.describe())
+# print(df.info())
 
+# Fix the date column to right format.
+df.date = pd.to_datetime(df.date)
+df.day = df.date.dt.day
+print(df[['date', 'day']].head())

@@ -16,7 +16,10 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/kc_house_data.c
 # print(df.describe())
 # print(df.info())
 
+
 # Fix the date column to right format.
 df.date = pd.to_datetime(df.date)
-df.day = df.date.dt.day
-print(df[['date', 'day']].head())
+df['year'] = df.date.dt.year
+df['month'] = df.date.dt.month
+df['day'] = df.date.dt.day
+print(df[['date', 'year', 'month', 'day']].head())

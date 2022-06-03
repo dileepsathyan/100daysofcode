@@ -19,7 +19,19 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/kc_house_data.c
 
 # Fix the date column to right format.
 df.date = pd.to_datetime(df.date)
-df['year'] = df.date.dt.year
-df['month'] = df.date.dt.month
-df['day'] = df.date.dt.day
-print(df[['date', 'year', 'month', 'day']].head())
+df.insert(2, 'year', df.date.dt.year)
+df.insert(3, 'month', df.date.dt.month)
+df.insert(4, 'day', df.date.dt.day)
+# print(df[['date', 'year', 'month', 'day']].head())
+
+print(df.columns)
+
+
+# Add a new calculated column: 'age' of the house.
+df.insert(5, 'age', (df.year - df.yr_built))
+
+print(df[['year', 'yr_built', 'age']])
+
+
+# Check whether the house has been renovated or not.
+print(df.yr_renovated.head(10))

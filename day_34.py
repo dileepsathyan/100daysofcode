@@ -100,7 +100,11 @@ for col in df.columns:
 
 #################################################################################################################################
 
-
-x = df.drop(['price'], axis=1)
+# Prepare the X and y variables from the dataset
+X = df.drop(['price'], axis=1)
 y = df['price']
+
+
+# Separate the train and test sets.
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 

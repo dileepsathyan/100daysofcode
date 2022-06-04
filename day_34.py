@@ -127,3 +127,9 @@ print(f'Model Coeff: {model.coef_}')
 print(f'Model Intercept: {model.intercept_}')
 print(f'Mean Squared Error: {mse}')
 print(f'R Squared Value: {r2}')
+
+
+# Plot the results
+plt.scatter(y_test, y_predicted)
+plt.plot(y_test, y_test, 'r')
+plt.show()

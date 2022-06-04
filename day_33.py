@@ -90,7 +90,7 @@ def remove_outliers(dfx, col):
     return df_cleaned
 
 
-for col in cols:
+for col in df.columns:
     df = remove_outliers(df, col)
 
 

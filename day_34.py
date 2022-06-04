@@ -123,10 +123,10 @@ mse = mean_squared_error(y_test, y_predicted)
 r2 = r2_score(y_test, y_predicted)
 
 
-# print(f'Model Coeff: {model.coef_}')
-# print(f'Model Intercept: {model.intercept_}')
-# print(f'Mean Squared Error: {mse}')
-# print(f'R Squared Value: {r2}')
+print(f'Model Coeff: {model.coef_}')
+print(f'Model Intercept: {model.intercept_}')
+print(f'Mean Squared Error: {mse}')
+print(f'R Squared Value: {r2}')
 
 
 # Plot the results

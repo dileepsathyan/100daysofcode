@@ -116,3 +116,13 @@ model.fit(X_train, y_train)
 
 # Predict the results from the model using the test set.
 y_predicted = model.predict(X_test)
+
+
+# Find the mean squared error and r2 values
+mse = mean_squared_error(y_test, y_predicted)
+r2 = r2_score(y_test, y_predicted)
+
+
+
+print(f'Mean Squared Error: {mse}')
+print(f'R Squared Value: {r2}')

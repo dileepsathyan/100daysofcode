@@ -12,9 +12,9 @@ from sklearn.metrics import explained_variance_score, mean_squared_error, mean_a
 # KING COUNTY HOUSE PRICE PREDICTION
 
 df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/kc_house_data.csv")
-# print(df.head())
-# print(df.describe())
-# print(df.info())
+print(df.head())
+print(df.describe())
+print(df.info())
 
 
 # Fix the date column to right format.
@@ -22,19 +22,19 @@ df.date = pd.to_datetime(df.date)
 df.insert(2, 'year', df.date.dt.year)
 df.insert(3, 'month', df.date.dt.month)
 df.insert(4, 'day', df.date.dt.day)
-# print(df[['date', 'year', 'month', 'day']].head())
+print(df[['date', 'year', 'month', 'day']].head())
 
-# print(df.columns)
+print(df.columns)
 
 
 # Add a new calculated column: 'age' of the house.
 df.insert(5, 'age', (df.year - df.yr_built))
 
-# print(df[['year', 'yr_built', 'age']])
+print(df[['year', 'yr_built', 'age']])
 
 
 # Check whether the house has been renovated or not.
-# print(df.yr_renovated.head(10))
+print(df.yr_renovated.head(10))
 
 
 # Since the above field is filled with 0 for those houses which were NOT renovated, lets create a new flag column for renovation.
@@ -46,13 +46,13 @@ df['renovated_flag'] = np.where(df.yr_renovated ==0, 0, 1)
 corr_fields = ['price', 'bedrooms', 'bathrooms', 'sqft_living', 'sqft_lot', 'floors', 'waterfront', 'view', 
             'condition', 'grade', 'sqft_above', 'sqft_basement', 'yr_built', 'yr_renovated', 'zipcode', 
             'lat', 'long', 'sqft_living15', 'sqft_lot15']
-# print(df[corr_fields].corr())
+print(df[corr_fields].corr())
 
 
 # Visualize the correlation values using seaborn
-# plt.figure(figsize=(15,8))
-# sns.heatmap(df[corr_fields].corr(), vmin=-1, vmax=1, annot=True,cmap='BrBG', fmt=".1g")
-# print(plt.show())
+plt.figure(figsize=(15,8))
+sns.heatmap(df[corr_fields].corr(), vmin=-1, vmax=1, annot=True,cmap='BrBG', fmt=".1g")
+print(plt.show())
 
 
 # Find the outliers in the fields.
@@ -65,8 +65,8 @@ def create_boxplot(dfx, col):
 
 cols = ['bedrooms','bathrooms','floors','waterfront','view','condition','grade']
 
-# for col in cols:
-#     create_boxplot(df, col)
+for col in cols:
+    create_boxplot(df, col)
 
 
 # Remove the outliers.
@@ -95,8 +95,8 @@ for col in df.columns:
 
 
 # Make boxplots again to make sure that outliers.
-# for col in cols:
-#     create_boxplot(df, col)
+for col in cols:
+    create_boxplot(df, col)
 
 #################################################################################################################################
 

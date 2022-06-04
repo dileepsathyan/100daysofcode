@@ -106,30 +106,30 @@ y = df['price']
 
 
 # Separate the train and test sets.
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 
 
 # Create a model and fit it with the train set.
-model = LinearRegression()
-model.fit(X_train, y_train)
+# model = LinearRegression()
+# model.fit(X_train, y_train)
 
 
 # Predict the results from the model using the test set.
-y_predicted = model.predict(X_test)
+# y_predicted = model.predict(X_test)
 
 
 # Find the mean squared error and r2 values
-mse = mean_squared_error(y_test, y_predicted)
-r2 = r2_score(y_test, y_predicted)
+# mse = mean_squared_error(y_test, y_predicted)
+# r2 = r2_score(y_test, y_predicted)
 
 
-print(f'Model Coeff: {model.coef_}')
-print(f'Model Intercept: {model.intercept_}')
-print(f'Mean Squared Error: {mse}')
-print(f'R Squared Value: {r2}')
+# print(f'Model Coeff: {model.coef_}')
+# print(f'Model Intercept: {model.intercept_}')
+# print(f'Mean Squared Error: {mse}')
+# print(f'R Squared Value: {r2}')
 
 
 # Plot the results
-plt.scatter(y_test, y_predicted)
-plt.plot(y_test, y_test, 'r')
-plt.show()
+# plt.scatter(y_test, y_predicted)
+# plt.plot(y_test, y_test, 'r')
+# plt.show()

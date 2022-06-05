@@ -21,14 +21,15 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insuran
 # print(df.describe())
 
 
-plt.figure(figsize=(10,5))
+# Plot the Gender and Smoker distribution among the dataset.
+# plt.figure(figsize=(10,5))
 
-plt.subplot(1, 2, 1)
-sns.countplot(df.sex)
-plt.title('Gender Distribution')
+# plt.subplot(1, 2, 1)
+# sns.countplot(df.sex)
+# plt.title('Gender Distribution')
 
 
-plt.subplot(1, 2, 2)
-sns.countplot(df.smoker)
-plt.title('Smoker / Non Smoker Distribution')
-plt.show()
+# plt.subplot(1, 2, 2)
+# sns.countplot(df.smoker)
+# plt.title('Smoker / Non Smoker Distribution')
+# plt.show()

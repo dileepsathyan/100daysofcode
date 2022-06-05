@@ -13,7 +13,7 @@ from sklearn.linear_model import LinearRegression
 # Import the dataset
 df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insurance.csv")
 
-print(df.head())
+# print(df.head())
 # print(df.shape)
 # print(df.info())
 # print(df.describe())
@@ -49,7 +49,7 @@ print(df.head())
 
 
 # Calculate the mean price for each age.
-# mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_index())
+mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_index())
 # print(mean_charge_for_age.head())
 
 
@@ -60,6 +60,6 @@ print(df.head())
 
 
 # Plot BMI distribution
-# sns.distplot(df.bmi)
-# plt.title('BMI Distribution')
-# plt.show()
+sns.distplot(df.bmi)
+plt.title('BMI Distribution')
+plt.show()

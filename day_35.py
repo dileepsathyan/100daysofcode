@@ -14,7 +14,7 @@ from sklearn.linear_model import LinearRegression
 # Import the dataset
 df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insurance.csv")
 
-# print(df.head())
+print(df.head())
 # print(df.shape)
 # print(df.info())
 # print(df.describe())
@@ -61,8 +61,6 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insuran
 
 
 # Plot BMI distribution
-sns.distplot(df.bmi)
-plt.title('BMI Distribution')
-plt.show()
-
-
+# sns.distplot(df.bmi)
+# plt.title('BMI Distribution')
+# plt.show()

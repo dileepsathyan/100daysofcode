@@ -35,10 +35,10 @@ plt.show()
 
 
 # Age distribution
-# plt.figure(figsize=(15,5))
-# sns.countplot(df.age)
-# plt.title('Age Distribution')
-# plt.show()
+plt.figure(figsize=(15,5))
+sns.countplot(df.age)
+plt.title('Age Distribution')
+plt.show()
 
 
 

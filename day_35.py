@@ -43,9 +43,9 @@ plt.show()
 
 
 # Check the age & price distribution.
-plt.figure(figsize=(15,5))
-sns.boxplot(df.age, df.charges)
-plt.show()
+# plt.figure(figsize=(15,5))
+# sns.boxplot(df.age, df.charges)
+# plt.show()
 
 
 # Calculate the mean price for each age.

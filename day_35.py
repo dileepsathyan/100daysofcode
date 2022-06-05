@@ -60,6 +60,6 @@ plt.show()
 
 
 # Plot BMI distribution
-sns.distplot(df.bmi)
-plt.title('BMI Distribution')
-plt.show()
+# sns.distplot(df.bmi)
+# plt.title('BMI Distribution')
+# plt.show()

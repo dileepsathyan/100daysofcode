@@ -33,3 +33,8 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insuran
 # plt.show()
 
 
+
+# Check the age & price distribution.
+plt.figure(figsize=(15,5))
+sns.boxplot(df.age, df.charges)
+plt.show()

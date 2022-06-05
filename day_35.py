@@ -21,20 +21,31 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insuran
 
 
 # Plot the Gender and Smoker distribution among the dataset.
-# plt.figure(figsize=(10,5))
+# plt.figure(figsize=(18,5))
 
-# plt.subplot(1, 2, 1)
+# plt.subplot(1, 3, 1)
 # sns.countplot(df.sex)
 # plt.title('Gender Distribution')
 
-# plt.subplot(1, 2, 2)
+
+# plt.subplot(1, 3, 3)
 # sns.countplot(df.smoker)
 # plt.title('Smoker / Non Smoker Distribution')
 # plt.show()
 
 
 
+# Age distribution
+# plt.figure(figsize=(15,5))
+# sns.countplot(df.age)
+# plt.title('Age Distribution')
+# plt.show()
+
+
+
 # Check the age & price distribution.
-plt.figure(figsize=(15,5))
-sns.boxplot(df.age, df.charges)
-plt.show()
+# plt.figure(figsize=(15,5))
+# sns.boxplot(df.age, df.charges)
+# plt.show()
+
+

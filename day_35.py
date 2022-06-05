@@ -1,3 +1,4 @@
+from turtle import color
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -27,7 +28,6 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insuran
 # sns.countplot(df.sex)
 # plt.title('Gender Distribution')
 
-
 # plt.subplot(1, 3, 3)
 # sns.countplot(df.smoker)
 # plt.title('Smoker / Non Smoker Distribution')
@@ -47,5 +47,22 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insuran
 # plt.figure(figsize=(15,5))
 # sns.boxplot(df.age, df.charges)
 # plt.show()
+
+
+# Calculate the mean price for each age.
+# mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_index())
+# print(mean_charge_for_age.head())
+
+
+# Plot the mean price per age
+# plt.figure(figsize=(10,5))
+# sns.lineplot(x = mean_charge_for_age.age, y=mean_charge_for_age.charges, color='r')
+# plt.show()
+
+
+# Plot BMI distribution
+sns.distplot(df.bmi)
+plt.title('BMI Distribution')
+plt.show()
 
 

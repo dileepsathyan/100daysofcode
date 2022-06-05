@@ -21,16 +21,16 @@ print(df.describe())
 
 
 # Plot the Gender and Smoker distribution among the dataset.
-# plt.figure(figsize=(18,5))
+plt.figure(figsize=(18,5))
 
-# plt.subplot(1, 3, 1)
-# sns.countplot(df.sex)
-# plt.title('Gender Distribution')
+plt.subplot(1, 3, 1)
+sns.countplot(df.sex)
+plt.title('Gender Distribution')
 
-# plt.subplot(1, 3, 3)
-# sns.countplot(df.smoker)
-# plt.title('Smoker / Non Smoker Distribution')
-# plt.show()
+plt.subplot(1, 3, 3)
+sns.countplot(df.smoker)
+plt.title('Smoker / Non Smoker Distribution')
+plt.show()
 
 
 

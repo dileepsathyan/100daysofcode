@@ -134,9 +134,12 @@ y_pred = model.predict(X_test)
 
 # Find the MSE and r2 value
 mse = mean_squared_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
+r2_train = r2_score(y_train, model.predict(X_train))
+r2_test = r2_score(y_test, y_pred)
 
 print(f'Coefficient Values or Slope : {model.coef_}')
 print(f'Intercept Value: {model.intercept_}')
 print(f'Mean Squared Error: {mse}')
-print(f'R Squared Value: {r2}')
+
+print(f'R Squared Value within train data: {r2_train}')
+print(f'R Squared Value on test data: {r2_test}')

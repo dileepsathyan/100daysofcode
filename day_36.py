@@ -73,7 +73,7 @@ mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_i
 
 # Region Distribution
 plt.figure(figsize=(6,5))
-sns.countplot(df.region)
+sns.countplot(data=df.region)
 plt.title('Region Distribution')
 plt.show()
 
@@ -89,13 +89,13 @@ region_and_charges = pd.DataFrame(df.groupby(['sex', 'region'])['charges'].agg([
 # plt.title('Children Distribution')
 # plt.show()
 
-children_and_charges = pd.DataFrame(df.groupby(['sex', 'children'])['charges'].agg([np.mean, np.std])).reset_index()
+# children_and_charges = pd.DataFrame(df.groupby(['sex', 'children'])['charges'].agg([np.mean, np.std])).reset_index()
 # print(children_and_charges)
 
 
 
 # Find correlation for price among variables.
-sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
+# sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
 # plt.show()
 
 
@@ -104,10 +104,10 @@ sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
 
 # print(df.head())
 
-df.replace({'sex': {'female': 0, 'male': 1}}, inplace=True)
-df.replace({'smoker': {'no': 0, 'yes': 1}}, inplace=True)
-df.replace({'region': {'southeast': 0, 'southwest': 1,
-                        'northeast': 2, 'northwest': 3}}, inplace=True)
+# df.replace({'sex': {'female': 0, 'male': 1}}, inplace=True)
+# df.replace({'smoker': {'no': 0, 'yes': 1}}, inplace=True)
+# df.replace({'region': {'southeast': 0, 'southwest': 1,
+#                         'northeast': 2, 'northwest': 3}}, inplace=True)
 # print(df.head())
 
 # y = df['charges']

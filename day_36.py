@@ -72,7 +72,6 @@ mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_i
 #####################################################################################################################################
 
 # Region Distribution
-
 plt.figure(figsize=(6,5))
 sns.countplot(df.region)
 plt.title('Region Distribution')
@@ -96,7 +95,7 @@ children_and_charges = pd.DataFrame(df.groupby(['sex', 'children'])['charges'].a
 
 
 # Find correlation for price among variables.
-# sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
+sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
 # plt.show()
 
 
@@ -119,7 +118,7 @@ df.replace({'region': {'southeast': 0, 'southwest': 1,
 
 
 # Separate the train and test datasets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state=1)
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state=1)
 
 
 # Create a model and fit it

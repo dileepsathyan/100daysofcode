@@ -89,3 +89,9 @@ region_and_charges = pd.DataFrame(df.groupby(['sex', 'region'])['charges'].agg([
 
 children_and_charges = pd.DataFrame(df.groupby(['sex', 'children'])['charges'].agg([np.mean, np.std])).reset_index()
 # print(children_and_charges)
+
+
+
+# Find correlation for price among variables.
+sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
+plt.show()

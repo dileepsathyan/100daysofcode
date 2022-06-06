@@ -126,3 +126,6 @@ model - LinearRegression()
 model.fit(X_train, y_train)
 
 
+# Predict the results using the model
+y_pred = model.predict(X_test)
+

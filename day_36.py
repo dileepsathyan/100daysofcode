@@ -43,14 +43,14 @@ plt.show()
 
 
 # Check the age & price distribution.
-plt.figure(figsize=(15,5))
-sns.boxplot(df.age, df.charges)
-plt.show()
+# plt.figure(figsize=(15,5))
+# sns.boxplot(df.age, df.charges)
+# plt.show()
 
 
 # Calculate the mean price for each age.
-mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_index())
-print(mean_charge_for_age.head())
+# mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_index())
+# print(mean_charge_for_age.head())
 
 
 # Plot the mean price per age

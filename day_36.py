@@ -54,9 +54,9 @@ print(mean_charge_for_age.head())
 
 
 # Plot the mean price per age
-plt.figure(figsize=(10,5))
-sns.lineplot(x = mean_charge_for_age.age, y=mean_charge_for_age.charges, color='r')
-plt.show()
+# plt.figure(figsize=(10,5))
+# sns.lineplot(x = mean_charge_for_age.age, y=mean_charge_for_age.charges, color='r')
+# plt.show()
 
 
 # Plot BMI distribution

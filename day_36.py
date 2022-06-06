@@ -93,5 +93,28 @@ children_and_charges = pd.DataFrame(df.groupby(['sex', 'children'])['charges'].a
 
 
 # Find correlation for price among variables.
-sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
-plt.show()
+# sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
+# plt.show()
+
+
+
+# Prepare the dataset for the categorical values.
+# print(df.head())
+
+
+df.replace({'sex': {'female': 0, 'male': 1}}, inplace=True)
+df.replace({'smoker': {'no': 0, 'yes': 1}}, inplace=True)
+df.replace({'region': {'southeast': 0, 'southwest': 1,
+                        'northeast': 2, 'northwest': 3}}, inplace=True)
+# print(df.head())
+
+y = df['charges']
+X = df.drop(columns='charges', axis=1)
+
+print(y.head())
+print(X.head())
+
+
+# Separate the train and test datasets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state=1)
+

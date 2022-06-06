@@ -70,11 +70,11 @@ mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_i
 
 # Region Distribution
 
-plt.figure(figsize=(6,5))
-sns.countplot(df.region)
-plt.title('Region Distribution')
-plt.show()
+# plt.figure(figsize=(6,5))
+# sns.countplot(df.region)
+# plt.title('Region Distribution')
+# plt.show()
 
 
-# region_and_charges = pd.DataFrame(df.groupby(['sex', 'region'])['charges'].agg([np.mean, np.std])).reset_index()
-# print(region_and_charges.head())
+region_and_charges = pd.DataFrame(df.groupby(['sex', 'region'])['charges'].agg([np.mean, np.std])).reset_index()
+print(region_and_charges)

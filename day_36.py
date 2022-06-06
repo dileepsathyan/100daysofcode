@@ -1,4 +1,5 @@
 from cgitb import reset
+from pyexpat import model
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -117,4 +118,11 @@ print(X.head())
 
 # Separate the train and test datasets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2, random_state=1)
+
+
+# Create a model and fit it
+
+model - LinearRegression()
+model.fit(X_train, y_train)
+
 

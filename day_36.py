@@ -1,3 +1,4 @@
+from cgitb import reset
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -49,7 +50,7 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insuran
 
 
 # Calculate the mean price for each age.
-# mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_index())
+mean_charge_for_age = pd.DataFrame(df.groupby(['age'])['charges'].mean().reset_index())
 # print(mean_charge_for_age.head())
 
 
@@ -63,3 +64,11 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/medical_insuran
 # sns.distplot(df.bmi)
 # plt.title('BMI Distribution')
 # plt.show()
+
+
+################################################
+
+# Region Distribution
+
+region_and_charges = pd.DataFrame(df.groupby(['sex', 'region'])['charges'].agg([np.mean, np.std])).reset_index()
+print(region_and_charges.head())

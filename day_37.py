@@ -10,3 +10,9 @@ result = [('Dileep', 34), ('Sachu', 32), ('Trinay', 4), ('Sathyan', 65), ('Latha
 unzipped = list(zip(*result))
 # print(unzipped)
 
+for i in unzipped:
+    print(list(i))
+
+
+ind = zip(range(5), persons)
+print(list(ind))

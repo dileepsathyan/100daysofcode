@@ -28,8 +28,8 @@ print(df.head(10))
 print(df.clusters.value_counts())
 
 
-sns.scatterplot(df.feat_1, df.feat_2, hue=df.clusters)
-plt.show()
+# sns.scatterplot(df.feat_1, df.feat_2, hue=df.clusters)
+# plt.show()
 
 
 # Optimising the k-value (number of clusters for a dataset)
@@ -37,6 +37,9 @@ plt.show()
 # There are 2 methods used to optimise the number of clusters for a dataset, which are,
 
 # ---- 1. ELBOW method (using WSS SCORE: Within-Cluster-Sum-of-Squares). By checking the compactness within a cluster.
+
+
+
 
 
 

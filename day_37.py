@@ -15,4 +15,7 @@ for i in unzipped:
 
 
 ind = zip(range(5), persons)
-print(list(ind))
+# print(list(ind))
+
+for i, item in list(ind):
+    print(i)

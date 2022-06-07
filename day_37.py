@@ -27,7 +27,9 @@ for i in unzipped_list:
 # If we have to index the values in a list.
 countries = ['India', 'USA', 'Canada', 'UAE', 'Australia']
 
-indexed_countries = zip(range(len(countries)), countries)
-print(list(indexed_countries))
+indexed_countries = list(zip(range(len(countries)), countries))
+print(indexed_countries)
 
 
+for i in indexed_countries:
+    print(i)

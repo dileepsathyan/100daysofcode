@@ -6,7 +6,6 @@ age = [34, 32, 4, 65, 61]
 
 
 # Zip both the name and age lists in 1 list.
-
 zipped_list = list(zip(name, age))
 # print(zipped_list)
 
@@ -19,20 +18,20 @@ unzipped_list = list(zip(*zip_list))
 
 
 # Extract the values from the unzipped_list as separate lists
-for i in unzipped_list:
-    # print(list(i))
-    pass
+# for i in unzipped_list:
+#     print(list(i))
+
 
 
 # If we have to index the values in a list.
 countries = ['India', 'USA', 'Canada', 'UAE', 'Australia']
 
 indexed_countries = list(zip(range(len(countries)), countries))
-print(indexed_countries)
+# print(indexed_countries)
 
 
-for i, item in indexed_countries:
-    print('Index ' + str(i) + ' is ' + item)
+# for i, item in indexed_countries:
+#     print('Index ' + str(i) + ' is ' + item)
     
 
 # Enumerate does the above indexing directly on the list.

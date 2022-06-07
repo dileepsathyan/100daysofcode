@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+from sklearn import metrics
 from sklearn.datasets import make_blobs
 from sklearn.cluster import KMeans
 
@@ -38,10 +39,26 @@ print(df.clusters.value_counts())
 
 # ---- 1. ELBOW method (using WSS SCORE: Within-Cluster-Sum-of-Squares). By checking the compactness within a cluster.
 
+#### Run the cluster analysis for 5 times (just for this case) to get the WSS scores and plot them to find the ELBOW point.
+
+attempts = range(1, 6)
+wss = []
+for k in attempts:
+    kmeans_elbow = KMeans(n_clusters= k, init='k-means++')
+    kmeans_elbow.fit(df)
+    wss_iter = kmeans_elbow.inertia_
+    wss.append(wss_iter)
+
+temp_df = pd.DataFrame({'clusters': attempts, 'wss': wss})
+print(temp_df)
 
 
+sns.scatterplot(y=temp_df.wss, x=temp_df.clusters)
+plt.show()
 
 
 
 # ---- 1. SILHOUETTE method
+
+
 

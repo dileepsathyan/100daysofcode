@@ -31,5 +31,10 @@ indexed_countries = list(zip(range(len(countries)), countries))
 print(indexed_countries)
 
 
-for i in indexed_countries:
+for i, item in indexed_countries:
+    print('Index ' + str(i) + ' is ' + item)
+    
+
+# Enumerate does the above indexing directly on the list.
+for i, item in enumerate(countries):
     print(i)

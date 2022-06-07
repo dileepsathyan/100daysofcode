@@ -28,11 +28,6 @@ for i in unzipped_list:
 countries = ['India', 'USA', 'Canada', 'UAE', 'Australia']
 
 indexed_countries = zip(range(len(countries)), countries)
-
 print(list(indexed_countries))
 
 
-for i in indexed_countries:
-    print('Done')
-    print(i)
-    

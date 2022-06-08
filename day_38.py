@@ -26,7 +26,7 @@ df['clusters'] = kmeans.labels_
 
 print(df.head(10))
 
-print(df.clusters.value_counts())
+# print(df.clusters.value_counts())
 
 
 # sns.scatterplot(df.feat_1, df.feat_2, hue=df.clusters)

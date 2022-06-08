@@ -53,8 +53,8 @@ temp_df = pd.DataFrame({'clusters': attempts, 'wss': wss})
 print(temp_df)
 
 
-sns.scatterplot(y=temp_df.wss, x=temp_df.clusters)
-plt.show()
+# sns.scatterplot(y=temp_df.wss, x=temp_df.clusters)
+# plt.show()
 
 
 

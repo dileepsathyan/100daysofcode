@@ -70,4 +70,3 @@ for k in range(2,8):
     silh_score = metrics.silhouette_score(df, labels, metric='euclidean', 
                                         sample_size=200, random_state=200)
     print('Silhouette score for '+ str(k) + ' clusters: '+ str(silh_score))
-

@@ -20,7 +20,7 @@ print(df.head())
 kmeans = KMeans(n_clusters=3)
 kmeans.fit(df)
 
-print(kmeans.cluster_centers_)
+# print(kmeans.cluster_centers_)
 
 # df['clusters'] = kmeans.labels_
 

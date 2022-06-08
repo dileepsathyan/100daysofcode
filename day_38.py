@@ -42,23 +42,29 @@ print(df.clusters.value_counts())
 #### Run the cluster analysis for 5 times (just for this case) to get the WSS scores and plot them to find the ELBOW point.
 
 attempts = range(1, 6)
-wss = []
-for k in attempts:
-    kmeans_elbow = KMeans(n_clusters= k, init='k-means++')
-    kmeans_elbow.fit(df)
-    wss_iter = kmeans_elbow.inertia_
-    wss.append(wss_iter)
+# wss = []
+# for k in attempts:
+#     kmeans_elbow = KMeans(n_clusters= k, init='k-means++')
+#     kmeans_elbow.fit(df)
+#     wss_iter = kmeans_elbow.inertia_
+#     wss.append(wss_iter)
 
-temp_df = pd.DataFrame({'clusters': attempts, 'wss': wss})
-print(temp_df)
+# temp_df = pd.DataFrame({'clusters': attempts, 'wss': wss})
+# print(temp_df)
 
 
-sns.scatterplot(y=temp_df.wss, x=temp_df.clusters)
-plt.show()
+# sns.scatterplot(y=temp_df.wss, x=temp_df.clusters)
+# plt.show()
 
 
 
 # ---- 1. SILHOUETTE method
 
-
+for k in range(2,8):
+    kmeans_silh = KMeans(n_clusters= k, init='k-means++', random_state=200)
+    kmeans_silh.fit(df)
+    labels = kmeans_silh.labels_
+    silh_score = metrics.silhouette_score(df, labels, metric='euclidean', 
+                                        sample_size=200, random_state=200)
+    print('Silhouette score for '+ str(k) + ' clusters: '+ str(silh_score))
 

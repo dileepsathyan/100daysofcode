@@ -49,8 +49,8 @@ for k in attempts:
     wss_iter = kmeans_elbow.inertia_
     wss.append(wss_iter)
 
-temp_df = pd.DataFrame({'clusters': attempts, 'wss': wss})
-print(temp_df)
+# temp_df = pd.DataFrame({'clusters': attempts, 'wss': wss})
+# print(temp_df)
 
 
 # sns.scatterplot(y=temp_df.wss, x=temp_df.clusters)

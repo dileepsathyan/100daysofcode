@@ -22,9 +22,9 @@ kmeans.fit(df)
 
 print(kmeans.cluster_centers_)
 
-df['clusters'] = kmeans.labels_
+# df['clusters'] = kmeans.labels_
 
-print(df.head(10))
+# print(df.head(10))
 
 # print(df.clusters.value_counts())
 

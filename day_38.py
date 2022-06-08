@@ -60,11 +60,14 @@ attempts = range(1, 6)
 
 # ---- 1. SILHOUETTE method
 
-for k in range(2,8):
-    kmeans_silh = KMeans(n_clusters= k, init='k-means++', random_state=200)
-    kmeans_silh.fit(df)
-    labels = kmeans_silh.labels_
-    silh_score = metrics.silhouette_score(df, labels, metric='euclidean', 
-                                        sample_size=200, random_state=200)
-    print('Silhouette score for '+ str(k) + ' clusters: '+ str(silh_score))
+#### The Silhouette Coefficient is calculated using the mean intra-cluster distance (a) and the mean nearest-cluster distance (b) for each sample. The Silhouette Coefficient for a sample is (b - a) / max(a, b). To clarify, b is the distance between a sample and the nearest cluster that the sample is not a part of. Note that Silhouette Coefficient is only defined if number of labels is 2 <= n_labels <= n_samples - 1.
+
+
+# for k in range(2,8):
+#     kmeans_silh = KMeans(n_clusters= k, init='k-means++', random_state=200)
+#     kmeans_silh.fit(df)
+#     labels = kmeans_silh.labels_
+#     silh_score = metrics.silhouette_score(df, labels, metric='euclidean', 
+#                                         sample_size=200, random_state=200)
+#     print('Silhouette score for '+ str(k) + ' clusters: '+ str(silh_score))
 

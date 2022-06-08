@@ -17,16 +17,16 @@ print(df.head())
 
 
 # Create a model and fit it
-# kmeans = KMeans(n_clusters=3)
-# kmeans.fit(df)
+kmeans = KMeans(n_clusters=3)
+kmeans.fit(df)
 
-# print(kmeans.cluster_centers_)
+print(kmeans.cluster_centers_)
 
-# df['clusters'] = kmeans.labels_
+df['clusters'] = kmeans.labels_
 
-# print(df.head(10))
+print(df.head(10))
 
-# print(df.clusters.value_counts())
+print(df.clusters.value_counts())
 
 
 # sns.scatterplot(df.feat_1, df.feat_2, hue=df.clusters)
@@ -41,7 +41,7 @@ print(df.head())
 
 #### Run the cluster analysis for 5 times (just for this case) to get the WSS scores and plot them to find the ELBOW point.
 
-# attempts = range(1, 6)
+attempts = range(1, 6)
 # wss = []
 # for k in attempts:
 #     kmeans_elbow = KMeans(n_clusters= k, init='k-means++')

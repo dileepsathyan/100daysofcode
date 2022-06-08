@@ -17,8 +17,8 @@ print(df.head())
 
 
 # Create a model and fit it
-kmeans = KMeans(n_clusters=3)
-kmeans.fit(df)
+# kmeans = KMeans(n_clusters=3)
+# kmeans.fit(df)
 
 # print(kmeans.cluster_centers_)
 

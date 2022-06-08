@@ -13,7 +13,7 @@ from sklearn.cluster import KMeans
 data_points = make_blobs(100, n_features=2, centers=3)
 
 df = pd.DataFrame(data_points[0], columns=['feat_1', 'feat_2'])
-# print(df.head())
+print(df.head())
 
 
 # Create a model and fit it

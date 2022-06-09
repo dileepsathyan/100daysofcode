@@ -10,8 +10,7 @@ from sklearn.cluster import KMeans
 # MALL CUSTOMER DATA CLUSTERING USING KMEANS ALGORITHM
 
 df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/mall_customers.csv")
-
-# print(df.head())
+print(df.head())
 
 
 # Create a pairplot using Seaborn to visualize the relationships among variables

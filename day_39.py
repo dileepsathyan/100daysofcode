@@ -26,7 +26,7 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/mall_customers.
 
 # Prepare the dataset for clustering.
 df_cluster = df.replace({'Gender': {'Male': 1, 'Female': 0}})
-# print(df_cluster.head())
+print(df_cluster.head())
 
 
 # Check the optimal number of clusters using ELBOW method.

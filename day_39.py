@@ -41,7 +41,7 @@ for k in attempts:
 
 
 df_elbow_scores = pd.DataFrame({'clusters': attempts, 'wss': wss})
-# print(df_elbow_scores)
+print(df_elbow_scores)
 
 
 # Plot the wss scores of each k value to see the optimal number of clusters.

@@ -44,3 +44,5 @@ print(df_elbow_scores)
 # Plot the wss scores of each k value to see the optimal number of clusters.
 sns.scatterplot(df_elbow_scores.clusters, df_elbow_scores.wss)
 plt.show()
+
+# From the scatterplot, it might be good to consider 4 or 5 clusters, which we will figure out using Silhouette method

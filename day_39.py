@@ -1,4 +1,3 @@
-from curses import def_shell_mode
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -16,8 +15,8 @@ print(df.head())
 
 
 # Create a pairplot using Seaborn to visualize the relationships among variables
-# sns.pairplot(df)
-# plt.show()
+sns.pairplot(df)
+plt.show()
 
 
 # From the pair plot, the below points are clearly visible
@@ -26,8 +25,8 @@ print(df.head())
 
 
 # Prepare the dataset for clustering.
-df_cluster = df.replace({'Gender': {'Male': 1, 'Female': 0}})
-print(df_cluster.head())
+# df_cluster = df.replace({'Gender': {'Male': 1, 'Female': 0}})
+# print(df_cluster.head())
 
 
 # Check the optimal number of clusters using ELBOW method.
@@ -64,12 +63,15 @@ print(df_cluster.head())
 
 # 5 clusters has a slightly higher Silhouette score than 4 clusters. So we will use the same in the final model and use it for prediction.
 
-kmeans_final = KMeans(n_clusters= 5, init='k-means++')
-kmeans_final.fit(df_cluster)
+
+# Create the final model with 5 clusters.
+
+# kmeans_final = KMeans(n_clusters= 5, init='k-means++')
+# kmeans_final.fit(df_cluster)
 
 # print(kmeans_final.cluster_centers_)
 
 
-df_cluster['clusters'] = kmeans_final.labels_
+# df_cluster['clusters'] = kmeans_final.labels_
 
-print(df_cluster.head(10))
+# print(df_cluster.head(10))

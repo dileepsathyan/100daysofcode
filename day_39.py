@@ -69,7 +69,7 @@ df_elbow_scores = pd.DataFrame({'clusters': attempts, 'wss': wss})
 kmeans_final = KMeans(n_clusters= 5, init='k-means++')
 kmeans_final.fit(df_cluster)
 
-# print(kmeans_final.cluster_centers_)
+print(kmeans_final.cluster_centers_)
 
 
 df_cluster['clusters'] = kmeans_final.labels_

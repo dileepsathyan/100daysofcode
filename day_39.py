@@ -45,8 +45,8 @@ df_elbow_scores = pd.DataFrame({'clusters': attempts, 'wss': wss})
 
 
 # Plot the wss scores of each k value to see the optimal number of clusters.
-# sns.scatterplot(df_elbow_scores.clusters, df_elbow_scores.wss)
-# plt.show()
+sns.scatterplot(df_elbow_scores.clusters, df_elbow_scores.wss)
+plt.show()
 
 
 

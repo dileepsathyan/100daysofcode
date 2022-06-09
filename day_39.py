@@ -42,7 +42,19 @@ print(df_elbow_scores)
 
 
 # Plot the wss scores of each k value to see the optimal number of clusters.
-sns.scatterplot(df_elbow_scores.clusters, df_elbow_scores.wss)
-plt.show()
+# sns.scatterplot(df_elbow_scores.clusters, df_elbow_scores.wss)
+# plt.show()
 
-# From the scatterplot, it might be good to consider 4 or 5 clusters, which we will figure out using Silhouette method
+
+
+# From the scatterplot, it might be good to consider 4 or 5 clusters, which we will figure out using Silhouette method below.
+
+for k in range(2,9):
+    kmeans_silh = KMeans(n_clusters= k, init='k-means++', random_state=200)
+    kmeans_silh.fit(df_cluster)
+    labels = kmeans_silh.labels_
+    silh_score = metrics.silhouette_score(df_cluster, labels, metric='euclidean', 
+                                        sample_size=200, random_state=200)
+    print('Silhouette score for '+ str(k) + ' clusters: '+ str(silh_score))
+
+

@@ -58,7 +58,7 @@ for k in range(3,9):
     labels = kmeans_silh.labels_
     silh_score = metrics.silhouette_score(df_cluster, labels, metric='euclidean', 
                                         sample_size=200, random_state=200)
-#     print('Silhouette score for '+ str(k) + ' clusters: '+ str(silh_score))
+    print('Silhouette score for '+ str(k) + ' clusters: '+ str(silh_score))
 
 
 # 5 clusters has a slightly higher Silhouette score than 4 clusters. So we will use the same in the final model and use it for prediction.

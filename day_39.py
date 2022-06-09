@@ -11,12 +11,12 @@ from sklearn.cluster import KMeans
 
 df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/mall_customers.csv")
 
-print(df.head())
+# print(df.head())
 
 
 # Create a pairplot using Seaborn to visualize the relationships among variables
-sns.pairplot(df)
-plt.show()
+# sns.pairplot(df)
+# plt.show()
 
 
 # From the pair plot, the below points are clearly visible
@@ -25,22 +25,22 @@ plt.show()
 
 
 # Prepare the dataset for clustering.
-# df_cluster = df.replace({'Gender': {'Male': 1, 'Female': 0}})
+df_cluster = df.replace({'Gender': {'Male': 1, 'Female': 0}})
 # print(df_cluster.head())
 
 
 # Check the optimal number of clusters using ELBOW method.
 
-# attempts = range(1, 9)
-# wss = []
-# for k in attempts:
-#     model1 = KMeans(n_clusters= k, init='k-means++')
-#     model1.fit(df_cluster)
-#     wss_iter = model1.inertia_
-#     wss.append(wss_iter)
+attempts = range(1, 9)
+wss = []
+for k in attempts:
+    model1 = KMeans(n_clusters= k, init='k-means++')
+    model1.fit(df_cluster)
+    wss_iter = model1.inertia_
+    wss.append(wss_iter)
 
 
-# df_elbow_scores = pd.DataFrame({'clusters': attempts, 'wss': wss})
+df_elbow_scores = pd.DataFrame({'clusters': attempts, 'wss': wss})
 # print(df_elbow_scores)
 
 
@@ -66,12 +66,12 @@ plt.show()
 
 # Create the final model with 5 clusters.
 
-# kmeans_final = KMeans(n_clusters= 5, init='k-means++')
-# kmeans_final.fit(df_cluster)
+kmeans_final = KMeans(n_clusters= 5, init='k-means++')
+kmeans_final.fit(df_cluster)
 
 # print(kmeans_final.cluster_centers_)
 
 
-# df_cluster['clusters'] = kmeans_final.labels_
+df_cluster['clusters'] = kmeans_final.labels_
 
-# print(df_cluster.head(10))
+print(df_cluster.head(10))

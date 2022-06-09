@@ -15,8 +15,8 @@ df = pd.read_csv("/Users/dileepsathyan/Documents/GitHub/datasets/mall_customers.
 
 
 # Create a pairplot using Seaborn to visualize the relationships among variables
-# sns.pairplot(df)
-# plt.show()
+sns.pairplot(df)
+plt.show()
 
 
 # From the pair plot, the below points are clearly visible

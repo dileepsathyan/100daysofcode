@@ -24,18 +24,23 @@ print(df.head())
 # 1. Age has a clear impact on the Spending Score. Age < 40 spend more than the elder.
 # 2. Anmual income can be used to segment the customer data in clear 5 categories. However, we have to reconfirm the same using the ELBOW and SILHOUETTE methods before clustering.
 
-df_cluster = df[['Annual Income (k$)', 'Spending Score (1-100)']]
+df_cluster = df[['CustomerID', 'Age', 'Annual Income (k$)', 'Spending Score (1-100)']]
 # print(df_cluster.head())
 
 
-attempts = range(1, 11)
+attempts = range(1, 9)
 wss = []
 for k in attempts:
     model1 = KMeans(n_clusters= k, init='k-means++')
     model1.fit(df_cluster)
     wss_iter = model1.inertia_
-    wss = wss.append(wss_iter)
+    wss.append(wss_iter)
 
 
 df_elbow_scores = pd.DataFrame({'clusters': attempts, 'wss': wss})
 print(df_elbow_scores)
+
+
+# Plot the wss scores of each k value to see the optimal number of clusters.
+sns.scatterplot(df_elbow_scores.clusters, df_elbow_scores.wss)
+plt.show()

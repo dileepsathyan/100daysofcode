@@ -64,7 +64,6 @@ for k in range(3,9):
 
 
 # Create the final model with 5 clusters.
-
 kmeans_final = KMeans(n_clusters= 5, init='k-means++')
 kmeans_final.fit(df_cluster)
 
@@ -72,5 +71,4 @@ print(kmeans_final.cluster_centers_)
 
 
 df_cluster['clusters'] = kmeans_final.labels_
-
 print(df_cluster.head(10))

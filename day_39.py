@@ -52,12 +52,12 @@ df_elbow_scores = pd.DataFrame({'clusters': attempts, 'wss': wss})
 
 # From the scatterplot, it might be good to consider 4 or 5 clusters, which we will figure out using Silhouette method below.
 
-# for k in range(3,9):
-#     kmeans_silh = KMeans(n_clusters= k, init='k-means++', random_state=200)
-#     kmeans_silh.fit(df_cluster)
-#     labels = kmeans_silh.labels_
-#     silh_score = metrics.silhouette_score(df_cluster, labels, metric='euclidean', 
-#                                         sample_size=200, random_state=200)
+for k in range(3,9):
+    kmeans_silh = KMeans(n_clusters= k, init='k-means++', random_state=200)
+    kmeans_silh.fit(df_cluster)
+    labels = kmeans_silh.labels_
+    silh_score = metrics.silhouette_score(df_cluster, labels, metric='euclidean', 
+                                        sample_size=200, random_state=200)
 #     print('Silhouette score for '+ str(k) + ' clusters: '+ str(silh_score))
 
 

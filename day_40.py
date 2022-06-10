@@ -43,7 +43,7 @@ df1.rename({'InvoiceNo':'Frequency'}, axis=1, inplace=True)
 
 # Merge the 2 dataframes
 df = df.merge(df1, on='CustomerID', how='left')
-# print(df.head())
+print(df.head())
 
 
 # Calculate the recency of each Customer.

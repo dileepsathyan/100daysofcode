@@ -18,7 +18,7 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/online_retail.c
 # Understand the datapoints and dataset.
 # print(df.head(10))
 # print(df.describe())
-# print(df.info())
+print(df.info())
 
 
 # Drop the NULL values from the dataset.

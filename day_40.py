@@ -3,6 +3,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+from datetime import datetime as dt
 from sklearn import metrics
 from sklearn.cluster import KMeans
 
@@ -20,8 +21,12 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/online_retail.c
 # print(df.describe())
 # print(df.info())
 
+
 # Drop the NULL values from the dataset.
 # df = df.dropna()
 # print(df.info())
 
 
+# Add new column as Amount of purchase
+df['Amount'] = df['UnitPrice'] * df['Quantity']
+print(df.head(10))

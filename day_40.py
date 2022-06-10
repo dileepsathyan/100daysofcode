@@ -23,7 +23,7 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/online_retail.c
 
 # Drop the NULL values from the dataset.
 df = df.dropna()
-# print(df.info())
+print(df.info())
 
 
 # Convert the InvoiceDate column to the right datatype.

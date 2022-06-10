@@ -52,11 +52,24 @@ df = df.merge(df1, on='CustomerID', how='left')
 max_date = max(df['InvoiceDate'])
 
 
-# Group the Customers to find the first InvoiceDate for each ID.
-df2 = df.groupby(['CustomerID'])['InvoiceDate'].min().reset_index()
-
-
 # Create a new fiels with the difference between the first InvoiceDate for each user and the latest date in the dataframe.
-df2['Recency'] = (max_date - df2['InvoiceDate']).dt.days
-print(df2.head())
+df['Recency'] = (max_date - df['InvoiceDate']).dt.days
 
+
+# Group the Customers to find the first InvoiceDate for each ID.
+df2 = df.groupby(['CustomerID'])['Recency'].min().reset_index()
+df2.rename({'Recency':'RecencyDays'}, axis=1, inplace=True)
+# print(df2.head())
+
+
+df = df.merge(df2, on='CustomerID', how='left')
+df.drop(columns=['Recency'], axis=1, inplace=True)
+df.rename({'RecencyDays':'Recency'}, axis=1, inplace=True)
+# print(df.head())
+
+df3 = df[['Amount', 'Frequency', 'Recency']]
+print(df3.head())
+
+
+sns.pairplot(df3)
+plt.show()

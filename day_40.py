@@ -12,6 +12,13 @@ from sklearn.cluster import KMeans
 
 # Import online retail dataset
 df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/online_retail.csv', encoding= 'unicode_escape')
+
+
+
+# Understand the datapoints and dataset.
 print(df.head(10))
+print(df.info())
+print(df.describe())
 
 
+#

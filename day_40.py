@@ -32,7 +32,7 @@ df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], format='%d-%m-%Y %H:%M')
 
 # Add new column as Amount of purchase
 df['Amount'] = df['UnitPrice'] * df['Quantity']
-# print(df.head(10))
+print(df.head(10))
 
 
 # Check the loyalty of the Customers.

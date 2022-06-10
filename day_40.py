@@ -38,7 +38,7 @@ df['Amount'] = df['UnitPrice'] * df['Quantity']
 # Check the loyalty of the Customers.
 df1 = df.groupby(['CustomerID'])['InvoiceNo'].count().reset_index()
 df1.rename({'InvoiceNo':'Frequency'}, axis=1, inplace=True)
-# print(df1.head())
+print(df1.head())
 
 
 # Merge the 2 dataframes

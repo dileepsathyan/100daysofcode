@@ -67,8 +67,9 @@ df.drop(columns=['Recency'], axis=1, inplace=True)
 df.rename({'RecencyDays':'Recency'}, axis=1, inplace=True)
 # print(df.head())
 
-df3 = df[['Amount', 'Frequency', 'Recency']]
+df3 = df[['CustomerID', 'Amount', 'Frequency', 'Recency']]
 print(df3.head())
+
 
 
 sns.pairplot(df3)

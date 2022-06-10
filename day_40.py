@@ -15,7 +15,6 @@ from sklearn.cluster import KMeans
 df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/online_retail.csv', encoding= 'unicode_escape')
 
 
-
 # Understand the datapoints and dataset.
 # print(df.head(10))
 # print(df.describe())
@@ -28,22 +27,22 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/online_retail.c
 
 
 # Convert the InvoiceDate column to the right datatype.
-df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], format='%d-%m-%Y %H:%M')
+# df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], format='%d-%m-%Y %H:%M')
 
 
 # Add new column as Amount of purchase
-df['Amount'] = df['UnitPrice'] * df['Quantity']
+# df['Amount'] = df['UnitPrice'] * df['Quantity']
 # print(df.head(10))
 
 
 # Check the loyalty of the Customers.
-df1 = df.groupby(['CustomerID'])['InvoiceNo'].count().reset_index()
-df1.rename({'InvoiceNo':'Frequency'}, axis=1, inplace=True)
+# df1 = df.groupby(['CustomerID'])['InvoiceNo'].count().reset_index()
+# df1.rename({'InvoiceNo':'Frequency'}, axis=1, inplace=True)
 # print(df1.head())
 
 
 # Merge the 2 dataframes
-df = df.merge(df1, on='CustomerID', how='left')
+# df = df.merge(df1, on='CustomerID', how='left')
 # print(df.head())
 
 

@@ -29,4 +29,17 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/online_retail.c
 
 # Add new column as Amount of purchase
 df['Amount'] = df['UnitPrice'] * df['Quantity']
-print(df.head(10))
+# print(df.head(10))
+
+
+# Check the loyalty of the Customers.
+df1 = df.groupby(['CustomerID'])['InvoiceNo'].count().reset_index()
+df1.rename({'InvoiceNo':'Frequency'}, axis=1, inplace=True)
+# print(df1.head())
+
+
+# Merge the 2 dataframes
+df = df.merge(df1, on='CustomerID', how='left')
+# print(df.head())
+
+

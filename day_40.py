@@ -27,6 +27,10 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/online_retail.c
 # print(df.info())
 
 
+# Convert the InvoiceDate column to the right datatype.
+df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], format='%d-%m-%Y %H:%M')
+
+
 # Add new column as Amount of purchase
 df['Amount'] = df['UnitPrice'] * df['Quantity']
 # print(df.head(10))
@@ -44,11 +48,9 @@ df = df.merge(df1, on='CustomerID', how='left')
 
 
 # Calculate the recency of each Customer.
-# Convert the InvoiceDate column to the right datatype.
-df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], format='%d-%m-%Y %H:%M')
-
 # Find the latest invoice date in the dataframe.
 max_date = max(df['InvoiceDate'])
+
 
 # Group the Customers to find the first InvoiceDate for each ID.
 df2 = df.groupby(['CustomerID'])['InvoiceDate'].min().reset_index()
@@ -57,3 +59,4 @@ df2 = df.groupby(['CustomerID'])['InvoiceDate'].min().reset_index()
 # Create a new fiels with the difference between the first InvoiceDate for each user and the latest date in the dataframe.
 df2['Recency'] = (max_date - df2['InvoiceDate']).dt.days
 print(df2.head())
+

@@ -97,8 +97,8 @@ print(df_final_scaled.head())
 #     wss.append(wss_iter)
 
 
-# df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})
-# print(df_wss)
+df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})
+print(df_wss)
 
 # Plot the wss scores to find the optimal k value.
 sns.scatterplot(df_wss.clusters, df_wss.wss)

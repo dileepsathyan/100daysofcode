@@ -88,13 +88,13 @@ print(df_final_scaled.head())
 # Find the optimal number of clusters
 
 # ELBOW Method: using Within-Cluster-Sum-Of-Squares Scores
-# attempts = range(1, 10)
-# wss = []
-# for k in attempts:
-#     model_elbow = KMeans(n_clusters=k, init='k-means++')
-#     model_elbow.fit(df_final_scaled)
-#     wss_iter = model_elbow.inertia_
-#     wss.append(wss_iter)
+attempts = range(1, 10)
+wss = []
+for k in attempts:
+    model_elbow = KMeans(n_clusters=k, init='k-means++')
+    model_elbow.fit(df_final_scaled)
+    wss_iter = model_elbow.inertia_
+    wss.append(wss_iter)
 
 
 df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})

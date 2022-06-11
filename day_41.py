@@ -1,4 +1,3 @@
-from typing import Any
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -76,14 +75,13 @@ df.rename({'RecencyDays':'Recency'}, axis=1, inplace=True)
 # Subset the dataframe for clustering.
 df_final = df[['Amount', 'Frequency', 'Recency']]
 
+
+# Rescale the variables using Standadisation method, to have a comparable scale.
 scaler = StandardScaler()
 df_final_scaled = scaler.fit_transform(df_final)
-# print(df_final_scaled.shape)
 
 df_final_scaled = pd.DataFrame(df_final_scaled, columns=['Amount', 'Frequency', 'Recency'])
 print(df_final_scaled.head())
-
-
 
 
 

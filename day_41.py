@@ -76,4 +76,16 @@ df_final = df[['CustomerID', 'Amount', 'Frequency', 'Recency']]
 print(df_final.head())
 
 
+# Find the optimal number of clusters
+
+# ELBOW Method:
+attempts = range(1, 10)
+wss = []
+for k in attempts:
+    model_elbow = KMeans()
+    model_elbow.fit(df_final)
+    wss_iter = model_elbow.inertia_
+    wss.append(wss_iter)
+
+
 

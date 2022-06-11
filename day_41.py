@@ -88,4 +88,8 @@ for k in attempts:
     wss.append(wss_iter)
 
 
+df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})
+print(df.wss)
+
+
 

@@ -71,4 +71,9 @@ df.rename({'RecencyDays':'Recency'}, axis=1, inplace=True)
 ############################################################################################################################
 
 
+# Subset the dataframe for clustering.
+df_final = df[['CustomerID', 'Amount', 'Frequency', 'Recency']]
+print(df_final.head())
+
+
 

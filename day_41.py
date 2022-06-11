@@ -25,6 +25,7 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/online_retail.c
 
 # Drop the NULL values from the dataset.
 df = df.dropna()
+df.CustomerID = df.CustomerID.astype(str)
 # print(df.info())
 
 
@@ -93,7 +94,7 @@ print(df_final_scaled.head())
 # wss = []
 # for k in attempts:
 #     model_elbow = KMeans(n_clusters=k, init='k-means++')
-#     model_elbow.fit(df_final)
+#     model_elbow.fit(df_final_scaled)
 #     wss_iter = model_elbow.inertia_
 #     wss.append(wss_iter)
 
@@ -105,29 +106,22 @@ print(df_final_scaled.head())
 # sns.scatterplot(df_wss.clusters, df_wss.wss)
 # plt.show()
 
-# From the plot, we are not able to decide between 6 or 7 number of clusters. So we will clarify it with Silhouette method.
+# From the plot, both 5 and 6 clusters will be good for the dataset. We shall reconfirm the optimal k using Silhouette method.
 
 
 # SILHOUETTE Method: 
-# for k in range(3, 10):
-#     model_silh = KMeans(n_clusters=k, init='k-means++', random_state=200)
-#     model_silh.fit(df_final)
+# for k in range(2, 9):
+#     model_silh = KMeans(n_clusters=k, init='k-means++', max_iter=100)
+#     model_silh.fit(df_final_scaled)
 #     labels = model_silh.labels_
-#     silh_score = metrics.silhouette_score(df_final, labels, metric='euclidean', sample_size=200, random_state=200)
+#     silh_score = metrics.silhouette_score(df_final_scaled, labels, metric='euclidean', sample_size=200)
 #     print('Silhouette score for '+ str(k) + ' clusters = ' + str(silh_score))
 
-# Its clear from the Silhouette score that, 6 clusters will be ideal for this dataset.
+# # Its clear from the Silhouette score also that, 4 clusters will be ideal for this dataset.
 
 
-# Build the final model with 6 clusters.
-# model_final = KMeans(n_clusters= 6, init='k-means++')
-# model_final.fit(df_final)
-# df_final['clusters'] = model_final.labels_
-# print(df_final.tail(25))
-
-
-# Group the dataframes to have the cluster numbers for each CustomerID
-# print(df.shape)
-# df = df.merge(df_final, on=['Amount', 'Frequency', 'Recency'], how='left')
-# # print(df.head(20))
-# print(df.shape)
+# Build the final model with 4 clusters.
+model_final = KMeans(n_clusters= 4, init='k-means++')
+model_final.fit(df_final_scaled)
+df['clusters'] = model_final.labels_
+print(df[['CustomerID', 'clusters']])

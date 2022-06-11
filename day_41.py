@@ -72,30 +72,43 @@ df.rename({'RecencyDays':'Recency'}, axis=1, inplace=True)
 
 
 # Subset the dataframe for clustering.
-df_final = df[['CustomerID', 'Amount', 'Frequency', 'Recency']]
-print(df_final.head())
+df_final = df[['Amount', 'Frequency', 'Recency']]
+# print(df_final.head())
 
 
 # Find the optimal number of clusters
 
 # ELBOW Method: using Within-Cluster-Sum-Of-Squares Scores
 attempts = range(1, 10)
-wss = []
-for k in attempts:
-    model_elbow = KMeans(n_clusters=k, init='k-means++')
-    model_elbow.fit(df_final)
-    wss_iter = model_elbow.inertia_
-    wss.append(wss_iter)
+# wss = []
+# for k in attempts:
+#     model_elbow = KMeans(n_clusters=k, init='k-means++')
+#     model_elbow.fit(df_final)
+#     wss_iter = model_elbow.inertia_
+#     wss.append(wss_iter)
 
 
-df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})
-print(df_wss)
+# df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})
+# print(df_wss)
 
 # Plot the wss scores to find the optimal k value.
-sns.scatterplot(df_wss.clusters, df_wss.wss)
-plt.show()
+# sns.scatterplot(df_wss.clusters, df_wss.wss)
+# plt.show()
 
 # From the plot, we are not able to decide between 6 or 7 number of clusters. So we will clarify it with Silhouette method.
 
 
 # SILHOUETTE Method: 
+# for k in range(3, 10):
+#     model_silh = KMeans(n_clusters=k, init='k-means++', random_state=200)
+#     model_silh.fit(df_final)
+#     labels = model_silh.labels_
+#     silh_score = metrics.silhouette_score(df_final, labels, metric='euclidean', sample_size=200, random_state=200)
+#     print('Silhouette score for '+ str(k) + ' clusters = ' + str(silh_score))
+
+# Its clear from the Silhouette score that, 6 clusters will be ideal for this dataset.
+
+
+# Build the final model with 6 clusters.
+
+model_final = 

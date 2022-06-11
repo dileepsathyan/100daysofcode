@@ -78,18 +78,24 @@ print(df_final.head())
 
 # Find the optimal number of clusters
 
-# ELBOW Method:
+# ELBOW Method: using Within-Cluster-Sum-Of-Squares Scores
 attempts = range(1, 10)
 wss = []
 for k in attempts:
-    model_elbow = KMeans()
+    model_elbow = KMeans(n_clusters=k, init='k-means++')
     model_elbow.fit(df_final)
     wss_iter = model_elbow.inertia_
     wss.append(wss_iter)
 
 
 df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})
-print(df.wss)
+print(df_wss)
+
+# Plot the wss scores to find the optimal k value.
+sns.scatterplot(df_wss.clusters, df_wss.wss)
+plt.show()
+
+# From the plot, we are not able to decide between 6 or 7 number of clusters. So we will clarify it with Silhouette method.
 
 
-
+# SILHOUETTE Method: 

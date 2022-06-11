@@ -101,8 +101,8 @@ print(df_final_scaled.head())
 # print(df_wss)
 
 # Plot the wss scores to find the optimal k value.
-# sns.scatterplot(df_wss.clusters, df_wss.wss)
-# plt.show()
+sns.scatterplot(df_wss.clusters, df_wss.wss)
+plt.show()
 
 # From the plot, both 5 and 6 clusters will be good for the dataset. We shall reconfirm the optimal k using Silhouette method.
 

@@ -108,12 +108,12 @@ print(df_final_scaled.head())
 
 
 # SILHOUETTE Method: 
-# for k in range(2, 9):
-#     model_silh = KMeans(n_clusters=k, init='k-means++', max_iter=100)
-#     model_silh.fit(df_final_scaled)
-#     labels = model_silh.labels_
-#     silh_score = metrics.silhouette_score(df_final_scaled, labels, metric='euclidean', sample_size=200)
-#     print('Silhouette score for '+ str(k) + ' clusters = ' + str(silh_score))
+for k in range(2, 9):
+    model_silh = KMeans(n_clusters=k, init='k-means++', max_iter=100)
+    model_silh.fit(df_final_scaled)
+    labels = model_silh.labels_
+    silh_score = metrics.silhouette_score(df_final_scaled, labels, metric='euclidean', sample_size=200)
+    print('Silhouette score for '+ str(k) + ' clusters = ' + str(silh_score))
 
 # # Its clear from the Silhouette score also that, 4 clusters will be ideal for this dataset.
 

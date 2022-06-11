@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime as dt
 from sklearn import metrics
 from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
 
 
 # ONLINE RETAIL DATA CLUSTERING
@@ -73,13 +74,22 @@ df.rename({'RecencyDays':'Recency'}, axis=1, inplace=True)
 
 # Subset the dataframe for clustering.
 df_final = df[['Amount', 'Frequency', 'Recency']]
-# print(df_final.head())
+
+scaler = StandardScaler()
+df_final_scaled = scaler.fit_transform(df_final)
+# print(df_final_scaled.shape)
+
+df_final_scaled = pd.DataFrame(df_final_scaled, columns=['Amount', 'Frequency', 'Recency'])
+print(df_final_scaled.head())
+
+
+
 
 
 # Find the optimal number of clusters
 
 # ELBOW Method: using Within-Cluster-Sum-Of-Squares Scores
-attempts = range(1, 10)
+# attempts = range(1, 10)
 # wss = []
 # for k in attempts:
 #     model_elbow = KMeans(n_clusters=k, init='k-means++')
@@ -110,5 +120,14 @@ attempts = range(1, 10)
 
 
 # Build the final model with 6 clusters.
+# model_final = KMeans(n_clusters= 6, init='k-means++')
+# model_final.fit(df_final)
+# df_final['clusters'] = model_final.labels_
+# print(df_final.tail(25))
 
-model_final = 
+
+# Group the dataframes to have the cluster numbers for each CustomerID
+# print(df.shape)
+# df = df.merge(df_final, on=['Amount', 'Frequency', 'Recency'], how='left')
+# # print(df.head(20))
+# print(df.shape)

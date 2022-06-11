@@ -70,8 +70,10 @@ df.rename({'RecencyDays':'Recency'}, axis=1, inplace=True)
 
 ############################################################################################################################
 
+
 df3 = pd.DataFrame(df.groupby(['Description'])['Quantity'].sum()).reset_index()
 print(df3.head())
+
 
 sns.barplot(x = 'Description', y = 'Quantity', data=df3)
 plt.show()

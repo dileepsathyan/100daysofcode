@@ -1,3 +1,4 @@
+from typing import Any
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -69,4 +70,8 @@ df.rename({'RecencyDays':'Recency'}, axis=1, inplace=True)
 
 ############################################################################################################################
 
+df3 = pd.DataFrame(df.groupby(['Description'])['Quantity'].sum()).reset_index()
+print(df3.head())
 
+sns.barplot(x = 'Description', y = 'Quantity', data=df3)
+plt.show()

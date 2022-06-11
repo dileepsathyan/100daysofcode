@@ -118,6 +118,7 @@ print(df_final_scaled.head())
 # # Its clear from the Silhouette score also that, 4 clusters will be ideal for this dataset.
 
 
+
 # Build the final model with 4 clusters.
 model_final = KMeans(n_clusters= 4, init='k-means++')
 model_final.fit(df_final_scaled)

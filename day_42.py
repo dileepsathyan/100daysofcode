@@ -31,11 +31,11 @@ print(df_scaled.head())
 # ELBOW Method: Find the optimal K value
 attempts = range(1,10)
 wss = []
-# for k in attempts:
-#     model_elbow = KMeans(n_clusters= k, init='k-means++')
-#     model_elbow.fit(df_scaled)
-#     wss_iter = model_elbow.inertia_
-#     wss.append(wss_iter)
+for k in attempts:
+    model_elbow = KMeans(n_clusters= k, init='k-means++')
+    model_elbow.fit(df_scaled)
+    wss_iter = model_elbow.inertia_
+    wss.append(wss_iter)
 
 # df_wss = pd.DataFrame({'cluster': attempts, 'wss': wss})
 # print(df_wss)

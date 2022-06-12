@@ -25,7 +25,7 @@ print(df.describe())
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)
 df_scaled = pd.DataFrame(scaled_data, columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
-# print(df_scaled.head())
+print(df_scaled.head())
 
 
 # ELBOW Method: Find the optimal K value

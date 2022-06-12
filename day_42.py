@@ -25,3 +25,14 @@ scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)
 df_scaled = pd.DataFrame(scaled_data, columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
 # print(df_scaled.head())
+
+
+# ELBOW Method: Find the optimal K value
+attempts = range(1,10)
+wss = []
+for k in attempts:
+    model_elbow = KMeans(n_clusters= k, init='k-means++')
+    model_elbow.fit(df_scaled)
+    wss_iter = model_elbow.inertia_
+    wss.append(wss_iter)
+

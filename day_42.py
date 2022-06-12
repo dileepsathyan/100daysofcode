@@ -1,3 +1,4 @@
+from lib2to3.pytree import HUGE
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -28,29 +29,54 @@ df_scaled = pd.DataFrame(scaled_data, columns=['sepal_length', 'sepal_width', 'p
 
 
 # ELBOW Method: Find the optimal K value
-attempts = range(1,10)
-wss = []
-for k in attempts:
-    model_elbow = KMeans(n_clusters= k, init='k-means++')
-    model_elbow.fit(df_scaled)
-    wss_iter = model_elbow.inertia_
-    wss.append(wss_iter)
+# attempts = range(1,10)
+# wss = []
+# for k in attempts:
+#     model_elbow = KMeans(n_clusters= k, init='k-means++')
+#     model_elbow.fit(df_scaled)
+#     wss_iter = model_elbow.inertia_
+#     wss.append(wss_iter)
 
-df_wss = pd.DataFrame({'cluster': attempts, 'wss': wss})
+# df_wss = pd.DataFrame({'cluster': attempts, 'wss': wss})
 # print(df_wss)
 
 
-sns.scatterplot(x=df_wss['cluster'], y=df_wss['wss'])
+# sns.scatterplot(x=df_wss['cluster'], y=df_wss['wss'])
+# plt.show()
+
+# Looks like 3 clusters will be good for this dataset but we will reconfirm the same using Silhouette method.
+
+
+# Build the final model with 3 clusters
+model = KMeans(n_clusters=3, init='k-means++')
+model.fit(df_scaled)
+df['cluster'] = model.labels_
+
+print(df.head())
+
+color = df['cluster']
+
+sns.pairplot(df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']], hue=color)
+
 plt.show()
 
-# Looks like 5 clusters will be good for this dataset but we will reconfirm the same using Silhouette method.
+# sep_len = df['sepal_length']
+# sep_wid = df['sepal_width']
+# pet_len = df['petal_length']
+# pet_wid = df['petal_width']
 
 
-# SILHOUETTE Method: Find the optimal KK value
-for k in range(2, 7):
-    model_sil = KMeans(n_clusters= k, init='k-means++')
-    model_sil.fit(df_scaled)
-    label = model_sil.labels_
-    sil_score = metrics.silhouette_score(df_scaled, label, metric='euclidean', sample_size=100)
-    print('Silhouette Score for '+ str(k) + ' clusters = ' + str(sil_score))
+# plt.figure(figsize=(10,10))
 
+# plt.subplot(2, 2, 1)
+# sns.scatterplot(sep_len, sep_wid, hue=color)
+
+# plt.subplot(2, 2, 2)
+# sns.scatterplot(pet_len, sep_wid, hue=color)
+
+# plt.subplot(2, 2, 3)
+# sns.scatterplot(sep_len, pet_wid, hue=color)
+
+# plt.subplot(2, 2, 4)
+# sns.scatterplot(pet_len, pet_wid, hue=color)
+# plt.show()

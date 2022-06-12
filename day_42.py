@@ -24,7 +24,7 @@ print(df.describe())
 # Process the valus in the dataset using StandardScaler
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)
-# df_scaled = pd.DataFrame(scaled_data, columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
+df_scaled = pd.DataFrame(scaled_data, columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
 # print(df_scaled.head())
 
 

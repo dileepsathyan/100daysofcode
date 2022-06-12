@@ -22,9 +22,9 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/iris_dataset.cs
 
 
 # Process the valus in the dataset using StandardScaler
-scaler = StandardScaler()
-scaled_data = scaler.fit_transform(df)
-df_scaled = pd.DataFrame(scaled_data, columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
+# scaler = StandardScaler()
+# scaled_data = scaler.fit_transform(df)
+# df_scaled = pd.DataFrame(scaled_data, columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width'])
 # print(df_scaled.head())
 
 

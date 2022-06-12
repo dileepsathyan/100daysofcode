@@ -54,29 +54,7 @@ df['cluster'] = model.labels_
 
 print(df.head())
 
-color = df['cluster']
 
-sns.pairplot(df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']], hue=color)
-
+# Plot the results to visulaize the clusters.
+sns.pairplot(df, hue='cluster')
 plt.show()
-
-# sep_len = df['sepal_length']
-# sep_wid = df['sepal_width']
-# pet_len = df['petal_length']
-# pet_wid = df['petal_width']
-
-
-# plt.figure(figsize=(10,10))
-
-# plt.subplot(2, 2, 1)
-# sns.scatterplot(sep_len, sep_wid, hue=color)
-
-# plt.subplot(2, 2, 2)
-# sns.scatterplot(pet_len, sep_wid, hue=color)
-
-# plt.subplot(2, 2, 3)
-# sns.scatterplot(sep_len, pet_wid, hue=color)
-
-# plt.subplot(2, 2, 4)
-# sns.scatterplot(pet_len, pet_wid, hue=color)
-# plt.show()

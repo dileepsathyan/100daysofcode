@@ -18,7 +18,7 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/iris_dataset.cs
 # Analyse the dataset
 print(df.head())
 print(df.info())
-# print(df.describe())
+print(df.describe())
 
 
 # Process the valus in the dataset using StandardScaler

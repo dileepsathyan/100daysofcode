@@ -16,7 +16,7 @@ from sklearn.preprocessing import StandardScaler
 df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/iris_dataset.csv')
 
 # Analyse the dataset
-# print(df.head())
+print(df.head())
 # print(df.info())
 # print(df.describe())
 

@@ -36,3 +36,21 @@ for k in attempts:
     wss_iter = model_elbow.inertia_
     wss.append(wss_iter)
 
+df_wss = pd.DataFrame({'cluster': attempts, 'wss': wss})
+# print(df_wss)
+
+
+sns.scatterplot(x=df_wss['cluster'], y=df_wss['wss'])
+plt.show()
+
+# Looks like 5 clusters will be good for this dataset but we will reconfirm the same using Silhouette method.
+
+
+# SILHOUETTE Method: Find the optimal KK value
+for k in range(2, 7):
+    model_sil = KMeans(n_clusters= k, init='k-means++')
+    model_sil.fit(df_scaled)
+    label = model_sil.labels_
+    sil_score = metrics.silhouette_score(df_scaled, label, metric='euclidean', sample_size=100)
+    print('Silhouette Score for '+ str(k) + ' clusters = ' + str(sil_score))
+

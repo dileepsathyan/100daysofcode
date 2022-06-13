@@ -46,16 +46,16 @@ df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', '
 
 
 # ELBOW Method: identify optimal number of clusters.
-# attempts = range(1, 9)
-# wss = []
-# for k in attempts:
-#     model_elbow = KMeans(n_clusters= k, init='k-means++')
-#     model_elbow.fit(df_scaled)
-#     wss_iter = model_elbow.inertia_
-#     wss.append(wss_iter)
+attempts = range(1, 9)
+wss = []
+for k in attempts:
+    model_elbow = KMeans(n_clusters= k, init='k-means++')
+    model_elbow.fit(df_scaled)
+    wss_iter = model_elbow.inertia_
+    wss.append(wss_iter)
 
-# df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})
-# print(df_wss)
+df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})
+print(df_wss)
 
 
 # Plot the Within Cluster Sum of Square values to find the optimal K value.

@@ -1,4 +1,3 @@
-from random import random
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -15,9 +14,9 @@ from sklearn.preprocessing import StandardScaler
 df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/wine_clustering.csv')
 
 # Analyse the dataset
-print(df.head())
-print(df.info())
-print(df.describe())
+# print(df.head())
+# print(df.info())
+# print(df.describe())
 
 # Check the histogram of the dataframe fields.
 # df.hist(figsize=(10,10))
@@ -38,12 +37,12 @@ print(df.describe())
 
 
 # Data Preprocessing using StandardScaler.
-# scaler = StandardScaler()
-# scaled_data = scaler.fit_transform(df)
-# df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', 'Ash_Alcanity', 'Magnesium',
-#                                                 'Total_Phenols', 'Flavanoids', 'Nonflavanoid_Phenols',
-#                                                 'Proanthocyanins', 'Color_Intensity', 'Hue', 'OD280', 'Proline'])
-# # print(df_scaled.head())
+scaler = StandardScaler()
+scaled_data = scaler.fit_transform(df)
+df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', 'Ash_Alcanity', 'Magnesium',
+                                                'Total_Phenols', 'Flavanoids', 'Nonflavanoid_Phenols',
+                                                'Proanthocyanins', 'Color_Intensity', 'Hue', 'OD280', 'Proline'])
+# print(df_scaled.head())
 
 
 # ELBOW Method: identify optimal number of clusters.
@@ -78,13 +77,13 @@ print(df.describe())
 
 
 # Build the final model with 3 clusters.
-# model = KMeans(n_clusters= 3, init='k-means++')
-# model.fit(df_scaled)
-# df['cluster'] = model.labels_
-# print(df.head())
+model = KMeans(n_clusters= 3, init='k-means++')
+model.fit(df_scaled)
+df['cluster'] = model.labels_
+print(df.head())
 
 
-
-# sns.set(rc={'figure.figsize':(6,6)})
-# sns.pairplot(df, hue='cluster')
-# plt.show()
+# Plot the final clusters
+sns.set(rc={'figure.figsize':(6,6)})
+sns.pairplot(df, hue='cluster')
+plt.show()

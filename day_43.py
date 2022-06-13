@@ -1,3 +1,4 @@
+from random import random
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -47,9 +48,36 @@ df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', '
 
 
 # ELBOW Method: identify optimal number of clusters.
-attempts = range(1, 11)
-wss = []
-for k in attempts:
-    model_elbow = KMeans(n_clusters= k, init='k-means++')
-    model_elbow.fit(df_scaled)
-    
+# attempts = range(1, 9)
+# wss = []
+# for k in attempts:
+#     model_elbow = KMeans(n_clusters= k, init='k-means++')
+#     model_elbow.fit(df_scaled)
+#     wss_iter = model_elbow.inertia_
+#     wss.append(wss_iter)
+
+# df_wss = pd.DataFrame({'clusters': attempts, 'wss': wss})
+# print(df_wss)
+
+
+# Plot the Within Cluster Sum of Square values to find the optimal K value.
+# sns.scatterplot(df_wss.clusters, df_wss.wss)
+# plt.show()
+
+
+
+# SILHOUETTE Method: Optimal K value.
+# for k in range(2, 9):
+#     model_sil = KMeans(n_clusters= k, init='k-means++')
+#     model_sil.fit(df_scaled)
+#     label = model_sil.labels_
+#     sil_score = metrics.silhouette_score(df_scaled, label, metric='euclidean', random_state=50)
+#     print('Silhouette Score for '+ str(k) + ' clusters = ' + str(sil_score))
+
+# Both ELBOW & SILHOUETTE Methods confirm the optimal K value as 3 clusters.
+
+
+
+# Build the final model with 3 clusters.
+
+model = KMeans(n_clusters= 3, init='k-means++').fit(df_scaled)

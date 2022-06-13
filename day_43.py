@@ -19,5 +19,11 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/wine_clustering
 # print(df.describe())
 
 # Check the histogram of the dataframe fields.
-df.hist(figsize=(10,10))
+# df.hist(figsize=(10,10))
+# plt.show()
+
+
+# Find the correlation among the fields.
+plt.figure(figsize=(10,8))
+sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
 plt.show()

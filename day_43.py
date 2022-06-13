@@ -42,7 +42,7 @@ scaled_data = scaler.fit_transform(df)
 df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', 'Ash_Alcanity', 'Magnesium',
                                                 'Total_Phenols', 'Flavanoids', 'Nonflavanoid_Phenols',
                                                 'Proanthocyanins', 'Color_Intensity', 'Hue', 'OD280', 'Proline'])
-# print(df_scaled.head())
+print(df_scaled.head())
 
 
 # ELBOW Method: identify optimal number of clusters.

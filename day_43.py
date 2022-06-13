@@ -15,9 +15,9 @@ from sklearn.preprocessing import StandardScaler
 df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/wine_clustering.csv')
 
 # Analyse the dataset
-# print(df.head())
-# print(df.info())
-# print(df.describe())
+print(df.head())
+print(df.info())
+print(df.describe())
 
 # Check the histogram of the dataframe fields.
 # df.hist(figsize=(10,10))

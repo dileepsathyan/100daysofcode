@@ -86,6 +86,6 @@ df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', '
 
 
 
-sns.set(rc={'figure.figsize':(6,6)})
-sns.pairplot(df, hue='cluster')
-plt.show()
+# sns.set(rc={'figure.figsize':(6,6)})
+# sns.pairplot(df, hue='cluster')
+# plt.show()

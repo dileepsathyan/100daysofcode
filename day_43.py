@@ -18,4 +18,6 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/wine_clustering
 # print(df.info())
 # print(df.describe())
 
-
+# Check the histogram of the dataframe fields.
+df.hist(figsize=(10,10))
+plt.show()

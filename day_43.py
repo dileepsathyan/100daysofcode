@@ -59,8 +59,8 @@ df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', '
 
 
 # Plot the Within Cluster Sum of Square values to find the optimal K value.
-# sns.scatterplot(df_wss.clusters, df_wss.wss)
-# plt.show()
+sns.scatterplot(df_wss.clusters, df_wss.wss)
+plt.show()
 
 
 

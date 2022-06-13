@@ -65,12 +65,12 @@ df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', '
 
 
 # SILHOUETTE Method: Optimal K value.
-# for k in range(2, 9):
-#     model_sil = KMeans(n_clusters= k, init='k-means++')
-#     model_sil.fit(df_scaled)
-#     label = model_sil.labels_
-#     sil_score = metrics.silhouette_score(df_scaled, label, metric='euclidean', random_state=50)
-#     print('Silhouette Score for '+ str(k) + ' clusters = ' + str(sil_score))
+for k in range(2, 9):
+    model_sil = KMeans(n_clusters= k, init='k-means++')
+    model_sil.fit(df_scaled)
+    label = model_sil.labels_
+    sil_score = metrics.silhouette_score(df_scaled, label, metric='euclidean', random_state=50)
+    print('Silhouette Score for '+ str(k) + ' clusters = ' + str(sil_score))
 
 # Both ELBOW & SILHOUETTE Methods confirm the optimal K value as 3 clusters.
 

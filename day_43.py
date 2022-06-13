@@ -36,8 +36,8 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/wine_clustering
 
 print(df.columns)
 
-# Data Preprocessing using StandardScaler.
 
+# Data Preprocessing using StandardScaler.
 scaler = StandardScaler()
 scaled_data = scaler.fit_transform(df)
 df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', 'Ash_Alcanity', 'Magnesium',

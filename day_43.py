@@ -47,3 +47,9 @@ df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', '
 
 
 # ELBOW Method: identify optimal number of clusters.
+attempts = range(1, 11)
+wss = []
+for k in attempts:
+    model_elbow = KMeans(n_clusters= k, init='k-means++')
+    model_elbow.fit(df_scaled)
+    

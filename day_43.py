@@ -24,6 +24,12 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/wine_clustering
 
 
 # Find the correlation among the fields.
+# plt.figure(figsize=(10,8))
+# sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
+# plt.show()
+
+
+# Find the relationship using pairplot.
 plt.figure(figsize=(10,8))
-sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
+sns.pairplot(df)
 plt.show()

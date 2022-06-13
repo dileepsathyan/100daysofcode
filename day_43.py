@@ -14,25 +14,25 @@ from sklearn.preprocessing import StandardScaler
 df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/wine_clustering.csv')
 
 # Analyse the dataset
-# print(df.head())
-# print(df.info())
-# print(df.describe())
+print(df.head())
+print(df.info())
+print(df.describe())
 
 # Check the histogram of the dataframe fields.
-# df.hist(figsize=(10,10))
-# plt.show()
+df.hist(figsize=(10,10))
+plt.show()
 
 
 # Find the correlation among the fields.
-# plt.figure(figsize=(10,8))
-# sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
-# plt.show()
+plt.figure(figsize=(10,8))
+sns.heatmap(df.corr(), annot=True, cmap='BrBG', cbar=True)
+plt.show()
 
 
 
 # Find the relationship using pairplot.
-# sns.pairplot(df)
-# plt.show()
+sns.pairplot(df)
+plt.show()
 
 
 

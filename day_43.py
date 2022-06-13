@@ -79,25 +79,13 @@ df_scaled = pd.DataFrame(scaled_data, columns=['Alcohol', 'Malic_Acid', 'Ash', '
 
 
 # Build the final model with 3 clusters.
-model = KMeans(n_clusters= 3, init='k-means++')
-model.fit(df_scaled)
-df['cluster'] = model.labels_
-print(df.head())
+# model = KMeans(n_clusters= 3, init='k-means++')
+# model.fit(df_scaled)
+# df['cluster'] = model.labels_
+# print(df.head())
 
 
 
-
-
-# sns.set(rc={'figure.figsize':(6,6)})
-# sns.pairplot(df[['Alcohol', 'Malic_Acid', 'Ash', 'Ash_Alcanity', 'cluster']], hue='cluster')
-# plt.show()
-
-
-# sns.set(rc={'figure.figsize':(6,6)})
-# sns.pairplot(df[['Magnesium', 'Total_Phenols', 'Flavanoids', 'Nonflavanoid_Phenols', 'cluster']], hue='cluster')
-# plt.show()
-
-
-# sns.set(rc={'figure.figsize':(6,6)})
-# sns.pairplot(df[['Proanthocyanins', 'Color_Intensity', 'Hue', 'OD280', 'Proline', 'cluster']], hue='cluster')
-# plt.show()
+sns.set(rc={'figure.figsize':(6,6)})
+sns.pairplot(df, hue='cluster')
+plt.show()

@@ -3,6 +3,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+from sklearn.preprocessing import LabelEncoder
+from kmodes.kmodes import KModes
 
 # K-MODES CLUSTERING ON BANK CUSTOMER CATEGIRUCAL DATA.
 
@@ -11,9 +13,7 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/bank_marketing.
 
 # Analyse the dataset
 # print(df.head())
-# print(df.info())
 
-# print(df.columns.to_list())
 
 # Subset the dataframe only for categorical values.
 
@@ -35,5 +35,5 @@ df.drop(columns=['age'], axis=1, inplace=True)
 
 # Find the stats of the resultant dataframe.
 # print(df.describe())
-
+print(df.info())
 

@@ -29,7 +29,7 @@ df['age_bins'] = pd.cut(df['age'],
 
 
 # Drop the original age column.
-df.drop(columns=['age'], axis=1, inplace=True)
+# df.drop(columns=['age'], axis=1, inplace=True)
 # print(df.head())
 
 

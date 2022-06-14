@@ -1,6 +1,3 @@
-from base64 import encode
-from ctypes import c_int
-from tkinter import Label
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -54,3 +51,5 @@ cao_clusters = model.fit_predict(df_enc)
 print(cao_clusters)
 
 df_cluster_centroids = pd.DataFrame(model.cluster_centroids_)
+df_cluster_centroids.columns = df_enc.columns
+print(df_cluster_centroids)

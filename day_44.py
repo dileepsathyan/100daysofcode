@@ -1,3 +1,5 @@
+from base64 import encode
+from tkinter import Label
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -35,5 +37,15 @@ df.drop(columns=['age'], axis=1, inplace=True)
 
 # Find the stats of the resultant dataframe.
 # print(df.describe())
-print(df.info())
+# print(df.info())
+
+
+# Prepare the data using Label Encoder.
+encoder = LabelEncoder()
+df_enc = df.apply(encoder.fit_transform)
+# print(df_enc.head())
+
+
+
+# Build the model and fir it.
 

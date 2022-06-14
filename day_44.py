@@ -17,7 +17,7 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/bank_marketing.
 
 # Subset the dataframe only for categorical values.
 
-df = df[['age', 'job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'day_of_week', 'poutcome']]
+# df = df[['age', 'job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'day_of_week', 'poutcome']]
 # print(df.head())
 
 

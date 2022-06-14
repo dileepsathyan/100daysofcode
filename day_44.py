@@ -22,9 +22,9 @@ df = df[['age', 'job', 'marital', 'education', 'default', 'housing', 'loan', 'co
 
 
 # Convert the age to a categorical variable by binning it into buckets.
-df['age_bins'] = pd.cut(df['age'], 
-                        [0, 20, 30, 40, 50, 60, 70, 80, 90, 100], 
-                        labels=['0-20', '20-30', '30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90-100'])
+# df['age_bins'] = pd.cut(df['age'], 
+#                         [0, 20, 30, 40, 50, 60, 70, 80, 90, 100], 
+#                         labels=['0-20', '20-30', '30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90-100'])
 # print(df.head())
 
 

@@ -10,8 +10,6 @@ from kmodes.kmodes import KModes
 
 # Import the dataset.
 df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/bank_marketing.csv')
-
-# Analyse the dataset
 print(df.head())
 
 

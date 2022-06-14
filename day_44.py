@@ -39,8 +39,8 @@ df.drop(columns=['age'], axis=1, inplace=True)
 
 
 # Prepare the data using Label Encoder.
-encoder = LabelEncoder()
-df_enc = df.apply(encoder.fit_transform)
+# encoder = LabelEncoder()
+# df_enc = df.apply(encoder.fit_transform)
 # print(df_enc.head())
 
 

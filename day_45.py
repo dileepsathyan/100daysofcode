@@ -94,3 +94,5 @@ sns.countplot(df['housing'], order=df['housing'].value_counts().index, hue=df['c
 sns.countplot(df['loan'], order=df['loan'].value_counts().index, hue=df['cluster_pred'], ax=axs[2])
 plt.tight_layout()
 plt.show()
+
+

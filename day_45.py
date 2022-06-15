@@ -49,7 +49,7 @@ cao_clusters = model.fit_predict(df_enc)
 
 df_cluster_centroids = pd.DataFrame(model.cluster_centroids_)
 df_cluster_centroids.columns = df_enc.columns
-# print(df_cluster_centroids)
+print(df_cluster_centroids)
 
 
 # Update the clusters on the actual dataframe.

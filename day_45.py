@@ -96,3 +96,11 @@ plt.tight_layout()
 plt.show()
 
 
+# Plot the similar distribution of fields: month & day_of_week.
+fig, axs = plt.subplots(1, 2, figsize=(12,5))
+sns.countplot(df['month'], order=df['month'].value_counts().index, hue=df['cluster_pred'], ax=axs[0])
+sns.countplot(df['day_of_week'], order=df['day_of_week'].value_counts().index, hue=df['cluster_pred'], ax=axs[1])
+plt.tight_layout()
+plt.show()
+
+

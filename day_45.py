@@ -45,7 +45,7 @@ df_enc = df.apply(encoder.fit_transform)
 # Build the model and fir it.
 model = KModes(n_clusters=2, init='Cao', n_init=1, verbose=1)
 cao_clusters = model.fit_predict(df_enc)
-# print(cao_clusters)
+print(cao_clusters)
 
 df_cluster_centroids = pd.DataFrame(model.cluster_centroids_)
 df_cluster_centroids.columns = df_enc.columns

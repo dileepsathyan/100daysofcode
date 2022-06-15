@@ -61,3 +61,11 @@ df = pd.concat([df, df_clusters], axis=1).reset_index()
 
 ####################################################################################################################################
 
+# Separate the clusters 
+df0 = df[df['cluster_pred'] == 0]
+df1 = df[df['cluster_pred'] == 1]
+
+print(df0.describe())
+print(df1.describe())
+
+

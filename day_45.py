@@ -69,3 +69,28 @@ print(df0.describe())
 print(df1.describe())
 
 
+# Plot the distribution of job.
+plt.subplots(figsize=(15,5))
+sns.countplot(df['job'], order=df['job'].value_counts().index, hue=df['cluster_pred'])
+plt.show()
+
+
+# Plot the distribution of marital status.
+plt.subplots(figsize=(15,5))
+sns.countplot(df['marital'], order=df['marital'].value_counts().index, hue=df['cluster_pred'])
+plt.show()
+
+
+# Plot the distribution of education.
+plt.subplots(figsize=(15,5))
+sns.countplot(df['education'], order=df['education'].value_counts().index, hue=df['cluster_pred'])
+plt.show()
+
+
+# Plot the similar distribution of fields: default, housing & loan.
+fig, axs = plt.subplots(1, 3, figsize=(15,5))
+sns.countplot(df['default'], order=df['default'].value_counts().index, hue=df['cluster_pred'], ax=axs[0])
+sns.countplot(df['housing'], order=df['housing'].value_counts().index, hue=df['cluster_pred'], ax=axs[1])
+sns.countplot(df['loan'], order=df['loan'].value_counts().index, hue=df['cluster_pred'], ax=axs[2])
+plt.tight_layout()
+plt.show()

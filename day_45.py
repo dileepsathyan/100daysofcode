@@ -104,3 +104,9 @@ plt.tight_layout()
 plt.show()
 
 
+# Plot the similar distribution of fields: poutcome & age_bin.
+fig, axs = plt.subplots(1, 2, figsize=(12,5))
+sns.countplot(df['poutcome'], order=df['poutcome'].value_counts().index, hue=df['cluster_pred'], ax=axs[0])
+sns.countplot(df['age_bin'], order=df['age_bin'].value_counts().index, hue=df['cluster_pred'], ax=axs[1])
+plt.tight_layout()
+plt.show()

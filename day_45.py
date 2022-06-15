@@ -41,7 +41,6 @@ df_enc = df.apply(encoder.fit_transform)
 print(df_enc.head())
 
 
-
 # Build the model and fir it.
 model = KModes(n_clusters=2, init='Cao', n_init=1, verbose=1)
 cao_clusters = model.fit_predict(df_enc)

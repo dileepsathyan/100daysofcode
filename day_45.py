@@ -61,7 +61,7 @@ df = pd.concat([df, df_clusters], axis=1).reset_index()
 
 ####################################################################################################################################
 
-# Separate the clusters 
+# Separate the clusters and to see the distribution in them.
 df0 = df[df['cluster_pred'] == 0]
 df1 = df[df['cluster_pred'] == 1]
 
@@ -104,9 +104,9 @@ plt.tight_layout()
 plt.show()
 
 
-# Plot the similar distribution of fields: poutcome & age_bin.
+# Plot the similar distribution of fields: poutcome & age_bins.
 fig, axs = plt.subplots(1, 2, figsize=(12,5))
 sns.countplot(df['poutcome'], order=df['poutcome'].value_counts().index, hue=df['cluster_pred'], ax=axs[0])
-sns.countplot(df['age_bin'], order=df['age_bin'].value_counts().index, hue=df['cluster_pred'], ax=axs[1])
+sns.countplot(df['age_bins'], order=df['age_bins'].value_counts().index, hue=df['cluster_pred'], ax=axs[1])
 plt.tight_layout()
 plt.show()

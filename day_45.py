@@ -32,7 +32,7 @@ df.drop(columns=['age'], axis=1, inplace=True)
 
 # Find the stats of the resultant dataframe.
 # print(df.describe())
-# print(df.info())
+print(df.info())
 
 
 # Prepare the data using Label Encoder.

@@ -56,7 +56,7 @@ df_cluster_centroids.columns = df_enc.columns
 df_clusters = pd.DataFrame(cao_clusters)
 df_clusters.columns = ['cluster_pred']
 df = pd.concat([df, df_clusters], axis=1).reset_index()
-# print(df.head())
+print(df.head())
 
 
 ####################################################################################################################################

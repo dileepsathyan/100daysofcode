@@ -22,7 +22,7 @@ print(cols)
 fig = plt.figure(figsize = (14, 9))
 i = 1
 for col in cols:
-#     plt.subplot(5, 6, i)
+    plt.subplot(5, 6, i)
 #     plt.plot(df[col])
 #     while i == 29:
 #         break

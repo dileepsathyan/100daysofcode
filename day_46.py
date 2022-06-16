@@ -17,10 +17,10 @@ df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/credit_card.csv
 
 cols = df.columns.to_list()
 
-
+fig = plt.figure(figsize = (12, 10))
 for col in cols:
-    i = 1
-    plt.subplot(5, 6, i)
+    i = 0
+    plt.subplot(5, 6, i+1)
     plt.plot(df[col])
     while i == 29:
         break

@@ -28,5 +28,5 @@ for col in cols:
         break
     else:
         i += 1
-# plt.tight_layout()
-# plt.show()
+plt.tight_layout()
+plt.show()

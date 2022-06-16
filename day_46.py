@@ -17,7 +17,7 @@ print(df.describe())
 
 cols = df.columns.to_list()
 cols = cols[1:-1]
-# print(cols)
+print(cols)
 
 # fig = plt.figure(figsize = (14, 9))
 # i = 1

@@ -26,7 +26,7 @@ for col in cols:
     plt.plot(df[col])
     while i == 29:
         break
-#     else:
-#         i += 1
+    else:
+        i += 1
 # plt.tight_layout()
 # plt.show()

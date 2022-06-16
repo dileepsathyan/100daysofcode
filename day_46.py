@@ -19,7 +19,7 @@ cols = df.columns.to_list()
 cols = cols[1:-1]
 print(cols)
 
-# fig = plt.figure(figsize = (14, 9))
+fig = plt.figure(figsize = (14, 9))
 # i = 1
 # for col in cols:
 #     plt.subplot(5, 6, i)

@@ -6,14 +6,14 @@ import matplotlib.pyplot as plt
 sns.set()
 
 
-# CREADIT CARD FRAUD DETECTION
+# CREDIT CARD FRAUD DETECTION
 
 
 # Import the dataset.
 df = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/credit_card.csv')
-# print(df.head())
-# print(df.info())
-# print(df.describe())
+print(df.head())
+print(df.info())
+print(df.describe())
 
 # cols = df.columns.to_list()
 # cols = cols[1:-1]

@@ -24,7 +24,7 @@ i = 1
 for col in cols:
     plt.subplot(5, 6, i)
     plt.plot(df[col])
-#     while i == 29:
+    while i == 29:
 #         break
 #     else:
 #         i += 1

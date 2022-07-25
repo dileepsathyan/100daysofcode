@@ -2,7 +2,7 @@ from operator import index
 import pandas as pd
 
 
-df1 = pd.read_csv('/Users/dileepsathyan/Downloads/Churn_Modelling.xls')
+df1 = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/Churn_Modelling.xls')
 print(df1.head())
 
 

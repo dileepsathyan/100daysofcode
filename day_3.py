@@ -16,11 +16,11 @@ dict1 = {
         'relationship': ['self', 'son', 'spouse', 'father', 'mother']
         }
 df1 = pd.DataFrame(dict1)
-#print(df1)
+print(df1)
 
 
 # Importing a csv file as DataFrame.
-df2 = pd.read_csv('/Users/dileepsathyan/Downloads/Sample_File.csv')
+df2 = pd.read_csv('/Users/dileepsathyan/Documents/GitHub/datasets/Sample_File.csv')
 print(df2)
 
 
@@ -56,4 +56,4 @@ print(df1_renamed)
 
 # 'Insert' function is an effective way of adding a new column to a DataFrame at the desired location.
 df1.insert(2, 'age_doubled', df1['age']*2)
-#print(df1)
+print(df1)

@@ -75,29 +75,5 @@ print(df2)
 print(df2.dropna(axis =1))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Concatenating, Merging, and Joining in a data frame
 # Summary Analysis, Cross Tabulation, and Pivot
